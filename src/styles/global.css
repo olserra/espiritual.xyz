@@ -1,0 +1,219 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/700.css";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .rc-table-custom table {
+    width: 100%;
+  }
+
+  li.js-li {
+    display: inline-block;
+    padding: 7px;
+    font-size: 18px;
+  }
+
+  li.js-li.active {
+    color: white;
+    font-weight: 700;
+    background: purple;
+    border-radius: 6px;
+  }
+
+  ul.js-ul {
+    margin-top: 12px;
+    text-align: right;
+  }
+
+  .pure-modal .panel-heading {
+    @apply bg-purple-600!important;
+  }
+
+  p.product-title {
+    margin-top: 0px !important;
+  }
+}
+
+.landing-background-color {
+  background: #000000;
+}
+
+.circle {
+  position: relative;
+  right: 0;
+  top: 50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: url("https://assets.codepen.io/7344750/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657025755&width=512");
+  background-size: cover;
+  border-radius: 100vmax;
+  background-position: center;
+}
+
+.text {
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  font-family: consolas;
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
+  font-size: 17px;
+  animation: textRotation 8s linear infinite;
+}
+
+@keyframes textRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+
+.gradient-background:hover {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  transition: background-color 0.2s ease-in-out;
+  animation: background-animation 10s ease-in-out infinite;
+  animation-play-state: start;
+}
+
+.gradient-hover-effect {
+  display: flex;
+  padding: 0.875em 2em;
+  background: linear-gradient(90deg, #3f51b5, transparent) #2196f3;
+  font-family: inherit;
+  color: #fff;
+  text-decoration: none;
+  transition: hover 3s ease-in 5s !important; /* delay of 0.5s */
+  place-content: center;
+}
+.gradient-hover-effect:hover {
+  height: 88vh;
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.gradient:hover {
+  background: linear-gradient(-45deg, #3f51b5, #2196f3, #dccc);
+  background-size: 400% 400%;
+  background-position: 100% 0%;
+  animation: gradient-bg 4s ease 1;
+  animation-iteration-count: 1;
+  transition: background-position 0.5s ease;
+}
+
+.gradient {
+  background-size: 400% 400%;
+  transition: background 0.5s ease;
+}
+
+.border-gradient {
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: gradient-bg 4s ease infinite;
+}
+
+.card-gradient {
+  border: 3px solid;
+  border-radius: 8px !important;
+}
+
+.card-gradient:hover {
+  border: 4px solid;
+  border-radius: 8px !important;
+  z-index: 10;
+  border-image: linear-gradient(to left, #12c2e9, #c471ed, #f64f59) 1;
+  transform: scale(1.01);
+  transition: transform 0.5s ease;
+  -webkit-mask-image: -webkit-linear-gradient(#12c2e9, #c471ed, #f64f59);
+  position: relative;
+}
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --neon-text: hotpink;
+}
+
+.neon {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: glow;
+}
+
+.neon:hover {
+  animation-name: flicker;
+  cursor: crosshair;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0.1em white, 0 0 0.2em var(--neon-text),
+      0 0 0.3em var(--neon-text), 0 0 0.3em var(--neon-text),
+      0 0 0.75em var(--neon-text), 0 0 0.9em var(--neon-text),
+      0 0 1em var(--neon-text);
+  }
+  100% {
+    text-shadow: 0 0 0.15em white, 0 0 0.3em var(--neon-text),
+      0 0 0.4em var(--neon-text), 0 0 0.4em var(--neon-text),
+      0 0 0.8em var(--neon-text), 0 0 0.9em var(--neon-text),
+      0 0 1em var(--neon-text);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 0.1em white, 0 0 0.2em var(--neon-text),
+      0 0 0.3em var(--neon-text), 0 0 0.3em var(--neon-text),
+      0 0 0.75em var(--neon-text), 0 0 0.9em var(--neon-text),
+      0 0 1em var(--neon-text);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}

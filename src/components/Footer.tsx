@@ -18,14 +18,6 @@ const aboutLinks = [
     label: `LinkedIn`,
     href: `https://www.linkedin.com/company/boostio-ai/`,
   },
-  {
-    label: `Instagram`,
-    href: `https://www.instagram.com/boostio.ai/`,
-  },
-  {
-    label: `Blog`,
-    href: `/blog`,
-  },
 ];
 
 const Footer = () => (

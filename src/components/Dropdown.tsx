@@ -14,7 +14,7 @@ export const Dropdown = ({
   selectPlaceholder,
 }: DropdownProps) => (
   <select
-    className="p-2 rounded-lg border lg:mb-12 border-gray-400"
+    className="p-2 rounded-lg border lg:mb-12 border-gray-500"
     value={selectedValue}
     onChange={(event) => onChange(event.target.value)}
   >

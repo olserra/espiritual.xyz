@@ -11,7 +11,10 @@ export default async function handler(
 
       const formSubmission = await prisma.formSubmission.create({
         data: {
+          name,
           email,
+          companyUrl,
+          employees,
         },
       });
 

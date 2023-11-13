@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 
 export const PdfExportButton = ({ content }: any) => {
   return (
-    <Button className="my-12">
+    <Button className="text-white my-12">
       <PDFDownloadLink
         document={<PdfDocument content={content} />}
         fileName="generated_content.pdf"

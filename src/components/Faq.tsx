@@ -2,50 +2,88 @@ import React from "react";
 
 const faqQuestions = [
   {
-    question: "What is BoostioAI?",
-    answer:
-      "BoostioAI is a revolutionary mobile app available on Android and iOS that specializes in connecting developers, data scientists, and related professionals with job opportunities. We're dedicated to finding the perfect fit for both candidates and companies, whether it's full-time, part-time, remote, hybrid, or freelancing work.",
+    question: "What is the GPT Assistant?",
+    answer: (
+      <>
+        <p>
+          The GPT Assistant is a powerful tool that harnesses the capabilities
+          of GPT (Generative Pre-trained Transformer) with your own data. It
+          employs Retrieval Augmented Generation (RAG) to augment your prompts
+          with information from various sources like PDFs, APIs, and text files.
+        </p>
+        <p>Here's how it works:</p>
+        <ul>
+          <li>
+            Step 1: Data Augmentation - You provide prompts along with external
+            data sources such as PDFs and APIs.
+          </li>
+          <li>
+            Step 2: Information Extraction - The tool analyzes the data sources
+            and extracts key information for enhanced generation.
+          </li>
+          <li>
+            Step 3: Insightful Responses - Based on your prompts and augmented
+            data, the GPT Assistant generates informative and context-rich
+            responses.
+          </li>
+        </ul>
+      </>
+    ),
   },
   {
-    question: "How does BoostioAI match professionals to jobs?",
+    question: "How can I benefit from the GPT Assistant?",
     answer:
-      "BoostioAI leverages advanced algorithms to match professionals with the right jobs. We consider both hard skills and soft skills, ensuring a comprehensive fit for both the job requirements and the company culture. Our goal is to make the perfect match and optimize your career journey.",
+      "By using the GPT Assistant, you gain the ability to analyze and extract insights from large documents and data sources, conduct market research, generate detailed reports, and enhance your decision-making process.",
   },
   {
-    question: "What types of jobs does BoostioAI offer?",
+    question: "What types of data can I analyze with the GPT Assistant?",
     answer:
-      "BoostioAI offers a diverse range of job opportunities, including full-time positions, part-time roles, remote work, hybrid arrangements, and freelancing opportunities. We believe in providing flexibility to professionals and companies to optimize their budgets and time.",
+      "The GPT Assistant allows you to analyze a variety of data sources, including PDFs, APIs, and text files. You can extract valuable information from these sources to gain insights into your business, competitors, and market trends.",
   },
   {
-    question:
-      "Can BoostioAI help companies find professionals for specific tasks or projects?",
+    question: "How does the market research feature work?",
     answer:
-      "Absolutely. BoostioAI aims to bring more jobs by demand, including features and small tasks. This means companies can find professionals for specific projects and tasks, allowing them to efficiently allocate resources and optimize their budgets.",
+      "Our AI-driven market research feature empowers you to analyze market trends and gather insights about your competitors. By inputting relevant data, you can obtain a deeper understanding of the market landscape and make informed decisions.",
   },
   {
-    question: "Is BoostioAI available for both Android and iOS?",
+    question: "How can the GPT Assistant provide insights?",
     answer:
-      "Yes, BoostioAI is available on both Android and iOS platforms, making it accessible to a wide range of professionals and companies seeking their ideal matches.",
+      "The GPT Assistant generates insights by processing your prompts and augmented data. It leverages the power of GPT to provide contextually relevant and valuable information, enabling you to uncover hidden patterns and make data-driven choices.",
   },
   {
-    question: "How can I get started with BoostioAI?",
+    question: "Can I generate detailed reports with the GPT Assistant?",
     answer:
-      "Getting started with BoostioAI is easy. Simply download our app from the Google Play Store or Apple App Store, sign up, and start your journey toward finding the perfect job or the ideal candidate. BoostioAI is here to help you optimize your career or recruitment process.",
+      "Absolutely. The GPT Assistant allows you to create precise and comprehensive reports based on the information you provide. Whether for your own business or for clients, you can generate detailed reports that highlight key findings and recommendations.",
   },
   {
-    question: "Is my data secure with BoostioAI?",
+    question: "Is my data secure?",
     answer:
-      "We take data security and privacy seriously. Your personal information and preferences are treated with the utmost confidentiality. BoostioAI employs stringent security measures to safeguard your data and ensure a secure job matching environment.",
+      "Yes, we prioritize data privacy and security. Your data and generated responses are treated with utmost confidentiality. We adhere to stringent security measures and do not share your data with third parties without your explicit consent.",
   },
   {
-    question: "Is there a trial period or free features available?",
+    question: "Can I customize the sources for data augmentation?",
     answer:
-      "Yes, BoostioAI offers trial options so you can experience our platform's capabilities firsthand. You can explore our features and see how BoostioAI can optimize your job search or hiring process.",
+      "Certainly. You have the flexibility to choose the data sources you want to augment your prompts with. Whether it's PDFs, APIs, or text files, you can tailor the data to align with your specific analytical needs.",
+  },
+  {
+    question: "Is assistance available while using the GPT Assistant?",
+    answer:
+      "Absolutely! Our platform offers a supportive community forum where you can connect with other users, seek advice, and share insights. Additionally, our experts and mentors are available to provide personalized guidance and assistance.",
+  },
+  {
+    question: "Is there a trial period for the GPT Assistant?",
+    answer:
+      "Yes, we offer a trial period during which you can explore the capabilities of the GPT Assistant. This allows you to experience the benefits firsthand and determine how it can enhance your analytical processes.",
+  },
+  {
+    question: "How do I get started with the GPT Assistant?",
+    answer:
+      "To begin using the GPT Assistant, simply sign up for an account on our platform. Once registered, you can start leveraging the power of GPT for data analysis, market research, insights, and report generation.",
   },
 ];
 
 const renderQuestions = () => (
-  <div className="flex flex-col items-start px-4 py-12 md:px-12 mx-auto max-w-screen-sm text-start lg:p-12">
+  <div className="flex flex-col items-start px-4 md:px-12 mx-auto max-w-screen-sm text-start lg:p-12">
     {faqQuestions.map((faqQuestion, index) => (
       <details className="p-4 border-b last:border-b-0">
         <summary key={index} className="font-semibold cursor-pointer">
@@ -63,20 +101,19 @@ const renderQuestions = () => (
 
 const Faq = () => (
   <>
-    <div className="px-4 md:px-12 md:pt-20 mx-auto max-w-screen-sm text-center lg:px-6">
+    <div className="px-4 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
       <div className="mx-auto mt-12">
-        <p className="mb-8 text-gray-700 lg:mb-16 text-2xl md:text-4xl font-bold">
+        <p className="mb-8 text-gray-500 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-700">
           FAQ{" "}
         </p>
-        <p className="md:pb-20 lg:text-lg">
+        <p className="pb-8">
           <strong>Frequently Asked Questions (FAQ)</strong> list is here answer
-          some of the most common knowledge gaps.
+          some of the most common knowledge gaps. If you have any other
+          questions, please contact us on otavio@boostio.ai.
         </p>
       </div>
     </div>
-    <div className="md:px-12 md:pb-20 mx-auto max-w-screen-xl">
-      {renderQuestions()}
-    </div>
+    <div className="md:px-12 mx-auto max-w-screen-xl">{renderQuestions()}</div>
   </>
 );
 export default Faq;

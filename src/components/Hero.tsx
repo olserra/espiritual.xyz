@@ -1,38 +1,71 @@
 import React from "react";
-import Board from "@/assets/board.jpeg";
-import { signIn } from "next-auth/react";
+import Button from "./Button";
 import Image from "next/image";
-import WaitlistInput from "./WaitlistInput";
+import Matrix from "@/assets/neural-network.png";
+import { useRouter } from "next/router";
+import { signIn, useSession } from "next-auth/react";
 
 const Hero = () => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const router = useRouter();
+  const { data: session } = useSession();
+
+  const handleSignIn = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     signIn("google", {
       callbackUrl: "https://www.boostio.ai/api/auth/callback/google",
     });
   };
 
+  const handleOpenEmail = () => {
+    router.push("/request-demo");
+  };
+
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-between pb-12 lg:pb-44 lg:px-28">
-        <div className="flex flex-col lg:items-start mb-8 px-6">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-400 pt-8 md:max-w-2xl pb-6 font-sans text-start font-bold text-4xl md:text-5xl lg:text-6xl lg:max-w-2xl">
-            The right developer for the right task
-          </h1>
-          <p className="md:max-w-2xl text-start text-gray-500 text-base lg:text-xl md:pb-8 lg:max-w-lg">
-            We help companies find the right developer for the right task,
-            reducing the time and cost of hiring a full-time resource
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:mx-24 mb-8 px-6 sm:px-2 lg:px-0">
+        <div className="flex flex-col lg:max-w-[550px] lg:mx-12">
+          <p className="text-base pt-12 lg:pt-4 pb-4 md:px-8 xl:px-2">
+            Empowering Lawyers with AI
           </p>
-          <div className="hidden lg:block justify-center">
-            <WaitlistInput />
+          <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-800 md:px-8 xl:px-2">
+            Transforming Legal Practice with AI-Powered Efficiency
+          </h1>
+          <p className="text-gray-500 text-base lg:text-xl pb-8 lg:pb-0 md:px-8 xl:px-2">
+            Unlock the Future of Legal Productivity: Revolutionize Document
+            Analysis with Our Cutting-Edge AI-Powered Solution, Designed for
+            Forward-Thinking Legal Professionals
+          </p>
+          <div className="justify-center pt-6 lg:block md:px-8 xl:px-2"></div>
+          {!session ? (
+            <div className="hidden justify-center pl-2 lg:block">
+              <Button onClick={handleSignIn} className="text-white">
+                Get started
+              </Button>
+            </div>
+          ) : (
+            <div className="hidden justify-center pl-8 lg:block xl:pl-2">
+              <Button onClick={handleOpenEmail} className="text-white">
+                Request a demo
+              </Button>
+            </div>
+          )}
+        </div>
+        <div className="items-center justify-center pl-8 lg:mr-20">
+          <Image src={Matrix} alt="matrix-img" width={600} height={600} />
+        </div>
+        {!session ? (
+          <div className="flex justify-center pt-16 lg:hidden">
+            <Button onClick={handleSignIn} className="text-white">
+              Get started
+            </Button>
           </div>
-        </div>
-        <div>
-          <Image src={Board} width={450} height={450} alt="" />
-        </div>
-        <div className="flex justify-center items-center text-center lg:hidden pt-12">
-          <WaitlistInput />
-        </div>
+        ) : (
+          <div className="flex justify-center pt-16 lg:hidden">
+            <Button onClick={handleOpenEmail} className="text-white">
+              Request a demo
+            </Button>
+          </div>
+        )}
       </div>
     </>
   );

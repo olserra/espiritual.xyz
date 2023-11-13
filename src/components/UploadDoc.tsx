@@ -42,7 +42,7 @@ function FileUpload() {
         className="border border-gray-400 shadow-lg w-40 h-40 rounded-lg cursor-pointer border-dashed"
       >
         <input {...getInputProps()} />
-        <p className="text-sm p-8 text-gray-400">
+        <p className="text-sm p-8 text-gray-500">
           Drag & drop a PDF file here, or click to select one
         </p>
       </div>
@@ -55,7 +55,11 @@ function FileUpload() {
           <i>No file chosen</i>
         </p>
       )}
-      {uploadedFile && <Button onClick={handleClick}>Chat</Button>}
+      {uploadedFile && (
+        <Button onClick={handleClick} className="text-white">
+          Chat
+        </Button>
+      )}
     </div>
   );
 }

@@ -24,7 +24,7 @@ const SignIn = () => {
 
         <Button
           onClick={handleSignIn}
-          className="flex items-center bg-white px-4 py-2 rounded hover:bg-gray-100 border"
+          className="flex items-center bg-white text-black px-4 py-2 rounded hover:bg-gray-100 border"
         >
           {svgs.googleLogo}
           <p className="pl-4">Sign In with Google</p>

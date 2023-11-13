@@ -1,102 +1,94 @@
 import React from "react";
+import Button from "./Button";
 
-const Pricing = () => (
-  <section className="bg-black py-12">
-    <div className="container mx-auto px-4 py-8 lg:py-16">
-      <div className="text-center mb-8 lg:mb-12">
-        <h2 className="px-8 lg:pb-4 text-2xl md:text-4xl font-bold text-gray-300">
-          Introducing agile and lean hiring
-        </h2>
-        <p className="p-8 lg:text-lg lg:px-52 text-gray-400">
-          Unlock Tremendous Savings and Unparalleled Flexibility: Say Goodbye to
-          Overhead Costs and Say Hello to Hiring Developers On-Demand, Tailored
-          to Your Company's Needs. With Boostio.ai, Cost-Effective Scalability
-          Has Never Been Easier.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-        {pricingPlans.map((plan) => (
-          <PricingCard key={plan.title} plan={plan} />
-        ))}
-      </div>
-    </div>
-  </section>
-);
+type CardProps = {
+  title: string;
+  description: any;
+};
 
-const PricingCard = ({ plan }: any) => (
-  <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-    <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
-    <p className="text-lg font-light text-gray-500 mb-8">{plan.description}</p>
-    <div className="flex justify-center items-baseline mb-8">
-      <span className="text-5xl font-extrabold">${plan.price}</span>
-      <span className="text-gray-500 dark:text-gray-400">/month</span>
+const Card = ({ title, description }: CardProps) => (
+  <div className="w-full p-8 border border-gray-700 rounded-lg mb-4 md:p-4 md:mb-0">
+    <div className="text-start">
+      <p className="text-base md:text-base lg:text-xl lg:font-bold text-gray-700 pb-4">
+        {">"} {title}
+      </p>
     </div>
-    <ul className="mb-8 space-y-4 text-left">
-      {plan.features.map((feature: any) => (
-        <li key={feature} className="flex items-center space-x-3">
-          <svg
-            className="w-5 h-5 text-green-500 dark:text-green-400"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-          <span>{feature}</span>
+    <ul className="leading-loose text-gray-500 text-start text-sm md:text-base">
+      {description.map((feat: string, index: number) => (
+        <li key={index}>
+          <br />
+          <strong>• </strong>
+          {feat}
         </li>
       ))}
     </ul>
-    <a
-      href="#"
-      className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-    >
-      Get started
-    </a>
   </div>
 );
 
-const pricingPlans = [
-  {
-    title: "Starter",
-    description: "Best option for personal use & for your next project.",
-    price: 29,
-    features: [
-      "Individual configuration",
-      "No setup or hidden fees",
-      "Project size: 10 tasks",
-      "Premium support: 6 months",
-      "Free updates: 6 months",
-    ],
-  },
-  {
-    title: "Company",
-    description: "Relevant for multiple users, extended & premium support.",
-    price: 99,
-    features: [
-      "Individual configuration",
-      "No setup or hidden fees",
-      "Project size: 50 tasks",
-      "Premium support: 24 months",
-      "Free updates: 24 months",
-    ],
-  },
-  {
-    title: "Enterprise",
-    description:
-      "Best for large-scale uses and extended redistribution rights.",
-    price: 499,
-    features: [
-      "Individual configuration",
-      "No setup or hidden fees",
-      "Project size: 100+ tasks",
-      "Premium support: 36 months",
-      "Free updates: 36 months",
-    ],
-  },
+const handleClick = () => {
+  window.location.href = "https://buy.stripe.com/28o2bP98PeI5a4MdQQ";
+};
+
+const profilerCard = [
+  "Map your gaps",
+  "Map your strengths",
+  "Spider chart",
+  "Team analysis",
+  "Individual analysis",
 ];
+
+const contentRecommendationsCard = [
+  "Learning content",
+  "Assertive content",
+  "Microlearning",
+  "Courses",
+  "Curation",
+];
+
+const roadmapsCard = [
+  "Tailored Roadmaps",
+  "Predefined Roadmaps",
+  "Team Roadmaps",
+  "Individual Roadmaps",
+  "Onboarding Roadmaps",
+  "Offboarding Roadmaps",
+];
+
+const AICoachCard = [
+  "Technical questions",
+  "Behavioral questions",
+  "Presentation preparation",
+  "Stategy support",
+  "Error and debugging",
+];
+
+const Pricing = () => (
+  <div className="px-4 md:px-12 mx-auto max-w-screen-xl text-center lg:px-6 lg:pb-40">
+    <div className="mx-auto max-w-screen-sm mt-12">
+      <p className="pb-8 text-gray-500 lg:mb-2 text-2xl md:text-4xl font-bold dark:text-gray-700">
+        Pricing
+      </p>
+      <p>
+        <strong>Premium plan:</strong> USD 10/month (per user)
+      </p>
+      <p className="py-8 text-gray-600">
+        Boostio is the <strong>most affordable all-in-one</strong> suite for
+        everything people enablement. Plus, our prices adjust to your needs -
+        without making you pay for modules you don’t want.
+      </p>
+    </div>
+    {/* <div className="hidden lg:grid grid-cols-1 md:grid-cols-4 md:gap-4 lg:px-12">
+      <Card title="Profiler" description={profilerCard} />
+      <Card title="Recommendations" description={contentRecommendationsCard} />
+      <Card title="Roadmaps" description={roadmapsCard} />
+      <Card title="AI Tutor" description={AICoachCard} />
+    </div> */}
+    <div className="py-2 lg:py-4">
+      <Button onClick={handleClick} className="text-white">
+        Subscribe
+      </Button>
+    </div>
+  </div>
+);
 
 export default Pricing;

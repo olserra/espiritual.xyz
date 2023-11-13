@@ -3,10 +3,10 @@ import React from "react";
 const PrivacyPolicy = () => (
   <div className="px-4 md:px-12 mx-auto max-w-screen-xl text-center lg:px-6">
     <div className="mx-auto mt-12">
-      <p className="mb-8 text-gray-400 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-300">
+      <p className="mb-8 text-gray-500 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-700">
         Privacy Policy{" "}
       </p>
-      <p className="text-sm text-gray-400">
+      <p className="text-sm text-gray-500">
         Sure, here's an expanded version of the Privacy Policy for BoostioAI:
         Privacy Policy Effective Date: 21/02/2022 1. Introduction Welcome to
         BoostioAI ("us", "we", or "our"). This Privacy Policy outlines how

@@ -19,13 +19,13 @@ const Roadmaps = () => {
     >
       <div className="flex flex-row justify-between">
         <p
-          className={`text-base md:text-base lg:text-lg lg:font-bold text-gray-300 pb-4 pl-4 font-bold`}
+          className={`text-base md:text-base lg:text-lg lg:font-bold text-gray-700 pb-4 pl-4 font-bold`}
         >
           {title}
         </p>
       </div>
       <p
-        className={`leading-loose text-gray-400 text-start text-sm md:text-base px-4 pb-4`}
+        className={`leading-loose text-gray-500 text-start text-sm md:text-base px-4 pb-4`}
       >
         {description}
       </p>
@@ -36,10 +36,10 @@ const Roadmaps = () => {
     <>
       <div className="pb-24 lg:pt-8 lg:pb-40 px-4 md:px-12 mx-auto max-w-screen-xl text-center lg:px-6">
         <div className="mx-auto max-w-screen-sm mt-12">
-          <p className="py-12 lg:py-0 text-gray-400 lg:mb-8 text-2xl md:text-4xl font-bold dark:text-gray-300">
+          <p className="py-12 lg:py-0 text-gray-500 lg:mb-8 text-2xl md:text-4xl font-bold dark:text-gray-700">
             Roadmaps
           </p>
-          <p className="pb-12 text-base lg:text-lg lg:pb-14 text-gray-400">
+          <p className="pb-12 text-base lg:text-lg lg:pb-14 text-gray-500">
             Explore the best roadmaps for your team. Our AI will curate the best
             ones.
           </p>

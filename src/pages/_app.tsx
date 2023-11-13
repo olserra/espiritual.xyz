@@ -5,7 +5,6 @@ import { ContextProvider } from "@/context/context";
 import PrivacyModal from "@/components/PrivacyModal";
 
 import "../styles/global.css";
-import Head from "next/head";
 
 const App = ({ Component, pageProps: { session, ...pageProps } }: any) => {
   return (

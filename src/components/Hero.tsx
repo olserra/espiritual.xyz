@@ -16,8 +16,9 @@ const Hero = () => {
     });
   };
 
-  const handleOpenEmail = () => {
-    router.push("/request-demo");
+  const handleChat = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push("/upload-doc");
   };
 
   return (
@@ -44,8 +45,8 @@ const Hero = () => {
             </div>
           ) : (
             <div className="hidden justify-center pl-8 lg:block xl:pl-2">
-              <Button onClick={handleOpenEmail} className="text-white">
-                Request a demo
+              <Button onClick={handleChat} className="text-white">
+                Chat
               </Button>
             </div>
           )}
@@ -61,8 +62,8 @@ const Hero = () => {
           </div>
         ) : (
           <div className="flex justify-center pt-16 lg:hidden">
-            <Button onClick={handleOpenEmail} className="text-white">
-              Request a demo
+            <Button onClick={handleChat} className="text-white">
+              Chat
             </Button>
           </div>
         )}

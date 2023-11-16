@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import svgs from "../helpers/svgs";
 
 import Button from "./Button";
-import { signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { ChevronArrow } from "./Arrow";
 import { useRouter } from "next/router";
@@ -28,8 +28,11 @@ const Navbar = () => {
     },
   ];
 
-  const handleGetStarted = (e: React.MouseEvent<HTMLButtonElement>) => {
-    router.push("/signin");
+  const handleSignIn = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    signIn("google", {
+      callbackUrl: "https://www.boostio.ai/api/auth/callback/google",
+    });
   };
 
   const handleSignOut = async (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -84,7 +87,7 @@ const Navbar = () => {
             <ChevronArrow direction="down" className="lg:mt-6" />
           </div>
         ) : (
-          <Button onClick={handleGetStarted} className="text-white lg:mt-4">
+          <Button onClick={handleSignIn} className="text-white lg:mt-4">
             Get started
           </Button>
         )}
@@ -133,7 +136,7 @@ const Navbar = () => {
             </button>
           ) : (
             <button
-              onClick={handleGetStarted}
+              onClick={handleSignIn}
               className="text-gray-500 underline lg:mt-4"
             >
               Get started

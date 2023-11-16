@@ -26,10 +26,10 @@ const options = {
     async redirect() {
       return "/";
     },
-    session: async ({session, token, user}: any) => {
+    session: async ({ session, token, user }: any) => {
       session.user.id = user.id as string;
       return session;
-    }
+    },
   },
 };
 

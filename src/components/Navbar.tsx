@@ -7,7 +7,7 @@ import Button from "./Button";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { ChevronArrow } from "./Arrow";
-import { useRouter } from "next/router";
+import CloseIcon from "@/assets/close-icon.png";
 
 const Navbar = () => {
   const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
@@ -15,7 +15,8 @@ const Navbar = () => {
   const [avatarImg, setAvatarImg] = useState("");
   const buttonRef: any = useRef(null);
   const { data: session } = useSession();
-  const router = useRouter();
+  const openMobileMenu = () => setIsMobileMenuOpen(true);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   useEffect(() => {
     session?.user?.image && setAvatarImg(session.user.image);
@@ -112,36 +113,46 @@ const Navbar = () => {
   const BurgerMenuItem = () => {
     return (
       <div
-        className="flex flex-col items-center absolute top-4 right-4 lg:right-20 lg:top-16 2xl:right-[420px] bg-gray-300 p-1 text-gray-700 border rounded-md w-95 h-132"
+        className="fixed top-0 left-0 w-full bg-black p-2 text-gray-700 border-t border-gray-700"
         ref={buttonRef}
       >
-        <div className="flex flex-col text-sm gap-4 px-2.5 py-1.5 text-gray-700 border-b last:border-b-0 border-gray-700">
-          {LandingMenuItems.map((item, index) => (
-            <a
-              target={item.href === "Careers" ? "_blank" : "_self"}
-              rel="noreferrer"
-              href={item.href}
-              key={index}
-              className="relative lg:mt-4 lg:pr-6 hover:underline"
-            >
-              {item.label}
-            </a>
-          ))}
-          {session ? (
-            <button
-              onClick={handleSignOut}
-              className="text-gray-500 bg-gray-300 lg:mt-4 underline text-start"
-            >
-              Sign out
-            </button>
-          ) : (
-            <button
-              onClick={handleSignIn}
-              className="text-gray-500 underline lg:mt-4"
-            >
-              Get started
-            </button>
-          )}
+        <div className="flex flex-row justify-between items-start">
+          <div className="flex flex-col text-sm gap-4 p-4 text-gray-200">
+            {LandingMenuItems.map((item, index) => (
+              <a
+                target={item.href === "Careers" ? "_blank" : "_self"}
+                rel="noreferrer"
+                href={item.href}
+                key={index}
+                className="relative hover:underline"
+              >
+                {item.label}
+              </a>
+            ))}
+            {session ? (
+              <button
+                onClick={handleSignOut}
+                className="text-gray-200 underline mt-4 text-start"
+              >
+                Sign out
+              </button>
+            ) : (
+              <button
+                onClick={handleSignIn}
+                className="text-gray-500 underline mt-4"
+              >
+                Get started
+              </button>
+            )}
+          </div>
+          <div className="p-4" onClick={() => setIsMobileMenuOpen(false)}>
+            <Image
+              src={CloseIcon}
+              alt="Close Icon"
+              className="cursor-pointer"
+              height={15}
+            />
+          </div>
         </div>
       </div>
     );

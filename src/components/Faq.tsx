@@ -109,11 +109,13 @@ const Faq = () => (
         <p className="pb-8">
           <strong>Frequently Asked Questions (FAQ)</strong> list is here answer
           some of the most common knowledge gaps. If you have any other
-          questions, please contact us on otavio@boostio.ai.
+          questions, please contact us.
         </p>
       </div>
     </div>
-    <div className="md:px-12 mx-auto max-w-screen-xl">{renderQuestions()}</div>
+    <div className="py-16 md:px-12 mx-auto max-w-screen-xl">
+      {renderQuestions()}
+    </div>
   </>
 );
 export default Faq;

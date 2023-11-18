@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BoostioLogo from "@/assets/logo.png";
+import BoostioLogo from "@/assets/boost.svg";
 import Link from "next/link";
 
 const Logo = () => {

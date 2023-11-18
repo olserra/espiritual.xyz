@@ -3,23 +3,10 @@ import Link from "next/link";
 type StepProps = {
   title: string;
   description: string;
-  isSoon?: boolean;
-  isFree?: boolean;
-  href?: string;
 };
 
-const Step = ({ title, description, isSoon, isFree, href }: StepProps) => (
+const Step = ({ title, description }: StepProps) => (
   <div className="relative w-full p-4 border-gray-300 border rounded-lg mb-4 md:p-4 md:mb-0 lg:h-58 xl:min-h-[220px]">
-    {isSoon && (
-      <div className="absolute top-3 right-3 border border-gray-700 rounded-lg p-1 text-xs">
-        Soon
-      </div>
-    )}
-    {isFree && (
-      <div className="absolute top-3 right-3 border border-gray-700 rounded-lg p-1 text-xs">
-        Free
-      </div>
-    )}
     <div className="flex flex-row justify-between">
       <p
         className={`text-base md:text-base lg:text-lg lg:font-bold text-gray-700 pb-4 pl-4 font-bold text-start`}

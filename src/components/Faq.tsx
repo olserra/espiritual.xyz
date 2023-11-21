@@ -2,83 +2,124 @@ import React from "react";
 
 const faqQuestions = [
   {
-    question: "What is the GPT Assistant?",
+    question: "What is Boostio.ai?",
     answer: (
       <>
         <p>
-          The GPT Assistant is a powerful tool that harnesses the capabilities
-          of GPT (Generative Pre-trained Transformer) with your own data. It
-          employs Retrieval Augmented Generation (RAG) to augment your prompts
-          with information from various sources like PDFs, APIs, and text files.
+          Boostio.ai is a cutting-edge platform that empowers lawyers with the
+          capabilities of AI (Artificial Intelligence). Our solution
+          revolutionizes legal practice by enhancing efficiency through
+          AI-powered tools.
         </p>
         <p>Here's how it works:</p>
         <ul>
           <li>
-            Step 1: Data Augmentation - You provide prompts along with external
-            data sources such as PDFs and APIs.
+            <strong>Step 1: Document Upload -</strong> Users upload their legal
+            documents in PDF format to the Boostio platform. The documents are
+            securely stored in our cloud in a vectorized format for easy access
+            and analysis by our AI agent.
           </li>
           <li>
-            Step 2: Information Extraction - The tool analyzes the data sources
-            and extracts key information for enhanced generation.
+            <strong>Step 2: AI Learning -</strong> Our AI agent learns from the
+            uploaded documents, extracting key information and insights using
+            Retrieval Augmented Generation (RAG) technology.
           </li>
           <li>
-            Step 3: Insightful Responses - Based on your prompts and augmented
-            data, the GPT Assistant generates informative and context-rich
-            responses.
+            <strong>Step 3: Intelligent Chat Agent -</strong> Activate your
+            AI-powered legal assistant with the extracted insights. Save time
+            and ensure comprehensive understanding without missing critical
+            details.
+          </li>
+          <li>
+            <strong>Step 4: Legal Insights -</strong> Gain an unfair advantage
+            by leveraging our powerful technology. Save time, streamline
+            strategies, and access insights that competitors might overlook.
           </li>
         </ul>
       </>
     ),
   },
   {
-    question: "How can I benefit from the GPT Assistant?",
+    question: "How can I benefit from Boostio.ai?",
     answer:
-      "By using the GPT Assistant, you gain the ability to analyze and extract insights from large documents and data sources, conduct market research, generate detailed reports, and enhance your decision-making process.",
+      "Boostio.ai allows you to analyze and extract insights from legal documents, saving time, streamlining strategies, and gaining a competitive edge. It is designed for forward-thinking legal professionals seeking AI-powered efficiency.",
   },
   {
-    question: "What types of data can I analyze with the GPT Assistant?",
+    question: "What types of data can I analyze with Boostio.ai?",
     answer:
-      "The GPT Assistant allows you to analyze a variety of data sources, including PDFs, APIs, and text files. You can extract valuable information from these sources to gain insights into your business, competitors, and market trends.",
+      "Boostio.ai enables analysis of legal documents in PDF format. Users can extract valuable information and insights to enhance their understanding of legal cases, precedents, and industry trends.",
   },
   {
-    question: "How does the market research feature work?",
+    question: "How does the AI-powered assistant work?",
     answer:
-      "Our AI-driven market research feature empowers you to analyze market trends and gather insights about your competitors. By inputting relevant data, you can obtain a deeper understanding of the market landscape and make informed decisions.",
+      "Our AI-powered assistant processes legal documents, extracting key information and insights using Retrieval Augmented Generation (RAG). The assistant provides contextually relevant and valuable information, empowering users to make informed decisions.",
   },
   {
-    question: "How can the GPT Assistant provide insights?",
+    question: "Can I generate detailed reports with Boostio.ai?",
     answer:
-      "The GPT Assistant generates insights by processing your prompts and augmented data. It leverages the power of GPT to provide contextually relevant and valuable information, enabling you to uncover hidden patterns and make data-driven choices.",
-  },
-  {
-    question: "Can I generate detailed reports with the GPT Assistant?",
-    answer:
-      "Absolutely. The GPT Assistant allows you to create precise and comprehensive reports based on the information you provide. Whether for your own business or for clients, you can generate detailed reports that highlight key findings and recommendations.",
+      "Certainly. Boostio.ai allows users to create precise and comprehensive reports based on the information extracted from legal documents. Whether for personal use or client presentations, detailed reports can be generated to highlight key findings and recommendations.",
   },
   {
     question: "Is my data secure?",
     answer:
-      "Yes, we prioritize data privacy and security. Your data and generated responses are treated with utmost confidentiality. We adhere to stringent security measures and do not share your data with third parties without your explicit consent.",
+      "Yes, we prioritize data privacy and security at Boostio.ai. Each user has a separate, exclusive, secured, redundant, and private database. Your data and generated responses are treated with utmost confidentiality. We adhere to stringent security measures and do not share your data with third parties without your explicit consent.",
   },
   {
-    question: "Can I customize the sources for data augmentation?",
+    question: "How is my data protected when using the OpenAI API?",
+    answer: (
+      <>
+        <p>
+          At Boostio.ai, we take data privacy and security seriously. When you
+          use the OpenAI API, your data is treated with the utmost care and
+          protection.
+        </p>
+        <p>
+          <strong>Data Encryption:</strong> We employ encryption techniques to
+          secure sensitive information, ensuring that your data remains
+          confidential during transmission.
+        </p>
+        <p>
+          <strong>Secure Transmission:</strong> All data sent to and from the
+          OpenAI API is transmitted securely over HTTPS (SSL/TLS), safeguarding
+          it against unauthorized access.
+        </p>
+        <p>
+          <strong>Key Management:</strong> Our platform follows secure key
+          management practices to handle encryption keys, adding an extra layer
+          of protection to your data.
+        </p>
+        <p>
+          <strong>Compliance:</strong> Our encryption practices align with
+          relevant regulations and data protection standards to ensure the
+          highest level of compliance.
+        </p>
+        <p>
+          If you have specific concerns or questions about data protection, feel
+          free to reach out to our support team. Your trust and the security of
+          your data are our top priorities.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Can I customize the sources for data analysis?",
     answer:
-      "Certainly. You have the flexibility to choose the data sources you want to augment your prompts with. Whether it's PDFs, APIs, or text files, you can tailor the data to align with your specific analytical needs.",
+      "Certainly. Boostio.ai provides flexibility in choosing data sources for analysis. Whether it's legal documents in PDF format or other relevant sources, you can tailor the data to align with your specific analytical needs.",
   },
   {
-    question: "Is assistance available while using the GPT Assistant?",
+    question: "Is assistance available while using the system?",
     answer:
       "Absolutely! Our platform offers a supportive community forum where you can connect with other users, seek advice, and share insights. Additionally, our experts and mentors are available to provide personalized guidance and assistance.",
   },
   {
-    question: "Is there a trial period for the GPT Assistant?",
+    question: "Is there a trial period?",
     answer:
-      "Yes, we offer a trial period during which you can explore the capabilities of the GPT Assistant. This allows you to experience the benefits firsthand and determine how it can enhance your analytical processes.",
+      "Yes, we offer a trial period during which you can explore the capabilities of Boostio.ai. This allows you to experience the benefits firsthand and determine how it can enhance your analytical processes.",
   },
   {
-    question: "How do I get started with the GPT Assistant?",
+    question: "How do I get started?",
     answer:
-      "To begin using the GPT Assistant, simply sign up for an account on our platform. Once registered, you can start leveraging the power of GPT for data analysis, market research, insights, and report generation.",
+      "To begin using Boostio.ai, simply sign up for an account on our platform. Once registered, you can start leveraging the power of AI for efficient data analysis, gaining insights from legal documents, and generating reports.",
   },
 ];
 

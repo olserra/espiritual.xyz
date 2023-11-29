@@ -3,6 +3,7 @@ import { makeChain } from "@/utils/makechain";
 import { initPinecone } from "@/utils/pinecone-client";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { prisma } from "../../../prisma/prisma";
 
 export const config = {
   runtime: "edge",
@@ -31,6 +32,22 @@ export default async function handler(req: Request, res: any) {
           status: 400,
         });
       }
+
+      try {
+        await prisma.chatHistory.create({
+          data: {
+            userId: userId,
+            conversation: [
+              { type: "question", text: question },
+              // Include the rest of the chat history
+              // Example: { type: "answer", text: "The model's response" },
+            ],
+          },
+        });
+      } catch (error) {
+        console.log(error);
+      }
+
       const pinecone = await initPinecone();
       const index = pinecone.Index(PINECONE_INDEX_NAME);
       const vectorStore = await PineconeStore.fromExistingIndex(

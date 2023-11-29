@@ -34,16 +34,37 @@ export default async function handler(req: Request, res: any) {
       }
 
       try {
-        await prisma.chatHistory.create({
-          data: {
+        const chatHistory = await prisma.chatHistory.findUnique({
+          where: {
             userId: userId,
-            conversation: [
-              { type: "question", text: question },
-              // Include the rest of the chat history
-              // Example: { type: "answer", text: "The model's response" },
-            ],
           },
         });
+
+        const newStep = { type: "question", text: question };
+
+        if (chatHistory) {
+          // If chat history exists, update it with the new conversation step
+          await prisma.chatHistory.update({
+            where: {
+              userId: userId,
+            },
+            data: {
+              conversation: chatHistory.conversation
+                ? {
+                    push: { type: "question", text: question },
+                  }
+                : { set: [{ type: "question", text: question }] },
+            },
+          });
+        } else {
+          // If chat history doesn't exist, create a new record
+          await prisma.chatHistory.create({
+            data: {
+              userId: userId,
+              conversation: [newStep],
+            },
+          });
+        }
       } catch (error) {
         console.log(error);
       }

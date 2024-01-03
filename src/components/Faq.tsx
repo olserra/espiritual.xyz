@@ -102,8 +102,8 @@ const faqQuestions = [
 const renderQuestions = () => (
   <div className="flex flex-col items-start px-4 md:px-12 mx-auto max-w-screen-sm text-start lg:p-12">
     {faqQuestions.map((faqQuestion, index) => (
-      <details className="p-4 border-b last:border-b-0 text-gray-300">
-        <summary key={index} className="font-semibold cursor-pointer">
+      <details className="p-4 border-b border-b-gray-500 last:border-b-0 text-gray-300">
+        <summary key={index} className="cursor-pointer">
           {faqQuestion.question}
         </summary>
         <div className="mt-3">

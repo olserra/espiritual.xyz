@@ -32,11 +32,11 @@ const Hero = () => {
           <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200 md:px-8 xl:px-2">
             Tailor Every AI to Your Unique Needs and Preferences
           </h1>
-          <p className="text-gray-400 text-base lg:text-xl pb-8 lg:pb-0 md:px-8 xl:px-2">
+          <p className="text-gray-400 text-base lg:text-xl lg:pb-0 md:px-8 xl:px-2">
             Transform How You Interact with AI: Introducing a Groundbreaking
             Platform for Secure, Personalized Metadata Management
           </p>
-          <div className="justify-center pt-6 lg:block md:px-8 xl:px-2"></div>
+          <div className="justify-center pt-8 lg:block md:px-8 xl:px-2"></div>
           {!session ? (
             <div className="hidden justify-center pl-2 lg:block">
               <Button onClick={handleSignIn} className="text-white">
@@ -55,7 +55,7 @@ const Hero = () => {
           <Image src={BrainGIF} alt="matrix-img" width={600} height={600} />
         </div>
         {!session ? (
-          <div className="flex justify-center pt-16 lg:hidden">
+          <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
             <Button onClick={handleSignIn} className="text-white">
               Get started
             </Button>

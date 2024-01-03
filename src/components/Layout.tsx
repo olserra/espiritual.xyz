@@ -11,7 +11,7 @@ interface IProps {
 
 export default function Layout({ children }: IProps) {
   return (
-    <div className="bg-white 2xl:px-[280px]">
+    <div className="bg-[#0A0826] 2xl:px-[280px]">
       <Head>
         <meta name="description" content="Boostio.ai" />
         <link

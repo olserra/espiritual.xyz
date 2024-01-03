@@ -6,34 +6,33 @@ const faqQuestions = [
     answer: (
       <>
         <p>
-          Boostio.ai is a cutting-edge platform that empowers lawyers with the
-          capabilities of AI (Artificial Intelligence). Our solution
-          revolutionizes legal practice by enhancing efficiency through
-          AI-powered tools.
+          Boostio.ai is an innovative AI-enhancement platform designed to
+          supercharge human capabilities in various domains like education,
+          career strategy, personal assistance, and health and wellness. Our
+          solution seamlessly integrates with various platforms, offering
+          tailored and actionable insights to elevate your personal and
+          professional life.
         </p>
         <p>Here's how it works:</p>
         <ul>
           <li>
-            <strong>Step 1: Document Upload -</strong> Users upload their legal
-            documents in PDF format to the Boostio platform. The documents are
-            securely stored in our cloud in a vectorized format for easy access
-            and analysis by our AI agent.
+            <strong>Education and Recruitment -</strong> Connects with
+            educational platforms and job boards to provide personalized career
+            guidance and improve job market competitiveness.
           </li>
           <li>
-            <strong>Step 2: AI Learning -</strong> Our AI agent learns from the
-            uploaded documents, extracting key information and insights using
-            Retrieval Augmented Generation (RAG) technology.
+            <strong>Strategy -</strong> Offers strategic insights tailored to
+            individual and corporate needs, helping you excel in your industry.
           </li>
           <li>
-            <strong>Step 3: Intelligent Chat Agent -</strong> Activate your
-            AI-powered legal assistant with the extracted insights. Save time
-            and ensure comprehensive understanding without missing critical
-            details.
+            <strong>Personal Assistants -</strong> Integrates with assistants
+            like Siri, Alexa, and Google Assistant, enhancing your experience
+            with AI-based personal assistance.
           </li>
           <li>
-            <strong>Step 4: Legal Insights -</strong> Gain an unfair advantage
-            by leveraging our powerful technology. Save time, streamline
-            strategies, and access insights that competitors might overlook.
+            <strong>Health and Wellness -</strong> Collaborates with health apps
+            to offer customized advice for a healthier lifestyle, based on your
+            personal health data.
           </li>
         </ul>
       </>
@@ -42,96 +41,73 @@ const faqQuestions = [
   {
     question: "How can I benefit from Boostio.ai?",
     answer:
-      "Boostio.ai allows you to analyze and extract insights from legal documents, saving time, streamlining strategies, and gaining a competitive edge. It is designed for forward-thinking legal professionals seeking AI-powered efficiency.",
+      "Boostio.ai empowers you to maximize your potential through AI-driven personalized insights. Whether it's advancing your career, optimizing your learning path, enhancing personal productivity, or improving health and wellness, our platform provides the tools you need to thrive in an AI-enhanced world.",
   },
   {
-    question: "What types of data can I analyze with Boostio.ai?",
+    question: "What types of platforms can I integrate with Boostio.ai?",
     answer:
-      "Boostio.ai enables analysis of legal documents in PDF format. Users can extract valuable information and insights to enhance their understanding of legal cases, precedents, and industry trends.",
+      "Boostio.ai is designed to integrate with a wide range of platforms, including educational resources, job boards, AI personal assistants, and health and wellness apps. This enables a comprehensive approach to personal and professional development.",
   },
   {
-    question: "How does the AI-powered assistant work?",
+    question: "How does Boostio.ai tailor its advice and recommendations?",
     answer:
-      "Our AI-powered assistant processes legal documents, extracting key information and insights using Retrieval Augmented Generation (RAG). The assistant provides contextually relevant and valuable information, empowering users to make informed decisions.",
+      "Our platform uses advanced AI algorithms to analyze your data across various platforms. It then provides personalized advice and recommendations based on your unique goals, preferences, and data patterns.",
   },
   {
-    question: "Can I generate detailed reports with Boostio.ai?",
+    question: "Can I track my progress and development with Boostio.ai?",
     answer:
-      "Certainly. Boostio.ai allows users to create precise and comprehensive reports based on the information extracted from legal documents. Whether for personal use or client presentations, detailed reports can be generated to highlight key findings and recommendations.",
+      "Yes, Boostio.ai offers features to track your progress in different areas such as learning, career development, personal productivity, and health. This allows you to see how you've improved over time and where to focus your efforts.",
   },
   {
-    question: "Is my data secure?",
+    question: "Is my data secure with Boostio.ai?",
     answer:
-      "Yes, we prioritize data privacy and security at Boostio.ai. Each user has a separate, exclusive, secured, redundant, and private database. Your data and generated responses are treated with utmost confidentiality. We adhere to stringent security measures and do not share your data with third parties without your explicit consent.",
+      "Absolutely. At Boostio.ai, we prioritize your privacy and data security. Your information is encrypted and stored securely, with strict protocols to ensure your data is protected and confidential.",
   },
   {
-    question: "How is my data protected when using the OpenAI API?",
+    question: "How do I ensure my data is used appropriately?",
     answer: (
       <>
         <p>
-          At Boostio.ai, we take data privacy and security seriously. When you
-          use the OpenAI API, your data is treated with the utmost care and
-          protection.
-        </p>
-        <p>
-          <strong>Data Encryption:</strong> We employ encryption techniques to
-          secure sensitive information, ensuring that your data remains
-          confidential during transmission.
-        </p>
-        <p>
-          <strong>Secure Transmission:</strong> All data sent to and from the
-          OpenAI API is transmitted securely over HTTPS (SSL/TLS), safeguarding
-          it against unauthorized access.
-        </p>
-        <p>
-          <strong>Key Management:</strong> Our platform follows secure key
-          management practices to handle encryption keys, adding an extra layer
-          of protection to your data.
-        </p>
-        <p>
-          <strong>Compliance:</strong> Our encryption practices align with
-          relevant regulations and data protection standards to ensure the
-          highest level of compliance.
-        </p>
-        <p>
-          If you have specific concerns or questions about data protection, feel
-          free to reach out to our support team. Your trust and the security of
-          your data are our top priorities.
+          We adhere to strict data usage policies at Boostio.ai. You have
+          complete control over your data, and we use it only to provide you
+          with personalized recommendations. Our platform complies with all
+          relevant data protection regulations, ensuring your data is used
+          ethically and responsibly.
         </p>
       </>
     ),
   },
   {
-    question: "Can I customize the sources for data analysis?",
+    question: "Can I customize my experience on Boostio.ai?",
     answer:
-      "Certainly. Boostio.ai provides flexibility in choosing data sources for analysis. Whether it's legal documents in PDF format or other relevant sources, you can tailor the data to align with your specific analytical needs.",
+      "Yes, Boostio.ai is designed for customization. You can set your preferences, goals, and interests to ensure the advice and insights you receive are aligned with your personal and professional aspirations.",
   },
   {
-    question: "Is assistance available while using the system?",
+    question: "Is there support available for using the system?",
     answer:
-      "Absolutely! Our platform offers a supportive community forum where you can connect with other users, seek advice, and share insights. Additionally, our experts and mentors are available to provide personalized guidance and assistance.",
+      "Of course! We provide comprehensive support for all our users. Our help center, community forums, and customer support team are available to assist you in maximizing your use of Boostio.ai.",
   },
   {
-    question: "Is there a trial period?",
+    question: "Is there a trial period for Boostio.ai?",
     answer:
-      "Yes, we offer a trial period during which you can explore the capabilities of Boostio.ai. This allows you to experience the benefits firsthand and determine how it can enhance your analytical processes.",
+      "Yes, Boostio.ai offers a trial period so you can explore its full range of features and see firsthand how it can enhance your capabilities and productivity.",
   },
   {
-    question: "How do I get started?",
+    question: "How do I get started with Boostio.ai?",
     answer:
-      "To begin using Boostio.ai, simply sign up for an account on our platform. Once registered, you can start leveraging the power of AI for efficient data analysis, gaining insights from legal documents, and generating reports.",
+      "Getting started with Boostio.ai is simple. Sign up on our platform, set your personal and professional goals, and begin your journey to becoming a supercharged version of yourself with our AI-enhanced insights.",
   },
 ];
 
 const renderQuestions = () => (
   <div className="flex flex-col items-start px-4 md:px-12 mx-auto max-w-screen-sm text-start lg:p-12">
     {faqQuestions.map((faqQuestion, index) => (
-      <details className="p-4 border-b last:border-b-0">
+      <details className="p-4 border-b last:border-b-0 text-gray-300">
         <summary key={index} className="font-semibold cursor-pointer">
           {faqQuestion.question}
         </summary>
         <div className="mt-3">
-          <p className="text-sm leading-6 text-gray-600">
+          <p className="text-sm leading-6 text-gray-400">
             {faqQuestion.answer}
           </p>
         </div>
@@ -144,10 +120,10 @@ const Faq = () => (
   <>
     <div className="px-4 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
       <div className="mx-auto mt-12">
-        <p className="mb-8 text-gray-500 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-700">
+        <p className="mb-8 lg:mb-16 text-2xl md:text-4xl font-bold text-gray-300">
           FAQ{" "}
         </p>
-        <p className="pb-8">
+        <p className="pb-8 text-gray-300">
           <strong>Frequently Asked Questions (FAQ)</strong> list is here answer
           some of the most common knowledge gaps. If you have any other
           questions, please contact us.

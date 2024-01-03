@@ -4,7 +4,7 @@ export const DemoSection = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center p-6 lg:p-32">
       <div className="flex flex-col md:mb-12 lg:mb-0 text-center lg:max-w-xl lg:pr-12">
-        <h1 className="mb-8 text-gray-500 text-2xl md:text-4xl font-bold dark:text-gray-700">
+        <h1 className="mb-8 text-gray-200 text-2xl md:text-4xl font-bold dark:text-gray-200">
           Why adopt?
         </h1>
         <p className="mb-8 md:mb-0 text-sm lg:text-base lg:px-16 pb-12">

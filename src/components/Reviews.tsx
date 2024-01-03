@@ -43,7 +43,7 @@ export default function Reviews() {
     <div className="px-2 pt-24 lg:px-6">
       <div className="flex justify-center">
         <div className="flex flex-row items-center mb-8">
-          <p className="mr-4 text-gray-500 text-2xl md:text-4xl font-bold dark:text-gray-700">
+          <p className="mr-4 text-gray-200 text-2xl md:text-4xl font-bold dark:text-gray-200">
             Some reviews
           </p>
           <Image src={Quote} alt={"quote-img"} width={50} height={50} />
@@ -65,13 +65,13 @@ export default function Reviews() {
                   className="rounded-full object-cover"
                 />
                 <div className="flex flex-col items-start">
-                  <p className="text-base md:text-base text-gray-700 ml-2">
+                  <p className="text-base md:text-base text-gray-200 ml-2">
                     {proof.name}
                   </p>
-                  <p className="text-xs text-gray-700 ml-2">{proof.role}</p>
+                  <p className="text-xs text-gray-200 ml-2">{proof.role}</p>
                 </div>
               </div>
-              <p className="text-xs lg:text-base md:text-sm text-gray-700 mt-4 italic">
+              <p className="text-xs lg:text-base md:text-sm text-gray-200 mt-4 italic">
                 "{proof.quote}"
               </p>
               <Image

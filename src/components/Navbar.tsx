@@ -113,7 +113,7 @@ const Navbar = () => {
   const BurgerMenuItem = () => {
     return (
       <div
-        className="fixed top-0 left-0 w-full bg-black p-2 text-gray-700 border-t border-gray-700"
+        className="fixed top-0 left-0 w-full bg-black p-2 text-gray-200 border-t border-gray-700"
         ref={buttonRef}
       >
         <div className="flex flex-row justify-between items-start">
@@ -139,7 +139,7 @@ const Navbar = () => {
             ) : (
               <button
                 onClick={handleSignIn}
-                className="text-gray-500 underline mt-4"
+                className="text-gray-200 underline mt-4"
               >
                 Get started
               </button>

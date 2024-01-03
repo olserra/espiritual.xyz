@@ -29,7 +29,7 @@ const PrivacyModal: React.FC = () => {
         <div className="flex justify-start">
           <Button
             onClick={handleReject}
-            className="px-4 py-2 bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 mr-2"
+            className="px-4 py-2 bg-white text-gray-300 border border-gray-300 hover:bg-gray-100 mr-2"
           >
             Reject All
           </Button>

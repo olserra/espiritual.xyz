@@ -3,10 +3,10 @@ import React from "react";
 const TermsOfService = () => (
   <div className="px-4 md:px-12 mx-auto max-w-screen-xl text-center lg:px-6">
     <div className="mx-auto mt-12">
-      <p className="mb-8 text-gray-500 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-700">
+      <p className="mb-8 text-gray-200 lg:mb-16 text-2xl md:text-4xl font-bold dark:text-gray-200">
         Terms of Service
       </p>
-      <p className="text-sm text-gray-500 max-w-4xl">
+      <p className="text-sm text-gray-200 max-w-4xl">
         Sure, here's the Terms of Service for BoostioAI: Terms of Service
         Effective Date: 22/02/2022 By accessing and using this website ("Site")
         and the services provided by BoostioAI, you agree to comply with and be

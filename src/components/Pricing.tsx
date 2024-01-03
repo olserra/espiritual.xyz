@@ -9,11 +9,11 @@ type CardProps = {
 const Card = ({ title, description }: CardProps) => (
   <div className="w-full p-8 border border-gray-700 rounded-lg mb-4 md:p-4 md:mb-0">
     <div className="text-start">
-      <p className="text-base md:text-base lg:text-xl lg:font-bold text-gray-700 pb-4">
+      <p className="text-base md:text-base lg:text-xl lg:font-bold text-gray-200 pb-4">
         {">"} {title}
       </p>
     </div>
-    <ul className="leading-loose text-gray-500 text-start text-sm md:text-base">
+    <ul className="leading-loose text-gray-200 text-start text-sm md:text-base">
       {description.map((feat: string, index: number) => (
         <li key={index}>
           <br />
@@ -65,13 +65,13 @@ const AICoachCard = [
 const Pricing = () => (
   <div className="px-4 md:px-12 mx-auto max-w-screen-xl text-center lg:px-6 lg:pb-40">
     <div className="mx-auto max-w-screen-sm mt-12">
-      <p className="pb-8 text-gray-500 lg:mb-2 text-2xl md:text-4xl font-bold dark:text-gray-700">
+      <p className="pb-8 text-gray-200 lg:mb-2 text-2xl md:text-4xl font-bold dark:text-gray-200">
         Pricing
       </p>
       <p>
         <strong>Premium plan:</strong> USD 10/month (per user)
       </p>
-      <p className="py-8 text-gray-600">
+      <p className="py-8 text-gray-200">
         Boostio is the <strong>most affordable all-in-one</strong> suite for
         everything people enablement. Plus, our prices adjust to your needs -
         without making you pay for modules you don’t want.

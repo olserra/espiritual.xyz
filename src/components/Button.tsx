@@ -14,7 +14,7 @@ const Button = ({
   disabled,
   ...props
 }: IButton) => {
-  const baseStyle = `font-sans rounded font-medium py-2 px-4 bg-black min-w-[70px] min-h-[40px]`;
+  const baseStyle = `font-sans rounded font-medium py-2 px-4 bg-gray-600 min-w-[70px] min-h-[40px]`;
 
   const renderButton = () => (
     <button disabled={disabled} type={type} {...props} onClick={onClick}>

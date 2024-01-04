@@ -13,9 +13,9 @@ const COLLECTION_NAME =
 // Additional Chroma configurations
 const chromaConfig = {
   collectionName: COLLECTION_NAME,
-  url: "http://localhost:8000", // Replace with your Chroma URL
+  url: "http://localhost:8000",
   collectionMetadata: {
-    "hnsw:space": "cosine", // Example configuration
+    "hnsw:space": "cosine",
   },
   // Include authentication configs if necessary
 };

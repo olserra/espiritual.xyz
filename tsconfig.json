@@ -17,13 +17,15 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "src/types/*.d.ts",
     "src/pages/_app.tsx",
     "src/components/layout/sidebar/SideNav.js",
     "src/pages/_document.js"

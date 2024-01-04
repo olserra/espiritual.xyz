@@ -57,11 +57,12 @@ function FileUpload() {
         onChange={(e) => setDescription(e.target.value)}
         className="px-4 py-2 rounded"
       />
-      <label>
+      <label className="text-gray-200">
         <input
           type="checkbox"
           checked={isPublic}
           onChange={(e) => setIsPublic(e.target.checked)}
+          className="mr-2"
         />
         Public
       </label>

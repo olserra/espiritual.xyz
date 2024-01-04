@@ -1,8 +1,6 @@
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
-import { initPinecone } from "@/utils/pinecone-client"; // Import your Pinecone client
-import { PINECONE_INDEX_NAME, PINECONE_NAME_SPACE } from "@/config/pinecone";
+import { Chroma } from "@langchain/community/vectorstores/chroma";
 import { NextApiRequest, NextApiResponse } from "next";
 import { IncomingForm } from "formidable";
 import { PDFLoader } from "langchain/document_loaders";
@@ -27,36 +25,28 @@ export default async function handler(
         page.metadata["userId"] = userId;
         return page;
       });
-      /* Split text into chunks */
+
+      // Split text into chunks
       const textSplitter = new RecursiveCharacterTextSplitter({
         chunkSize: 1000,
         chunkOverlap: 200,
       });
-
       const docs = await textSplitter.splitDocuments(pdfDocument);
 
-      /*create and store the embeddings in the vectorStore*/
+      // Create and store the embeddings in the vectorStore
       const embeddings = new OpenAIEmbeddings();
-      const pinecone = await initPinecone();
-      const index = pinecone.Index(PINECONE_INDEX_NAME); //change to your own index name
-      console.log("deleting old data from the vector store...");
-      index._delete({
-        deleteRequest: {
-          filter: {
-            userId: userId,
-          },
-        },
+      const chroma = new Chroma(embeddings, {
+        collectionName: "your-collection-name", // Replace with your actual collection name
+        // Add other necessary Chroma configurations
       });
 
-      console.log("creating vector store...");
+      // Embed the PDF documents and add to Chroma
+      console.log("Embedding and adding documents to Chroma...");
+      for (const doc of docs) {
+        await chroma.addDocuments([doc]);
+      }
 
-      //embed the PDF documents
-      await PineconeStore.fromDocuments(docs, embeddings, {
-        pineconeIndex: index,
-        namespace: PINECONE_NAME_SPACE,
-        textKey: "text",
-      });
-      console.log("done creating vector store");
+      console.log("Done creating vector store");
       res
         .status(200)
         .json({ success: true, message: "PDF uploaded and processed" });

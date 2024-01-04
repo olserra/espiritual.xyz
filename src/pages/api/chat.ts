@@ -1,157 +1,109 @@
-import { PINECONE_INDEX_NAME, PINECONE_NAME_SPACE } from "@/config/pinecone";
-import { makeChain } from "@/utils/makechain";
-import { initPinecone } from "@/utils/pinecone-client";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { Chroma } from "@langchain/community/vectorstores/chroma";
+import { OpenAIEmbeddings } from "@langchain/openai";
 import { prisma } from "../../../prisma/prisma";
 
 export const config = {
   runtime: "edge",
 };
 
+// Define the collection name - this can also be an environment variable
+const COLLECTION_NAME =
+  process.env.CHROMA_COLLECTION_NAME || "default_collection";
+
+// Additional Chroma configurations
+const chromaConfig = {
+  collectionName: COLLECTION_NAME,
+  url: "http://localhost:8000", // Replace with your Chroma URL
+  collectionMetadata: {
+    "hnsw:space": "cosine", // Example configuration
+  },
+  // Include authentication configs if necessary
+};
+
 function createSSEMessage(data: any) {
-  return `event: message \ndata: ${data}\n\n`;
+  return `event: message \ndata: ${JSON.stringify(data)}\n\n`;
 }
 
 export default async function handler(req: Request, res: any) {
-  if (req.method == "POST") {
+  if (req.method === "POST") {
     try {
       const userId = req.headers.get("x-user-id");
+      const knowledgeBaseId = req.headers.get("x-knowledge-base-id");
 
-      if (!userId || userId == "undefined") {
-        return new Response("Unauthorized", {
-          status: 401,
-        });
+      if (!userId || userId === "undefined" || !knowledgeBaseId) {
+        return new Response("Unauthorized", { status: 401 });
       }
+
       const { question, history } = (await req.json()) as {
         question?: string;
         history?: string[];
       };
+
       if (!question) {
-        return new Response("Missing question", {
-          status: 400,
+        return new Response("Missing question", { status: 400 });
+      }
+
+      // Find or create chat history for the specified knowledge base
+      let chatHistory = await prisma.chatHistory.findFirst({
+        where: {
+          knowledgeBaseId: knowledgeBaseId,
+        },
+      });
+
+      const newStep = { type: "question", text: question };
+
+      if (chatHistory) {
+        // Update existing chat history
+        await prisma.chatHistory.update({
+          where: { id: chatHistory.id },
+          data: {
+            conversation: { push: newStep },
+          },
+        });
+      } else {
+        // Create new chat history
+        chatHistory = await prisma.chatHistory.create({
+          data: {
+            knowledgeBaseId: knowledgeBaseId,
+            conversation: [newStep],
+          },
         });
       }
 
+      // Initialize Chroma Vector Store
+      const embeddings = new OpenAIEmbeddings({});
+      const vectorStore = new Chroma(embeddings, chromaConfig);
+
+      // Example usage of vectorStore for a similarity search
       try {
-        const chatHistory = await prisma.chatHistory.findUnique({
-          where: {
-            userId: userId,
-          },
-        });
+        const searchResponse = await vectorStore.similaritySearch(question, 5); // Adjust the number 5 to the desired number of results
+        // Process the searchResponse to format it as needed for your application
+        const formattedResponse = searchResponse
+          .map((doc) => doc.pageContent)
+          .join("\n");
 
-        const newStep = { type: "question", text: question };
-
-        if (chatHistory) {
-          // If chat history exists, update it with the new conversation step
-          await prisma.chatHistory.update({
-            where: {
-              userId: userId,
+        return new Response(
+          createSSEMessage({ type: "response", text: formattedResponse }),
+          {
+            headers: {
+              "Content-Type": "text/event-stream",
+              "Cache-Control": "no-cache",
+              Connection: "keep-alive",
             },
-            data: {
-              conversation: chatHistory.conversation
-                ? {
-                    push: { type: "question", text: question },
-                  }
-                : { set: [{ type: "question", text: question }] },
-            },
-          });
-        } else {
-          // If chat history doesn't exist, create a new record
-          await prisma.chatHistory.create({
-            data: {
-              userId: userId,
-              conversation: [newStep],
-            },
-          });
-        }
+          }
+        );
       } catch (error) {
-        console.log(error);
+        console.error("Error during similarity search:", error);
+        return new Response("Error processing your request", { status: 500 });
       }
-
-      const pinecone = await initPinecone();
-      const index = pinecone.Index(PINECONE_INDEX_NAME);
-      const vectorStore = await PineconeStore.fromExistingIndex(
-        new OpenAIEmbeddings({}),
-        {
-          pineconeIndex: index,
-          textKey: "text",
-          namespace: PINECONE_NAME_SPACE,
-          filter: {
-            userId: userId,
-          },
-        }
-      );
-      const chain = makeChain(vectorStore);
-      const encoder = new TextEncoder();
-      const readable = new ReadableStream({
-        start(controller) {
-          chain
-            .call(
-              {
-                question: question,
-                chat_history: history || [],
-              },
-              [
-                {
-                  handleLLMNewToken(token: string) {
-                    try {
-                      controller.enqueue(
-                        encoder.encode(
-                          createSSEMessage(
-                            JSON.stringify({
-                              type: "token",
-                              text: token,
-                            })
-                          )
-                        )
-                      );
-                    } catch (e) {
-                      console.log(e);
-                    }
-                  },
-                },
-              ]
-            )
-            .then((response) => {
-              try {
-                controller.enqueue(
-                  encoder.encode(
-                    createSSEMessage(
-                      JSON.stringify({
-                        type: "response",
-                        response,
-                      })
-                    )
-                  )
-                );
-                controller.close();
-              } catch (e) {
-                console.log(e);
-              }
-            });
-        },
-      });
-
-      return new Response(readable, {
-        headers: {
-          "Content-Type": "text/event-stream",
-          "Cache-Control": "no-cache",
-          Connection: "keep-alive",
-        },
-      });
     } catch (error: any) {
       console.log("error", error);
-      return new Response("Something went wrong", {
-        status: 500,
-      });
+      return new Response("Something went wrong", { status: 500 });
     }
   } else {
     return new Response("Method not allowed", {
       status: 405,
-      headers: {
-        Allow: "POST",
-      },
+      headers: { Allow: "POST" },
     });
   }
 }

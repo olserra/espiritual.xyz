@@ -7,8 +7,12 @@ import { useSession } from "next-auth/react";
 
 function FileUpload() {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [knowledgeBaseName, setKnowledgeBaseName] = useState("");
+  const [description, setDescription] = useState("");
+  const [isPublic, setIsPublic] = useState(false);
   const router = useRouter();
   const { data: session } = useSession();
+
   const handleClick = () => {
     router.push("/chat");
   };
@@ -18,7 +22,10 @@ function FileUpload() {
     setUploadedFile(file);
 
     const formData = new FormData();
-    formData.append("pdfData", file); // Use "pdfData" as the key
+    formData.append("pdfData", file);
+    formData.append("knowledgeBaseName", knowledgeBaseName);
+    formData.append("description", description);
+    formData.append("isPublic", JSON.stringify(isPublic));
 
     try {
       const response = await axios.post("/api/upload", formData, {
@@ -36,7 +43,28 @@ function FileUpload() {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center">
+    <div className="flex flex-col gap-4 justify-center items-center">
+      <input
+        type="text"
+        placeholder="Knowledge Base Name"
+        value={knowledgeBaseName}
+        onChange={(e) => setKnowledgeBaseName(e.target.value)}
+        className="px-4 py-2 rounded"
+      />
+      <textarea
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        className="px-4 py-2 rounded"
+      />
+      <label>
+        <input
+          type="checkbox"
+          checked={isPublic}
+          onChange={(e) => setIsPublic(e.target.checked)}
+        />
+        Public
+      </label>
       <div
         {...getRootProps()}
         className="border border-gray-400 shadow-lg w-40 h-40 rounded-lg cursor-pointer border-dashed"
@@ -47,11 +75,11 @@ function FileUpload() {
         </p>
       </div>
       {uploadedFile ? (
-        <p>
+        <p className="text-gray-200">
           <i>Uploaded File: {uploadedFile?.name}</i>
         </p>
       ) : (
-        <p>
+        <p className="text-gray-200">
           <i>No file chosen</i>
         </p>
       )}

@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <div className="flex flex-row items-center cursor-pointer">
-        <Image src={BoostioLogo} alt="Boostio logo" width={35} />
+        <Image src={BoostioLogo} alt="Boostio logo" width={30} />
         <p className="ml-1 sm:text-xl text-xl text-gray-300 font-bold font-pacifico">
           Boostio
         </p>

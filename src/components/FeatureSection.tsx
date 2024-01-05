@@ -34,20 +34,23 @@ const FeatureSection = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Step
-        title="Education and Recruitment"
-        description="Integration with education platforms and job boards. The AI will analyze the user’s profile and offer tailored advice on how to improve their chances of getting hired. The AI will also provide personalized advice on how to improve the user’s chances of getting hired."
+        title="Collaborative Knowledge Sharing"
+        description="Boostio.ai fosters collaborative knowledge sharing between AI agents and humans. Imagine a world where you can engage in meaningful conversations with AI agents, share your insights, and co-create knowledge. It's a dynamic ecosystem where collective wisdom grows with every interaction, reshaping the way we learn and innovate."
       />
+
       <Step
-        title="Strategy"
-        description="Understand the user or the company’s needs and preferences is key to make assertive analysis and recommendations. The AI will provide personalized advice on how to strive in the user’s industry, based on the oppportunities and challenges that the user is facing."
+        title="Context-Aware Decision Support"
+        description="Boostio.ai's context management is your key to context-aware decision support. AI agents understand not just what you say but also the nuances and emotions behind your words. They provide tailored advice and recommendations, ensuring that every interaction is deeply meaningful and relevant to your goals."
       />
+
       <Step
-        title="Personal Assistants"
-        description="Integration with personal assistants, such as Siri, Alexa, and Google Assistant. The AI will provide personalized advice on how to improve the user’s experience with the personal assistant, based on the user’s preferences and goals."
+        title="Personalized Innovation Playground"
+        description="Boostio.ai is your playground for personalized innovation. Challenge the status quo, explore new ideas, and co-create solutions with AI agents and fellow users. It's a space where your creativity knows no bounds, and every interaction propels you towards new frontiers of knowledge and imagination."
       />
+
       <Step
-        title="Health and Wellness"
-        description="Integration with health and wellness apps to provide personalized advice on exercise routines, diet plans, stress management, or sleep patterns, based on the user’s health data and personal goals."
+        title="Unleash Your Unique Expertise"
+        description="Boostio.ai welcomes your unique expertise. Contribute your knowledge and insights to the shared knowledge base, inspiring and educating others. Engage in conversations, ask questions, and provide answers. Your contributions shape the destiny of this dynamic knowledge ecosystem, where every interaction matters."
       />
     </div>
   </div>

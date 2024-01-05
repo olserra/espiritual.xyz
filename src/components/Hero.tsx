@@ -31,7 +31,6 @@ const Hero = () => {
             Boostio is a marketplace for Knowledge Bases. You can create your
             own KB and share it with others or use the existing ones.
           </p>
-
           <div className="justify-center pt-8 lg:block md:px-8 xl:px-2"></div>
           {!session ? (
             <div className="hidden justify-center pl-2 lg:block">

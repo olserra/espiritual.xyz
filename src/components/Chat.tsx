@@ -45,8 +45,7 @@ export default function Home() {
     textAreaRef.current?.focus();
   }, []);
 
-  //handle form submission
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     setError(null);
@@ -77,67 +76,34 @@ export default function Home() {
     setQuery("");
 
     try {
-      await fetchEventSource("/api/chat", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
-          "Content-Type": "text/event-stream",
-          "x-user-id": session.data?.user?.id as string,
+          "Content-Type": "application/json",
+          "x-user-id": session.data?.user?.id || "",
         },
         body: JSON.stringify({
           question,
           history,
         }),
-        onopen(res) {
-          if (res.ok && res.status === 200) {
-            console.log("Connection made ", res);
-          } else if (
-            res.status >= 400 &&
-            res.status < 500 &&
-            res.status !== 429
-          ) {
-            console.log("Client side error ", res);
-          }
-          return Promise.resolve();
-        },
-        onmessage(event) {
-          const parsedData = JSON.parse(event.data);
-          if (parsedData.type == "token") {
-            setMessageState((state) => {
-              state.messages[state.messages.length - 1].message +=
-                parsedData.text;
-              return {
-                ...state,
-                messages: [...state.messages],
-              };
-            });
-          } else if (parsedData.type == "response") {
-            setMessageState((state) => {
-              state.messages[state.messages.length - 1].sourceDocs =
-                parsedData.response.sourceDocuments;
-              return {
-                ...state,
-                messages: [...state.messages],
-                history: [
-                  ...state.history,
-                  [question, parsedData.response.text],
-                ],
-              };
-            });
-          } else {
-            throw new Error(`unknown message event type ${parsedData.type}`);
-          }
-        },
-        onclose() {
-          console.log("Connection closed by the server");
-        },
-        onerror(err) {
-          console.log("There was an error from server", err);
-        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const responseData = await response.json();
+
+      setMessageState((state) => {
+        state.messages[state.messages.length - 1].message = responseData.text;
+        return {
+          ...state,
+          messages: [...state.messages],
+          history: [...state.history, [question, responseData.text]],
+        };
       });
 
       setLoading(false);
-
-      //scroll to bottom
       messageListRef.current?.scrollTo(0, messageListRef.current.scrollHeight);
     } catch (error) {
       setLoading(false);

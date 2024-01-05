@@ -22,7 +22,7 @@ function FileUpload() {
     setUploadedFile(file);
 
     const formData = new FormData();
-    formData.append("pdfData", file);
+    formData.append("pdfFile", file);
     formData.append("knowledgeBaseName", knowledgeBaseName);
     formData.append("description", description);
     formData.append("isPublic", JSON.stringify(isPublic));

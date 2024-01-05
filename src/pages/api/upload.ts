@@ -23,7 +23,7 @@ export default async function handler(
   }
 
   const form = new formidable.IncomingForm();
-  form.parse(req, async (err, fields, files) => {
+  form.parse(req, async (err: any, fields: any, files: any) => {
     if (err) {
       console.error("Error processing the upload:", err);
       return res.status(500).json({ error: "Failed to process the upload" });

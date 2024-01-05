@@ -45,7 +45,7 @@ export default function Home() {
     textAreaRef.current?.focus();
   }, []);
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: any) {
     e.preventDefault();
 
     setError(null);

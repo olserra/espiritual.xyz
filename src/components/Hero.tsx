@@ -4,6 +4,7 @@ import Image from "next/image";
 import BrainGIF from "@/assets/brain.gif";
 import { useRouter } from "next/router";
 import { signIn, useSession } from "next-auth/react";
+import WaitlistInput from "@/components/WaitlistInput";
 
 const Hero = () => {
   const router = useRouter();
@@ -16,24 +17,19 @@ const Hero = () => {
     });
   };
 
-  const handleChat = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push("/upload-doc");
-  };
-
   return (
     <>
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:mx-24 mb-8 px-6 sm:px-2 lg:px-0">
         <div className="flex flex-col lg:max-w-[550px] lg:mx-12">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4 md:px-8 xl:px-2">
-            Collaborate and Innovate: Public or Private AI Knowledge Bases
+            Shared knowledge bases across multiple AI agents
           </p>
           <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200 md:px-8 xl:px-2">
-            Customize and Share AI Knowledge, Tailored to Your Community's Needs
+            Context management for AI agents and humans
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0 md:px-8 xl:px-2">
-            Revolutionize Collaboration with AI: A Pioneering Platform for
-            Community-Driven, Secure Knowledge Creation and Sharing
+            Boostio is a marketplace for Knowledge Bases. You can create your
+            own KB and share it with others or use the existing ones.
           </p>
 
           <div className="justify-center pt-8 lg:block md:px-8 xl:px-2"></div>
@@ -45,9 +41,7 @@ const Hero = () => {
             </div>
           ) : (
             <div className="hidden justify-center pl-8 lg:block xl:pl-2">
-              <Button onClick={handleChat} className="text-white">
-                Create a Knowledge Base
-              </Button>
+              <WaitlistInput />
             </div>
           )}
         </div>
@@ -62,9 +56,7 @@ const Hero = () => {
           </div>
         ) : (
           <div className="flex justify-center pt-16 lg:hidden">
-            <Button onClick={handleChat} className="text-white">
-              Chat
-            </Button>
+            <WaitlistInput />
           </div>
         )}
       </div>

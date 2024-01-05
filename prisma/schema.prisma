@@ -9,6 +9,12 @@ datasource db {
   shadowDatabaseUrl = env("POSTGRES_DB_URL_NON_POOLING")
 }
 
+model FormSubmission {
+  id        String  @id @default(cuid())
+  email     String
+  createdAt DateTime @default(now())
+}
+
 model User {
   id            String         @id @default(cuid())
   name          String?
@@ -18,38 +24,6 @@ model User {
   accounts      Account[]
   sessions      Session[]
   role          Role           @default(USER)
-  knowledgeBases KnowledgeBase[]
-}
-
-model KnowledgeBase {
-  id            String       @id @default(cuid())
-  name          String
-  description   String
-  isPublic      Boolean      @map("is_public")
-  format        String       @default("default_format")
-  userId        String       @map("user_id")
-  createdAt     DateTime     @default(now())
-  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  chatHistories ChatHistory[]
-  documents     Document[]
-}
-
-model ChatHistory {
-  id              String         @id @default(cuid())
-  knowledgeBaseId String         @map("knowledge_base_id")
-  conversation    Json[]
-  createdAt       DateTime       @default(now())
-  knowledgeBase   KnowledgeBase  @relation(fields: [knowledgeBaseId], references: [id], onDelete: Cascade)
-}
-
-model Document {
-  id              String         @id @default(cuid())
-  knowledgeBaseId String         @map("knowledge_base_id")
-  name            String
-  path            String         // Path to the document storage
-  chromaRef       String         // Reference ID in Chroma DB
-  createdAt       DateTime       @default(now())
-  knowledgeBase   KnowledgeBase  @relation(fields: [knowledgeBaseId], references: [id], onDelete: Cascade)
 }
 
 model Account {

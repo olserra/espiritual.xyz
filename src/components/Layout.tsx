@@ -15,18 +15,15 @@ export default function Layout({ children }: IProps) {
       <Head>
         <meta name="description" content="Boostio.ai" />
         <meta property="og:image" content="@/assets/screenshot.png" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <NextSeo
         title="Boostio"
         description="Personalize AI with Your Metadata"
       />
-      <div className="min-h-screen lg:mt-24">{children}</div>
+      <div className="min-h-screen lg:mt-24" key={Math.random()}>
+        {children}
+      </div>
       <Footer />
     </div>
   );

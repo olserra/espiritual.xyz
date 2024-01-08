@@ -1,5 +1,10 @@
 import React from "react";
 
+interface FaqQuestionProps {
+  question: string;
+  answer: React.ReactNode;
+}
+
 const faqQuestions = [
   {
     question: "What is Boostio.ai's Vision for the Future?",
@@ -188,21 +193,17 @@ const faqQuestions = [
   },
 ];
 
-const renderQuestions = () => (
-  <div className="flex flex-col items-start px-4 md:px-12 mx-auto max-w-screen-sm text-start lg:p-12">
-    {faqQuestions.map((faqQuestion, index) => (
-      <details className="p-4 border-b border-b-gray-500 last:border-b-0 text-gray-300">
-        <summary key={index} className="cursor-pointer">
-          {faqQuestion.question}
-        </summary>
-        <div className="mt-3">
-          <p className="text-sm leading-6 text-gray-400">
-            {faqQuestion.answer}
-          </p>
-        </div>
-      </details>
-    ))}
-  </div>
+const FaqQuestion: React.FC<FaqQuestionProps> = ({ question, answer }) => (
+  <details className="p-4 border-b border-b-gray-500 last:border-b-0 text-gray-300">
+    <summary className="cursor-pointer">{question}</summary>
+    <div className="mt-3">
+      {typeof answer === "string" ? (
+        <p className="text-sm leading-6 text-gray-400">{answer}</p>
+      ) : (
+        answer
+      )}
+    </div>
+  </details>
 );
 
 const Faq = () => (
@@ -210,18 +211,25 @@ const Faq = () => (
     <div className="px-4 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
       <div className="mx-auto mt-12">
         <p className="mb-8 lg:mb-16 text-2xl md:text-4xl font-bold text-gray-300">
-          FAQ{" "}
+          FAQ
         </p>
         <p className="pb-8 text-gray-300">
-          <strong>Frequently Asked Questions (FAQ)</strong> list is here answer
-          some of the most common knowledge gaps. If you have any other
+          <strong>Frequently Asked Questions (FAQ)</strong> list is here to
+          answer some of the most common knowledge gaps. If you have any other
           questions, please contact us.
         </p>
       </div>
     </div>
     <div className="py-16 md:px-12 mx-auto max-w-screen-xl">
-      {renderQuestions()}
+      {faqQuestions.map((faqQuestion, index) => (
+        <FaqQuestion
+          key={index}
+          question={faqQuestion.question}
+          answer={faqQuestion.answer}
+        />
+      ))}
     </div>
   </>
 );
+
 export default Faq;

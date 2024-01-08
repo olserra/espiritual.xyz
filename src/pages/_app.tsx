@@ -3,23 +3,29 @@ import Script from "next/script";
 import { SessionProvider } from "next-auth/react";
 import { ContextProvider } from "@/context/context";
 import PrivacyModal from "@/components/PrivacyModal";
-
 import "../styles/global.css";
 
-const App = ({ Component, pageProps: { session, ...pageProps } }: any) => {
+interface AppProps {
+  Component: React.ComponentType;
+  pageProps: {
+    session: any; // Replace 'any' with a more specific type if possible
+    // other page props
+  };
+}
+
+const App: React.FC<AppProps> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   const [hasPrivacyModalShown, setHasPrivacyModalShown] = useState(false);
 
   useEffect(() => {
-    // Check if the modal has been shown before
     const hasShown = localStorage.getItem("hasPrivacyModalShown");
-
     if (!hasShown) {
-      // If not shown, set the flag and display the modal
       setHasPrivacyModalShown(true);
       localStorage.setItem("hasPrivacyModalShown", "true");
     }
   }, []);
-
   return (
     <>
       <Script

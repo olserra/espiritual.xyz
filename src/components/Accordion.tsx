@@ -6,9 +6,13 @@ import { cn } from "@/utils/cn";
 
 const Accordion = AccordionPrimitive.Root;
 
+type AccordionItemProps = React.ComponentPropsWithoutRef<
+  typeof AccordionPrimitive.Item
+>;
+
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+  AccordionItemProps
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
@@ -21,9 +25,13 @@ const AccordionItem = React.forwardRef<
 ));
 AccordionItem.displayName = "AccordionItem";
 
+type AccordionTriggerProps = React.ComponentPropsWithoutRef<
+  typeof AccordionPrimitive.Trigger
+>;
+
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+  AccordionTriggerProps
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
@@ -41,14 +49,20 @@ const AccordionTrigger = React.forwardRef<
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
+type AccordionContentProps = React.ComponentPropsWithoutRef<
+  typeof AccordionPrimitive.Content
+>;
+
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+  AccordionContentProps
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
     className={cn(
-      "data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden text-sm transition-all",
+      "overflow-hidden text-sm transition-all",
+      "data-[state=open]:animate-accordion-down",
+      "data-[state=closed]:animate-accordion-up",
       className
     )}
     {...props}

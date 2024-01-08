@@ -6,7 +6,7 @@ import svgs from "../helpers/svgs";
 import Button from "./Button";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { ChevronArrow } from "./Arrow";
+import { Arrow } from "./Arrow";
 import CloseIcon from "@/assets/close-icon.png";
 
 const Navbar = () => {
@@ -15,8 +15,6 @@ const Navbar = () => {
   const [avatarImg, setAvatarImg] = useState("");
   const buttonRef: any = useRef(null);
   const { data: session } = useSession();
-  const openMobileMenu = () => setIsMobileMenuOpen(true);
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   useEffect(() => {
     session?.user?.image && setAvatarImg(session.user.image);
@@ -61,7 +59,7 @@ const Navbar = () => {
 
   const TabItems = () => (
     <div className="flex lg:flex-row pr-4 lg:pl-52">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center text-gray-200">
         {LandingMenuItems.map((item, index) => (
           <a
             target={item.href === "Careers" ? "_blank" : "_self"}
@@ -85,7 +83,7 @@ const Navbar = () => {
               height={20}
               className="max-h-[30px] max-w-[30px] mr-4 mt-4 rounded-2xl"
             />
-            <ChevronArrow direction="down" className="lg:mt-6" />
+            <Arrow direction="down" className="lg:mt-6" />
           </div>
         ) : (
           <Button onClick={handleSignIn} className="text-white lg:mt-4">

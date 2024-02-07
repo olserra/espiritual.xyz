@@ -8,6 +8,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { Arrow } from "./Arrow";
 import CloseIcon from "@/assets/close-icon.png";
+import { useRouter } from "next/router";
+import { handleSignIn } from "@/helpers/handleSignIn";
 
 const Navbar = () => {
   const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
@@ -15,6 +17,7 @@ const Navbar = () => {
   const [avatarImg, setAvatarImg] = useState("");
   const buttonRef: any = useRef(null);
   const { data: session } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
     session?.user?.image && setAvatarImg(session.user.image);
@@ -26,13 +29,6 @@ const Navbar = () => {
       href: `https://www.linkedin.com/company/boostio-ai/`,
     },
   ];
-
-  const handleSignIn = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    signIn("google", {
-      callbackUrl: "https://www.boostio.ai/api/auth/callback/google",
-    });
-  };
 
   const handleSignOut = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();

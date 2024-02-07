@@ -206,7 +206,7 @@ const FaqQuestion: React.FC<FaqQuestionProps> = ({ question, answer }) => (
   </details>
 );
 
-const Faq = () => (
+export const Faq = () => (
   <>
     <div className="px-4 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
       <div className="mx-auto mt-12">
@@ -231,5 +231,3 @@ const Faq = () => (
     </div>
   </>
 );
-
-export default Faq;

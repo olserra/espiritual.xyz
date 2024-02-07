@@ -2,27 +2,11 @@ import React from "react";
 import Button from "./Button";
 import Image from "next/image";
 import BrainGIF from "@/assets/brain.gif";
-import { signIn, useSession } from "next-auth/react";
-import WaitlistInput from "@/components/WaitlistInput";
+import { useSession } from "next-auth/react";
+import { handleSignIn } from "@/helpers/handleSignIn";
 
 const Hero: React.FC = () => {
   const { data: session } = useSession();
-
-  const handleSignIn = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    signIn("google", {
-      callbackUrl: "https://www.boostio.ai/api/auth/callback/google",
-    });
-  };
-
-  const renderActionButton = () =>
-    session ? (
-      <WaitlistInput />
-    ) : (
-      <Button onClick={handleSignIn} className="text-white">
-        Get started
-      </Button>
-    );
 
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:mx-24 mb-8 px-6 sm:px-2 lg:px-0">
@@ -40,16 +24,24 @@ const Hero: React.FC = () => {
             own KB and share it with others or use the existing ones.
           </p>
         </div>
-        <div className="pt-8 md:px-8 xl:px-2 lg:block">
-          {renderActionButton()}
-        </div>
+        {!session && (
+          <div className="pt-8 md:px-8 xl:px-2 lg:block">
+            <Button onClick={handleSignIn} className="text-white">
+              Get started
+            </Button>
+          </div>
+        )}
       </div>
       <div className="items-center justify-center lg:mr-20">
         <Image src={BrainGIF} alt="matrix-img" width={600} height={600} />
       </div>
-      <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
-        {renderActionButton()}
-      </div>
+      {!session && (
+        <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
+          <Button onClick={handleSignIn} className="text-white">
+            Get started
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

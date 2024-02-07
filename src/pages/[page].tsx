@@ -1,14 +1,16 @@
 import React from "react";
 import { useRouter } from "next/router";
 import LandingPageLayout from "@/components/Layout";
-import Faq from "@/components/Faq";
-import PrivacyPolicy from "@/components/PrivacyPolicy";
-import TermsOfService from "@/components/TermsOfService";
+import { Faq } from "@/components/Faq";
+import { PrivacyPolicy } from "@/components/PrivacyPolicy";
+import { TermsOfService } from "@/components/TermsOfService";
+import { Profiler } from "@/components/Profiler";
 
 const PageContent = {
   faq: <Faq />,
   "privacy-policy": <PrivacyPolicy />,
   "terms-of-service": <TermsOfService />,
+  profiler: <Profiler />,
 };
 
 const DynamicPage = () => {

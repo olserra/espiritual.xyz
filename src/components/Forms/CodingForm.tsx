@@ -63,7 +63,6 @@ export const CodingForm: React.FC<CodingFormProps> = ({
             />
             XML
           </label>
-          {/* Add more data format options */}
         </div>
 
         <p className="text-gray-400 text-sm">Error Handling:</p>
@@ -90,7 +89,6 @@ export const CodingForm: React.FC<CodingFormProps> = ({
             />
             If-Else
           </label>
-          {/* Add more error handling options */}
         </div>
 
         <p className="text-gray-400 text-sm">Variable Naming:</p>
@@ -117,7 +115,6 @@ export const CodingForm: React.FC<CodingFormProps> = ({
             />
             Snake Case
           </label>
-          {/* Add more variable naming options */}
         </div>
 
         <p className="text-gray-400 text-sm">Coding Style:</p>
@@ -146,7 +143,6 @@ export const CodingForm: React.FC<CodingFormProps> = ({
             />
             Object-Oriented
           </label>
-          {/* Add more coding style options */}
         </div>
 
         <p className="text-gray-400 text-sm">Language:</p>

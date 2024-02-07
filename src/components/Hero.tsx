@@ -8,6 +8,11 @@ import { handleSignIn } from "@/helpers/handleSignIn";
 const Hero: React.FC = () => {
   const { data: session } = useSession();
 
+  const handleStart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = "/profiler";
+  };
+
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:mx-24 mb-8 px-6 sm:px-2 lg:px-0">
       <div className="flex flex-col lg:max-w-[550px] lg:mx-12">
@@ -24,7 +29,13 @@ const Hero: React.FC = () => {
             own KB and share it with others or use the existing ones.
           </p>
         </div>
-        {!session && (
+        {session ? (
+          <div className="pt-8 md:px-8 xl:px-2 lg:block">
+            <Button onClick={handleStart} className="text-white">
+              Create your profile
+            </Button>
+          </div>
+        ) : (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">
             <Button onClick={handleSignIn} className="text-white">
               Get started
@@ -35,7 +46,13 @@ const Hero: React.FC = () => {
       <div className="items-center justify-center lg:mr-20">
         <Image src={BrainGIF} alt="matrix-img" width={600} height={600} />
       </div>
-      {!session && (
+      {session ? (
+        <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
+          <Button onClick={handleStart} className="text-white">
+            Create your profile
+          </Button>
+        </div>
+      ) : (
         <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
           <Button onClick={handleSignIn} className="text-white">
             Get started

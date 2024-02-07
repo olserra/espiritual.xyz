@@ -39,10 +39,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
   return (
     <div className={className}>
       <div className="flex flex-col justify-start items-start gap-2">
-        <p className="text-gray-400 text-sm">Data Format:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Data Format:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="JSON"
               checked={codingPreferences.dataFormat.includes("JSON")}
@@ -54,6 +61,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="XML"
               checked={codingPreferences.dataFormat.includes("XML")}
@@ -65,10 +79,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Error Handling:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Error Handling:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Try-Catch"
               checked={codingPreferences.errorHandling.includes("Try-Catch")}
@@ -80,6 +101,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="If-Else"
               checked={codingPreferences.errorHandling.includes("If-Else")}
@@ -91,10 +119,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Variable Naming:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Variable Naming:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="CamelCase"
               checked={codingPreferences.variableNaming.includes("CamelCase")}
@@ -106,6 +141,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="SnakeCase"
               checked={codingPreferences.variableNaming.includes("SnakeCase")}
@@ -117,10 +159,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Coding Style:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Coding Style:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Functional"
               checked={codingPreferences.codingStyle.includes("Functional")}
@@ -132,6 +181,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Object-Oriented"
               checked={codingPreferences.codingStyle.includes(
@@ -145,10 +201,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Language:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Language:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="JavaScript"
               checked={codingPreferences.language.includes("JavaScript")}
@@ -158,6 +221,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Python"
               checked={codingPreferences.language.includes("Python")}
@@ -167,6 +237,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="TypeScript"
               checked={codingPreferences.language.includes("TypeScript")}
@@ -176,6 +253,13 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Java"
               checked={codingPreferences.language.includes("Java")}
@@ -185,14 +269,36 @@ export const CodingForm: React.FC<CodingFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Add comments:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 text-sm font-semibold">Add comments:</p>
+        <div className="flex gap-2 mb-6">
           <label>
-            <input type="radio" name="comments" value="Yes" />
+            <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
+              type="radio"
+              name="comments"
+              value="Yes"
+            />
             Yes
           </label>
           <label>
-            <input type="radio" name="comments" value="No" />
+            <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
+              type="radio"
+              name="comments"
+              value="No"
+            />
             No
           </label>
         </div>

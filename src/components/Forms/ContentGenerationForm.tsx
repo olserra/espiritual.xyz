@@ -39,10 +39,17 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
   return (
     <div className={className}>
       <div className="flex flex-col justify-start items-start gap-2">
-        <p className="text-gray-400 text-sm">Content Types:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 font-semibold text-sm">Content Types:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Article"
               checked={contentGenerationPreferences.contentTypes.includes(
@@ -56,6 +63,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Blog Post"
               checked={contentGenerationPreferences.contentTypes.includes(
@@ -70,6 +84,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
 
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Case Study"
               checked={contentGenerationPreferences.contentTypes.includes(
@@ -83,6 +104,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Whitepaper"
               checked={contentGenerationPreferences.contentTypes.includes(
@@ -96,10 +124,17 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Writing Style:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 font-semibold text-sm">Writing Style:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Formal"
               checked={contentGenerationPreferences.writingStyle.includes(
@@ -113,6 +148,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Informal"
               checked={contentGenerationPreferences.writingStyle.includes(
@@ -126,6 +168,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Technical"
               checked={contentGenerationPreferences.writingStyle.includes(
@@ -139,6 +188,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Casual"
               checked={contentGenerationPreferences.writingStyle.includes(
@@ -152,6 +208,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Conversational"
               checked={contentGenerationPreferences.writingStyle.includes(
@@ -165,10 +228,17 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Tone:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 font-semibold text-sm">Tone:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Formal"
               checked={contentGenerationPreferences.tone.includes("Formal")}
@@ -178,6 +248,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Informative"
               checked={contentGenerationPreferences.tone.includes(
@@ -189,6 +266,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Persuasive"
               checked={contentGenerationPreferences.tone.includes("Persuasive")}
@@ -198,6 +282,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Casual"
               checked={contentGenerationPreferences.tone.includes("Casual")}
@@ -207,10 +298,17 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Audience:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 font-semibold text-sm">Audience:</p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="General"
               checked={contentGenerationPreferences.audience.includes(
@@ -222,6 +320,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Technical"
               checked={contentGenerationPreferences.audience.includes(
@@ -233,6 +338,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Business"
               checked={contentGenerationPreferences.audience.includes(
@@ -244,10 +356,19 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
         </div>
 
-        <p className="text-gray-400 text-sm">Multimedia Format:</p>
-        <div className="flex gap-2">
+        <p className="text-gray-100 font-semibold text-sm">
+          Multimedia Format:
+        </p>
+        <div className="flex gap-2 mb-6">
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Text"
               checked={contentGenerationPreferences.multimediaFormat.includes(
@@ -261,6 +382,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Image"
               checked={contentGenerationPreferences.multimediaFormat.includes(
@@ -274,6 +402,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Audio"
               checked={contentGenerationPreferences.multimediaFormat.includes(
@@ -287,6 +422,13 @@ export const ContentGenerationForm: React.FC<ContentGenerationFormProps> = ({
           </label>
           <label>
             <input
+              style={{
+                boxShadow:
+                  "1px 1px 2px #ff178f, -1px -1px 2px #ff178f, inset 1px 1px 2px #ff178f, inset -1px -1px 2px #ff178f",
+                marginRight: "8px",
+                height: "20px",
+                width: "20px",
+              }}
               type="checkbox"
               value="Video"
               checked={contentGenerationPreferences.multimediaFormat.includes(

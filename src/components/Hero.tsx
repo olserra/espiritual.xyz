@@ -46,19 +46,6 @@ const Hero: React.FC = () => {
       <div className="items-center justify-center lg:mr-20">
         <Image src={BrainGIF} alt="matrix-img" width={600} height={600} />
       </div>
-      {session ? (
-        <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
-          <Button onClick={handleStart} className="text-white">
-            Create your profile
-          </Button>
-        </div>
-      ) : (
-        <div className="flex justify-center pt-8 md:pt-16 lg:hidden">
-          <Button onClick={handleSignIn} className="text-white">
-            Get started
-          </Button>
-        </div>
-      )}
     </div>
   );
 };

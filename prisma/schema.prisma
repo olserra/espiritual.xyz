@@ -10,20 +10,22 @@ datasource db {
 }
 
 model FormSubmission {
-  id        String  @id @default(cuid())
+  id        String    @id @default(cuid())
   email     String
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 }
 
 model User {
-  id            String         @id @default(cuid())
-  name          String?
-  email         String?        @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
-  role          Role           @default(USER)
+  id                     String                    @id @default(cuid())
+  name                   String?
+  email                  String?                   @unique
+  emailVerified          DateTime?
+  image                  String?
+  accounts               Account[]
+  sessions               Session[]
+  role                   Role                      @default(USER)
+  codingPreferences      CodingPreferences?       // Added reverse relation field
+  contentGenerationPreferences ContentGenerationPreferences? // Added reverse relation field
 }
 
 model Account {
@@ -42,26 +44,52 @@ model Account {
   oauth_token_secret String?
   oauth_token        String?
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user               User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
 
 model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique @map("session_token")
-  userId       String   @map("user_id")
+  id           String     @id @default(cuid())
+  sessionToken String     @unique @map("session_token")
+  userId       String     @map("user_id")
   expires      DateTime
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model VerificationToken {
-  id         Int      @id @default(autoincrement())
+  id         Int        @id @default(autoincrement())
   identifier String
-  token      String   @unique
+  token      String     @unique
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+// Add fields for coding preferences
+model CodingPreferences {
+  id                  String    @id @default(cuid())
+  userId              String    @map("user_id") @unique
+  language            String[]
+  codingStyle         String[]
+  dataFormat          String[]
+  errorHandling       String[]
+  variableNaming      String[]
+
+  user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Add fields for content generation preferences
+model ContentGenerationPreferences {
+  id                  String    @id @default(cuid())
+  userId              String    @map("user_id") @unique
+  contentTypes        String[]
+  writingStyle        String[]
+  tone                String[]
+  audience            String[]
+  multimediaFormat    String[]
+
+  user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 enum Role {

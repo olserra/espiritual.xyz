@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { Context } from "@/context/context";
 import { GetSessionParams, getSession } from "next-auth/react";
 
@@ -34,7 +34,7 @@ export const CodingForm: React.FC<CodingFormProps> = ({
 
   useEffect(() => {
     // Log codingPreferences whenever it changes for debugging purposes
-    console.log("Coding Preferences Updated:", codingPreferences);
+    console.log("State:", state);
     // Call the onPreferencesChange callback to notify parent components of the changes
     onPreferencesChange(codingPreferences);
   }, [codingPreferences, onPreferencesChange]);

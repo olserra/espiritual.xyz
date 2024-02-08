@@ -19,14 +19,14 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            Shared knowledge bases across multiple AI agents
+            Improve LLMs and ChatGPT performance
           </p>
           <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200">
-            Context management for AI agents and humans
+            Calibrate ChatGPT to your needs
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Boostio is a marketplace for Knowledge Bases. You can create your
-            own KB and share it with others or use the existing ones.
+            Create a profile to customize the AI's responses to your
+            preferences, and get the most out of your ChatGPT experience.
           </p>
         </div>
         {session ? (

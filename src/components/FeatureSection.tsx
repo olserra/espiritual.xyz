@@ -30,23 +30,43 @@ const FeatureSection: React.FC = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Step
-        title="Collaborative Knowledge Sharing"
-        description="Boostio.ai fosters collaborative knowledge sharing between AI agents and humans. Imagine a world where you can engage in meaningful conversations with AI agents, share your insights, and co-create knowledge. It's a dynamic ecosystem where collective wisdom grows with every interaction, reshaping the way we learn and innovate."
+        title="Developers' Language Preferences"
+        description="Developers can calibrate responses to their preferred programming language, ensuring that code examples and technical explanations are consistently presented in their language of choice. For example, they can specify responses in TypeScript instead of JavaScript for better alignment with their project requirements."
       />
 
       <Step
-        title="Context-Aware Decision Support"
-        description="Boostio.ai's context management is your key to context-aware decision support. AI agents understand not just what you say but also the nuances and emotions behind your words. They provide tailored advice and recommendations, ensuring that every interaction is deeply meaningful and relevant to your goals."
+        title="Content Creators' Tone Control"
+        description="Content creators can adjust the tone of responses based on the intended audience or context. They have the flexibility to generate content in a formal or informal language, depending on the platform, target audience, or specific campaign requirements. This allows them to maintain brand voice consistency while adapting to various communication styles."
       />
 
       <Step
-        title="Personalized Innovation Playground"
-        description="Boostio.ai is your playground for personalized innovation. Challenge the status quo, explore new ideas, and co-create solutions with AI agents and fellow users. It's a space where your creativity knows no bounds, and every interaction propels you towards new frontiers of knowledge and imagination."
+        title="Educators' Learning Styles"
+        description="Educators can customize responses to accommodate different learning styles and preferences of their students. They can calibrate the AI to provide explanations, examples, and learning materials in formats that align with visual, auditory, or kinesthetic learning styles, fostering a more inclusive and engaging learning environment."
       />
 
       <Step
-        title="Unleash Your Unique Expertise"
-        description="Boostio.ai welcomes your unique expertise. Contribute your knowledge and insights to the shared knowledge base, inspiring and educating others. Engage in conversations, ask questions, and provide answers. Your contributions shape the destiny of this dynamic knowledge ecosystem, where every interaction matters."
+        title="Customer Support Tailoring"
+        description="Customer support teams can tailor responses to meet the specific needs and preferences of individual customers. They can calibrate the AI to deliver responses in different languages, adjust the level of formality, or personalize recommendations based on past interactions and customer profiles, enhancing the overall customer experience."
+      />
+
+      <Step
+        title="Legal Professionals' Terminology Preferences"
+        description="Legal professionals can customize responses to adhere to specific legal terminology or citation formats. They can calibrate the AI to generate legal documents, case summaries, or contract clauses using precise language and referencing conventions relevant to their jurisdiction or practice area, ensuring accuracy and compliance."
+      />
+
+      <Step
+        title="Medical Practitioners' Patient Communication"
+        description="Medical practitioners can adjust the tone and level of detail in responses to effectively communicate with patients. They can calibrate the AI to provide medical information in layman's terms for patient education purposes or deliver more technical explanations for discussions with colleagues or researchers, improving patient understanding and healthcare outcomes."
+      />
+
+      <Step
+        title="Marketing Personalization"
+        description="Marketing professionals can personalize responses to match the preferences and interests of their target audience segments. They can calibrate the AI to generate tailored marketing messages, product recommendations, and promotional offers based on demographic data, past interactions, and behavioral patterns, maximizing engagement and conversion rates."
+      />
+
+      <Step
+        title="Language Learners' Proficiency Levels"
+        description="Language learners can adjust the difficulty level and complexity of responses to match their proficiency levels and learning objectives. They can calibrate the AI to provide simple explanations and vocabulary for beginners or more advanced language structures and idiomatic expressions for intermediate and advanced learners, facilitating language acquisition and fluency development."
       />
     </div>
   </div>

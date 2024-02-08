@@ -1,16 +1,36 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 
-interface IState {
-  youTubeData: [];
-}
+// Create the context with default value as empty state
+const Context = createContext<
+  [IState, React.Dispatch<React.SetStateAction<IState>>]
+>([{} as IState, () => {}]);
 
-const Context = React.createContext([{}, () => {}]);
-
-const ContextProvider = (props: any) => {
+// Context provider component
+const ContextProvider: React.FC<{ children: React.ReactNode }> = (props) => {
+  // Initialize state with default values
   const [state, setState] = useState<IState>({
-    youTubeData: [],
+    user: {
+      name: "",
+      email: "",
+      image: "",
+    },
+    codingPreferences: {
+      language: [],
+      codingStyle: [],
+      dataFormat: [],
+      errorHandling: [],
+      variableNaming: [],
+    },
+    contentGenerationPreferences: {
+      contentTypes: [],
+      writingStyle: [],
+      tone: [],
+      audience: [],
+      multimediaFormat: [],
+    },
   });
 
+  // Return the context provider with state and setState
   return (
     <Context.Provider value={[state, setState]}>
       {props.children}

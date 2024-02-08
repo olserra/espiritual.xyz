@@ -1,40 +1,43 @@
-// CodingForm.tsx
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { Context } from "@/context/context";
+import { GetSessionParams, getSession } from "next-auth/react";
+
+interface CodingFormProps {
+  onPreferencesChange: (preferences: CodingPreferences) => void;
+  className?: string;
+}
 
 export const CodingForm: React.FC<CodingFormProps> = ({
   onPreferencesChange,
   className,
 }) => {
-  const [codingPreferences, setCodingPreferences] = useState<CodingPreferences>(
-    {
-      language: [],
-      codingStyle: [],
-      dataFormat: [],
-      errorHandling: [],
-      variableNaming: [],
-    }
-  );
-
-  useEffect(() => {
-    onPreferencesChange(codingPreferences);
-  }, [codingPreferences, onPreferencesChange]);
+  const [state, setState] = useContext(Context); // Accessing state and setState from context
+  const codingPreferences = state.codingPreferences; // Extract codingPreferences from state
 
   const handleCheckboxChange = (
     category: keyof CodingPreferences,
     value: string
   ) => {
-    setCodingPreferences((prevPreferences) => {
-      const updatedPreferences = { ...prevPreferences };
-      if (updatedPreferences[category].includes(value)) {
-        updatedPreferences[category] = updatedPreferences[category].filter(
-          (item) => item !== value
-        );
-      } else {
-        updatedPreferences[category] = [...updatedPreferences[category], value];
-      }
-      return updatedPreferences;
-    });
+    // Updating codingPreferences in the context's state
+    setState((prevState) => ({
+      ...prevState,
+      codingPreferences: {
+        ...prevState.codingPreferences,
+        [category]: prevState.codingPreferences[category].includes(value)
+          ? prevState.codingPreferences[category].filter(
+              (item) => item !== value
+            )
+          : [...prevState.codingPreferences[category], value],
+      },
+    }));
   };
+
+  useEffect(() => {
+    // Log codingPreferences whenever it changes for debugging purposes
+    console.log("Coding Preferences Updated:", codingPreferences);
+    // Call the onPreferencesChange callback to notify parent components of the changes
+    onPreferencesChange(codingPreferences);
+  }, [codingPreferences, onPreferencesChange]);
 
   return (
     <div className={className}>
@@ -305,4 +308,17 @@ export const CodingForm: React.FC<CodingFormProps> = ({
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async (
+  context: GetSessionParams | undefined
+) => {
+  const session = await getSession(context); // Get session
+  const userId = session?.user?.id; // Extract user ID from session
+
+  return {
+    props: {
+      userId, // Pass userId as prop to the component
+    },
+  };
 };

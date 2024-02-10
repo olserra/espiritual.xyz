@@ -5,6 +5,7 @@ import { ContentGenerationForm } from "./Forms/ContentGenerationForm";
 import { useContext, useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Context } from "@/context/context";
+import { debounce } from "@/utils/debounce";
 
 export const Profiler = () => {
   const { data: session } = useSession();
@@ -53,25 +54,21 @@ export const Profiler = () => {
   }, [session, setState]);
 
   useEffect(() => {
-    // Function to generate JSON object based on user profile and coding preferences
-    const generateJSON = () => {
-      const userProfile = {
-        name: session?.user.name,
-        email: session?.user.email,
-        avatarImg: avatarImg,
-      };
+    // Define a debounced version of your JSON generation function
+    const debouncedGenerateJSON = debounce(() => {
       const data = {
-        userProfile,
+        userProfile: {
+          name: session?.user.name,
+          email: session?.user.email,
+          avatarImg: avatarImg,
+        },
         codingPreferences,
         contentGenerationPreferences,
       };
-      setState((prevState) => ({
-        ...prevState,
-        generatedJSON: JSON.stringify(data, null, 2),
-      }));
-    };
+      setGeneratedJSON(JSON.stringify(data, null, 2));
+    }, 500); // 500ms delay
 
-    generateJSON();
+    debouncedGenerateJSON();
   }, [session, avatarImg, codingPreferences, contentGenerationPreferences]);
 
   const handleCodingPreferencesChange = (preferences: CodingPreferences) => {

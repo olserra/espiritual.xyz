@@ -1,6 +1,5 @@
 import { useEffect, useContext } from "react";
 import { Context } from "@/context/context";
-import { GetSessionParams, getSession } from "next-auth/react";
 
 interface CodingFormProps {
   onPreferencesChange: (preferences: CodingPreferences) => void;
@@ -308,17 +307,4 @@ export const CodingForm: React.FC<CodingFormProps> = ({
       </div>
     </div>
   );
-};
-
-export const getServerSideProps = async (
-  context: GetSessionParams | undefined
-) => {
-  const session = await getSession(context); // Get session
-  const userId = session?.user?.id; // Extract user ID from session
-
-  return {
-    props: {
-      userId, // Pass userId as prop to the component
-    },
-  };
 };

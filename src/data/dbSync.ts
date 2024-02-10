@@ -3,7 +3,7 @@
 import { PrismaClient } from "@prisma/client";
 import { Context } from "@/context/context";
 import { useContext } from "react";
-
+import { GetSessionParams, getSession } from "next-auth/react";
 const prisma = new PrismaClient();
 
 // Function to fetch data from the database
@@ -44,12 +44,13 @@ async function fetchDataFromDB(): Promise<IState> {
 
 // Function to update user data in the database
 async function updateUserDataInDB(
-  data: Partial<IState["user"]>
+  data: Partial<IState["user"]>,
+  userId: string
 ): Promise<void> {
   try {
     // Update user data in the database using Prisma queries
     await prisma.user.update({
-      where: { id: "userId" /* Provide the user ID */ },
+      where: { id: userId },
       data,
     });
     console.log("User data updated in the database:", data);
@@ -100,6 +101,19 @@ export function syncData() {
     .then((data) => setState(data))
     .catch((error) => console.error("Error syncing data:", error));
 }
+
+export const getServerSideProps = async (
+  context: GetSessionParams | undefined
+) => {
+  const session = await getSession(context); // Get session
+  const userId = session?.user?.id; // Extract user ID from session
+
+  return {
+    props: {
+      userId, // Pass userId as prop to the component
+    },
+  };
+};
 
 // Export additional functions as needed
 

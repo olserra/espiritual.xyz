@@ -98,6 +98,23 @@ export const Profiler = () => {
         .writeText(generatedJSON)
         .then(() => alert("JSON copied to clipboard"))
         .catch(() => alert("Failed to copy JSON to clipboard"));
+    } else {
+      // If generatedJSON is null or empty, generate it first and then copy
+      const userProfile = {
+        name: session?.user.name,
+        email: session?.user.email,
+        avatarImg: avatarImg,
+      };
+      const data = {
+        userProfile,
+        codingPreferences,
+        contentGenerationPreferences,
+      };
+      const jsonString = JSON.stringify(data, null, 2);
+      navigator.clipboard
+        .writeText(jsonString)
+        .then(() => alert("JSON copied to clipboard"))
+        .catch(() => alert("Failed to copy JSON to clipboard"));
     }
   };
 

@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
             Enhance Your Experience and Own Your Data
           </p>
-          <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200">
+          <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">
             Personalize your experience and have better recommendations
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           </div>
         )}
       </div>
-      <div className="items-center justify-center lg:mr-20">
+      <div className="max-w-[200px] md:max-w-[3000px] self-center items-center justify-center lg:mr-20">
         <Image src={BlocksImg} alt="matrix-img" width={600} height={600} />
       </div>
     </div>

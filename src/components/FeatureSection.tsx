@@ -23,10 +23,10 @@ const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => (
 const FeatureSection: React.FC = () => (
   <div className="lg:py-8 px-4 md:px-12 mx-auto max-w-screen-2xl text-center lg:px-6">
     <div className="mx-auto max-w-screen-sm mt-12">
-      <p className="pt-12 pb-2 lg:pb-4 lg:py-0 text-2xl md:text-4xl font-bold text-gray-200">
+      <p className="pt-12 pb-2 lg:pb-4 lg:py-0 text-lg md:text-4xl font-bold text-gray-200">
         Web3 Marketplace Showcase
       </p>
-      <p className="pb-12 text-base lg:text-lg lg:pb-14 text-gray-200">
+      <p className="pb-12 text-base italic lg:text-lg lg:pb-14 text-gray-200">
         Where can you use our solution
       </p>
     </div>

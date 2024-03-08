@@ -19,15 +19,15 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            Personalize & Participate with Blockchain
+            Enhance Your Experience and Own Your Data
           </p>
           <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200">
-            Enhance Your Experience & Earn Rewards
+            Personalize your experience and have better recommendations
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Create a decentralized profile to tailor AI responses to your
-            preferences. Engage and contribute to earn tokens for premium
-            features and community governance.
+            Create a digital profile, decentralized and protected by blockchain,
+            ready to be used across the web for better recommendations and
+            personalized experiences.
           </p>
         </div>
 

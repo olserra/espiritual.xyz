@@ -4,11 +4,10 @@ import Logo from "./Logo";
 import svgs from "../helpers/svgs";
 
 import Button from "./Button";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { Arrow } from "./Arrow";
 import CloseIcon from "@/assets/close-icon.png";
-import { useRouter } from "next/router";
 import { handleSignIn } from "@/helpers/handleSignIn";
 
 const Navbar = () => {
@@ -17,7 +16,6 @@ const Navbar = () => {
   const [avatarImg, setAvatarImg] = useState("");
   const buttonRef: any = useRef(null);
   const { data: session } = useSession();
-  const router = useRouter();
 
   useEffect(() => {
     session?.user?.image && setAvatarImg(session.user.image);
@@ -86,7 +84,6 @@ const Navbar = () => {
             Get started
           </Button>
         )}
-        <div className="flex items-center pt-3 pl-3">{svgs.wallet}</div>
       </div>
     </div>
   );

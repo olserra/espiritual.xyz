@@ -32,45 +32,43 @@ const FeatureSection: React.FC = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Card
-        title="Token Rewards for Engagement"
-        description="Users earn tokens for actively participating, sharing data, and engaging with the platform. These tokens can be used for accessing premium features or voting on platform developments."
-        imageUrl={
-          "https://powerdao.ai/wp-content/uploads/2023/02/Group-590-2-min.png"
-        }
+        title="Blockchain-Powered Digital Identity"
+        description="Forge a secure, decentralized digital identity safeguarded by blockchain technology, enabling personalized experiences and tailored recommendations across the web."
+        imageUrl="https://powerdao.ai/wp-content/uploads/2023/02/Group-590-2-min.png"
       />
       <Card
-        title="Decentralized Profiles"
-        description="Leverage blockchain to create secure, decentralized profiles that users control, ensuring privacy and data integrity while enabling personalized AI experiences."
+        title="Decentralized Profile Management"
+        description="Harness the power of blockchain to manage your digital profile in a decentralized manner, ensuring privacy and control while receiving customized recommendations and experiences."
         imageUrl="https://learn.swyftx.com/wp-content/uploads/2021/11/What-is-DeFi-800x533.png"
       />
       <Card
-        title="Enhanced Privacy and Security"
-        description="Blockchain technology ensures user data is stored securely, providing a foundation for trust and privacy in every interaction."
+        title="Enhanced Privacy with Blockchain"
+        description="Elevate your privacy standards with blockchain-based profile protection, guaranteeing data integrity and confidentiality for personalized web experiences without compromising security."
         imageUrl="https://miro.medium.com/v2/resize:fit:1400/1*GoOGwG5xc-iZuP4ipL7lVw.png"
       />
       <Card
-        title="Cross-Platform Utility Tokens"
-        description="Earned tokens can be used across different platforms and services, enhancing the utility and value of participation within the ecosystem."
+        title="Cross-Platform Personalization"
+        description="Utilize your decentralized digital profile seamlessly across various platforms for tailored recommendations and personalized experiences, enhancing your online journey."
         imageUrl="https://cdn.pixabay.com/photo/2022/10/25/09/19/platform-7545309_1280.png"
       />
       <Card
-        title="Community Governance"
-        description="Token holders can vote on platform updates, feature additions, and community-driven projects, fostering a collaborative ecosystem."
+        title="Community-Driven Profile Governance"
+        description="Engage in community-driven governance of your digital profile, shaping its evolution and contributing to a collaborative ecosystem of personalized web experiences."
         imageUrl="https://assets-global.website-files.com/63031faba0f284f1d8ddbcc6/63eb4c94a5edc024b4e5292c_loyalty-community.png"
       />
       <Card
-        title="Marketplace for Digital Goods and Services"
-        description="A blockchain-based marketplace where users can trade tokens for digital goods, services, or exclusive content, enhancing the platform's value proposition."
+        title="Blockchain Marketplace for Personalized Services"
+        description="Access a blockchain-based marketplace to tailor services and experiences to your decentralized digital profile, enriching your online presence with personalized offerings."
         imageUrl="https://www.antiersolutions.com/wp-content/uploads/2022/10/image_2022_10_03T11_23_00_335Z.png"
       />
       <Card
-        title="Personalized Learning and Development"
-        description="Tokens can be used to access specialized courses, premium content, or personalized learning paths, encouraging continuous growth and development."
+        title="Personalized Learning Pathways"
+        description="Embark on a personalized learning journey tailored to your decentralized digital profile, accessing curated content and educational resources to fuel continuous growth."
         imageUrl="https://miro.medium.com/v2/resize:fit:1024/0*DwVcmqU5wXjxcH9I.png"
       />
       <Card
-        title="Collaborative Content Creation"
-        description="Encourage collaborative content creation and sharing within the community, rewarding contributions with tokens to incentivize quality and innovation."
+        title="Collaborative Content Curation"
+        description="Join forces with the community to curate and share content aligned with your decentralized digital profile, fostering innovation and quality within the personalized web experience."
         imageUrl="https://uploads-ssl.webflow.com/5e0c29eceae07ed55982d194/63c4b448a45ec713f511b12c_web3-light.png"
       />
     </div>

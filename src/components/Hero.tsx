@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import BrainGIF from "@/assets/brain.gif";
+import BlocksImg from "@/assets/blocks.png";
 import { useSession } from "next-auth/react";
 import { handleSignIn } from "@/helpers/handleSignIn";
 
@@ -19,16 +19,18 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            Improve LLMs and ChatGPT performance
+            Personalize & Participate with Blockchain
           </p>
           <h1 className="max-w-[350px] md:max-w-md pb-6 font-sans font-bold text-4xl md:text-5xl lg:text-4xl text-gray-200">
-            Calibrate ChatGPT to your needs
+            Enhance Your Experience & Earn Rewards
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Create a profile to customize the AI's responses to your
-            preferences, and get the most out of your ChatGPT experience.
+            Create a decentralized profile to tailor AI responses to your
+            preferences. Engage and contribute to earn tokens for premium
+            features and community governance.
           </p>
         </div>
+
         {session ? (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">
             <Button onClick={handleStart} className="text-white">
@@ -44,7 +46,7 @@ const Hero: React.FC = () => {
         )}
       </div>
       <div className="items-center justify-center lg:mr-20">
-        <Image src={BrainGIF} alt="matrix-img" width={600} height={600} />
+        <Image src={BlocksImg} alt="matrix-img" width={600} height={600} />
       </div>
     </div>
   );

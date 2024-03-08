@@ -1,72 +1,77 @@
-import Link from "next/link";
-
-type StepProps = {
+type CardProps = {
   title: string;
   description: string;
+  imageUrl: string; // New property for image URL
 };
 
-const Step: React.FC<StepProps> = ({ title, description }) => (
-  <div className="relative w-full p-4 border-gray-500 border rounded-lg mb-4 md:p-4 md:mb-0 lg:h-58 xl:min-h-[220px]">
-    <div className="flex flex-row justify-between">
-      <p className="text-base md:text-base lg:text-lg lg:font-bold text-gray-200 pb-4 pl-4 font-bold text-start">
-        {title}
-      </p>
+const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => (
+  <div className="relative w-full p-2 rounded-xl border border-gray-500 bg-gradient-to-r from-gray-500 to-gray-500 shadow-lg mb-4 md:p-3 md:mb-0 lg:h-72 xl:min-h-[480px] overflow-hidden">
+    <img
+      src={imageUrl}
+      alt="Illustration"
+      className="w-full h-80 object-cover rounded-xl"
+    />{" "}
+    {/* Image element */}
+    <div className="flex flex-col justify-between h-full text-gray-200 py-6">
+      <div>
+        <p className="text-lg lg:text-xl font-bold mb-2">{title}</p>
+        <p className="text-sm md:text-base">{description}</p>
+      </div>
     </div>
-    <p className="leading-loose text-gray-400 text-start text-sm md:text-base px-4 pb-4">
-      {description}
-    </p>
   </div>
 );
-
 const FeatureSection: React.FC = () => (
   <div className="lg:py-8 px-4 md:px-12 mx-auto max-w-screen-2xl text-center lg:px-6">
     <div className="mx-auto max-w-screen-sm mt-12">
       <p className="pt-12 pb-2 lg:pb-4 lg:py-0 text-2xl md:text-4xl font-bold text-gray-200">
-        Use cases
+        Web3 Marketplace Showcase
       </p>
       <p className="pb-12 text-base lg:text-lg lg:pb-14 text-gray-200">
         Where can you use our solution
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
-      <Step
-        title="Developers' Language Preferences"
-        description="Developers can calibrate responses to their preferred programming language, ensuring that code examples and technical explanations are consistently presented in their language of choice. For example, they can specify responses in TypeScript instead of JavaScript for better alignment with their project requirements."
+      <Card
+        title="Token Rewards for Engagement"
+        description="Users earn tokens for actively participating, sharing data, and engaging with the platform. These tokens can be used for accessing premium features or voting on platform developments."
+        imageUrl={
+          "https://powerdao.ai/wp-content/uploads/2023/02/Group-590-2-min.png"
+        }
       />
-
-      <Step
-        title="Content Creators' Tone Control"
-        description="Content creators can adjust the tone of responses based on the intended audience or context. They have the flexibility to generate content in a formal or informal language, depending on the platform, target audience, or specific campaign requirements. This allows them to maintain brand voice consistency while adapting to various communication styles."
+      <Card
+        title="Decentralized Profiles"
+        description="Leverage blockchain to create secure, decentralized profiles that users control, ensuring privacy and data integrity while enabling personalized AI experiences."
+        imageUrl="https://learn.swyftx.com/wp-content/uploads/2021/11/What-is-DeFi-800x533.png"
       />
-
-      <Step
-        title="Educators' Learning Styles"
-        description="Educators can customize responses to accommodate different learning styles and preferences of their students. They can calibrate the AI to provide explanations, examples, and learning materials in formats that align with visual, auditory, or kinesthetic learning styles, fostering a more inclusive and engaging learning environment."
+      <Card
+        title="Enhanced Privacy and Security"
+        description="Blockchain technology ensures user data is stored securely, providing a foundation for trust and privacy in every interaction."
+        imageUrl="https://miro.medium.com/v2/resize:fit:1400/1*GoOGwG5xc-iZuP4ipL7lVw.png"
       />
-
-      <Step
-        title="Customer Support Tailoring"
-        description="Customer support teams can tailor responses to meet the specific needs and preferences of individual customers. They can calibrate the AI to deliver responses in different languages, adjust the level of formality, or personalize recommendations based on past interactions and customer profiles, enhancing the overall customer experience."
+      <Card
+        title="Cross-Platform Utility Tokens"
+        description="Earned tokens can be used across different platforms and services, enhancing the utility and value of participation within the ecosystem."
+        imageUrl="https://cdn.pixabay.com/photo/2022/10/25/09/19/platform-7545309_1280.png"
       />
-
-      <Step
-        title="Legal Professionals' Terminology Preferences"
-        description="Legal professionals can customize responses to adhere to specific legal terminology or citation formats. They can calibrate the AI to generate legal documents, case summaries, or contract clauses using precise language and referencing conventions relevant to their jurisdiction or practice area, ensuring accuracy and compliance."
+      <Card
+        title="Community Governance"
+        description="Token holders can vote on platform updates, feature additions, and community-driven projects, fostering a collaborative ecosystem."
+        imageUrl="https://assets-global.website-files.com/63031faba0f284f1d8ddbcc6/63eb4c94a5edc024b4e5292c_loyalty-community.png"
       />
-
-      <Step
-        title="Medical Practitioners' Patient Communication"
-        description="Medical practitioners can adjust the tone and level of detail in responses to effectively communicate with patients. They can calibrate the AI to provide medical information in layman's terms for patient education purposes or deliver more technical explanations for discussions with colleagues or researchers, improving patient understanding and healthcare outcomes."
+      <Card
+        title="Marketplace for Digital Goods and Services"
+        description="A blockchain-based marketplace where users can trade tokens for digital goods, services, or exclusive content, enhancing the platform's value proposition."
+        imageUrl="https://www.antiersolutions.com/wp-content/uploads/2022/10/image_2022_10_03T11_23_00_335Z.png"
       />
-
-      <Step
-        title="Marketing Personalization"
-        description="Marketing professionals can personalize responses to match the preferences and interests of their target audience segments. They can calibrate the AI to generate tailored marketing messages, product recommendations, and promotional offers based on demographic data, past interactions, and behavioral patterns, maximizing engagement and conversion rates."
+      <Card
+        title="Personalized Learning and Development"
+        description="Tokens can be used to access specialized courses, premium content, or personalized learning paths, encouraging continuous growth and development."
+        imageUrl="https://miro.medium.com/v2/resize:fit:1024/0*DwVcmqU5wXjxcH9I.png"
       />
-
-      <Step
-        title="Language Learners' Proficiency Levels"
-        description="Language learners can adjust the difficulty level and complexity of responses to match their proficiency levels and learning objectives. They can calibrate the AI to provide simple explanations and vocabulary for beginners or more advanced language structures and idiomatic expressions for intermediate and advanced learners, facilitating language acquisition and fluency development."
+      <Card
+        title="Collaborative Content Creation"
+        description="Encourage collaborative content creation and sharing within the community, rewarding contributions with tokens to incentivize quality and innovation."
+        imageUrl="https://uploads-ssl.webflow.com/5e0c29eceae07ed55982d194/63c4b448a45ec713f511b12c_web3-light.png"
       />
     </div>
   </div>

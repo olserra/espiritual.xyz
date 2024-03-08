@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo2.png";
 
 interface LinkItem {
   label: string;

@@ -55,13 +55,13 @@ const Navbar = () => {
 
   const TabItems = () => (
     <div className="flex lg:flex-row pr-4 lg:pl-52">
-      <div className="flex flex-row items-center text-gray-200">
+      <div className="flex flex-row items-center justify-between text-gray-200">
         {LandingMenuItems.map((item, index) => (
           <a
+            key={index}
             target={item.href === "Careers" ? "_blank" : "_self"}
             rel="noreferrer"
             href={item.href}
-            key={index}
             className="lg:mt-4 lg:pr-6"
           >
             {item.label}
@@ -69,7 +69,7 @@ const Navbar = () => {
         ))}
         {session ? (
           <div
-            className="flex flex-row justify-center items-center lg:ml-8 hover:cursor-pointer"
+            className="flex flex-row items-center justify-center lg:ml-8 hover:cursor-pointer"
             onClick={toggleMenu}
           >
             <Image
@@ -86,6 +86,7 @@ const Navbar = () => {
             Get started
           </Button>
         )}
+        <div className="flex items-center pt-3 pl-3">{svgs.wallet}</div>
       </div>
     </div>
   );

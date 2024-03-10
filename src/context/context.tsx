@@ -14,20 +14,7 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = (props) => {
       email: "",
       image: "",
     },
-    codingPreferences: {
-      language: [],
-      codingStyle: [],
-      dataFormat: [],
-      errorHandling: [],
-      variableNaming: [],
-    },
-    contentGenerationPreferences: {
-      contentTypes: [],
-      writingStyle: [],
-      tone: [],
-      audience: [],
-      multimediaFormat: [],
-    },
+    customInstructions: {},
   });
 
   // Return the context provider with state and setState

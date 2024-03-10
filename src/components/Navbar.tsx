@@ -110,17 +110,7 @@ const Navbar = () => {
       >
         <div className="flex flex-row justify-between items-start">
           <div className="flex flex-col text-sm gap-4 p-4 text-gray-200">
-            {LandingMenuItems.map((item, index) => (
-              <a
-                target={item.href === "Careers" ? "_blank" : "_self"}
-                rel="noreferrer"
-                href={item.href}
-                key={index}
-                className="relative hover:underline"
-              >
-                {item.label}
-              </a>
-            ))}
+            Welcome, {session?.user?.name}
             {session ? (
               <button
                 onClick={handleSignOut}

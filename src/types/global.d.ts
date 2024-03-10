@@ -51,6 +51,5 @@ declare interface IUser {
 // Define the state interface
 declare interface IState {
   user: IUser;
-  codingPreferences: CodingPreferences;
-  contentGenerationPreferences: ContentGenerationPreferences;
+  customInstructions: {};
 }

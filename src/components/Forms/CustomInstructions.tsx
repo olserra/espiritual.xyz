@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+
+interface CustomInstructionProps {
+  onInputChange: (text: string) => void;
+  subject: string;
+}
+
+const CustomInstruction: React.FC<CustomInstructionProps> = ({
+  onInputChange,
+  subject,
+}) => {
+  const [inputText, setInputText] = useState<string>("");
+
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const text = event.target.value;
+    setInputText(text);
+    onInputChange(text);
+  };
+
+  // Validate character count
+  const maxLength = 1500;
+  const remainingChars = maxLength - inputText.length;
+  const charCountClassName =
+    remainingChars >= 0 ? "text-gray-500" : "text-red-500";
+
+  return (
+    <div>
+      <label className="block text-gray-500 font-bold mb-2">{subject}:</label>
+      <textarea
+        className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        placeholder="Type here..."
+        value={inputText}
+        onChange={handleChange}
+        maxLength={maxLength}
+        rows={10}
+      />
+      <p className={`${charCountClassName} text-sm mt-1`}>
+        {remainingChars} characters remaining
+      </p>
+    </div>
+  );
+};
+
+export default CustomInstruction;

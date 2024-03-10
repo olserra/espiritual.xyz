@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import BlocksImg from "@/assets/blocks.png";
+import DevImg from "@/assets/dev.png";
 import { useSession } from "next-auth/react";
 import { handleSignIn } from "@/helpers/handleSignIn";
 
@@ -33,20 +33,21 @@ const Hero: React.FC = () => {
 
         {session ? (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">
-            <Button onClick={handleStart} className="text-white">
-              Create your profile
-            </Button>
+            <Button onClick={handleStart}>Create your profile</Button>
           </div>
         ) : (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">
-            <Button onClick={handleSignIn} className="text-white">
-              Get started
-            </Button>
+            <Button onClick={handleSignIn}>Get started</Button>
           </div>
         )}
       </div>
       <div className="max-w-[200px] md:max-w-[3000px] self-center items-center justify-center lg:mr-20">
-        <Image src={BlocksImg} alt="matrix-img" width={600} height={600} />
+        <Image
+          src="https://cdni.iconscout.com/illustration/premium/thumb/job-seeker-1818108-1539672.png"
+          alt="matrix-img"
+          width={600}
+          height={600}
+        />
       </div>
     </div>
   );

@@ -127,10 +127,9 @@ export const Profiler: React.FC = () => {
             subject={formatSubject(key)}
           />
         ))}
-
         <Button
           onClick={handleCopyToClipboard}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md mt-12 mb-24"
+          className="px-4 py-2 bg-blue-500 text-white rounded-md mt-12 mb-24 max-w-fit self-center"
         >
           Copy data to Clipboard
         </Button>

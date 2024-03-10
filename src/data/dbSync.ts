@@ -20,20 +20,7 @@ async function fetchDataFromDB(): Promise<IState> {
         email: user?.email || "",
         image: user?.image || "",
       },
-      codingPreferences: {
-        language: [],
-        codingStyle: [],
-        dataFormat: [],
-        errorHandling: [],
-        variableNaming: [],
-      },
-      contentGenerationPreferences: {
-        contentTypes: [],
-        writingStyle: [],
-        tone: [],
-        audience: [],
-        multimediaFormat: [],
-      },
+      customInstructions: {},
     };
     return state;
   } catch (error) {
@@ -60,36 +47,16 @@ async function updateUserDataInDB(
   }
 }
 
-// Function to update coding preferences in the database
-async function updateCodingPreferencesInDB(
-  data: Partial<IState["codingPreferences"]>
+// Function to update custom instructions in the database
+async function updateCustomInstructionsInDB(
+  data: Partial<IState["customInstructions"]>
 ): Promise<void> {
   try {
-    // Update coding preferences in the database using Prisma queries
-    // Example: await prisma.codingPreferences.update({ where: { id: 'codingPreferencesId' /* Provide the coding preferences ID */ }, data });
-    console.log("Coding preferences updated in the database:", data);
+    // Update custom instructions in the database using Prisma queries
+    // Example: await prisma.customInstructions.update({ where: { id: 'customInstructionsId' /* Provide the custom instructions ID */ }, data });
+    console.log("Custom instructions updated in the database:", data);
   } catch (error) {
-    console.error("Error updating coding preferences in the database:", error);
-    throw error;
-  }
-}
-
-// Function to update content generation preferences in the database
-async function updateContentGenerationPreferencesInDB(
-  data: Partial<IState["contentGenerationPreferences"]>
-): Promise<void> {
-  try {
-    // Update content generation preferences in the database using Prisma queries
-    // Example: await prisma.contentGenerationPreferences.update({ where: { id: 'contentGenerationPreferencesId' /* Provide the content generation preferences ID */ }, data });
-    console.log(
-      "Content generation preferences updated in the database:",
-      data
-    );
-  } catch (error) {
-    console.error(
-      "Error updating content generation preferences in the database:",
-      error
-    );
+    console.error("Error updating custom instructions in the database:", error);
     throw error;
   }
 }

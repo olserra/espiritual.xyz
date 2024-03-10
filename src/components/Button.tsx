@@ -17,14 +17,14 @@ const Button: React.FC<IButton> = ({
   ...props
 }) => {
   const baseStyle =
-    "font-sans rounded font-medium py-2 px-4 bg-gray-600 min-w-[70px] min-h-[40px]";
+    "font-sans rounded font-medium py-2 px-4 bg-gray-600 min-w-[70px] min-h-[40px] text-white";
 
   return (
     <button
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={`${baseStyle} ${className}`}
+      className={className ? className : baseStyle}
       {...props}
     >
       {children}

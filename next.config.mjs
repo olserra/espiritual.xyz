@@ -17,6 +17,7 @@ export default withPlugins(
         "cdn.analyticsvidhya.com",
         "images.mktw.net",
         "document360.com",
+        "cdni.iconscout.com",
       ],
     },
     // Add any other Next.js configs here

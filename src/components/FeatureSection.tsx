@@ -32,9 +32,9 @@ const FeatureSection: React.FC = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Card
-        title="Blockchain-Powered Digital Identity"
-        description="Forge a secure, decentralized digital identity safeguarded by blockchain technology, enabling personalized experiences and tailored recommendations across the web."
-        imageUrl="https://powerdao.ai/wp-content/uploads/2023/02/Group-590-2-min.png"
+        title="Own Your Data with Blockchain"
+        description="Take control of your digital identity and data with blockchain technology, ensuring ownership and security while enabling personalized web experiences."
+        imageUrl="https://www.ancrypto.io/wp-content/uploads/2023/04/ownership.jpg"
       />
       <Card
         title="Decentralized Profile Management"
@@ -42,8 +42,8 @@ const FeatureSection: React.FC = () => (
         imageUrl="https://learn.swyftx.com/wp-content/uploads/2021/11/What-is-DeFi-800x533.png"
       />
       <Card
-        title="Enhanced Privacy with Blockchain"
-        description="Elevate your privacy standards with blockchain-based profile protection, guaranteeing data integrity and confidentiality for personalized web experiences without compromising security."
+        title="Trust and Authenticity in Personalization"
+        description="Choose the level of access that third parties have to your digital profile, ensuring trust and authenticity in personalized web experiences while maintaining control over your data."
         imageUrl="https://miro.medium.com/v2/resize:fit:1400/1*GoOGwG5xc-iZuP4ipL7lVw.png"
       />
       <Card
@@ -57,8 +57,8 @@ const FeatureSection: React.FC = () => (
         imageUrl="https://assets-global.website-files.com/63031faba0f284f1d8ddbcc6/63eb4c94a5edc024b4e5292c_loyalty-community.png"
       />
       <Card
-        title="Blockchain Marketplace for Personalized Services"
-        description="Access a blockchain-based marketplace to tailor services and experiences to your decentralized digital profile, enriching your online presence with personalized offerings."
+        title="Shopping and Marketplace Personalization"
+        description="Better recommendations and personalized experiences while shopping online, leveraging your decentralized digital profile to enhance your journey and discover new products."
         imageUrl="https://www.antiersolutions.com/wp-content/uploads/2022/10/image_2022_10_03T11_23_00_335Z.png"
       />
       <Card

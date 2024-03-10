@@ -7,122 +7,113 @@ interface FaqQuestionProps {
 
 const faqQuestions = [
   {
-    question: "How does Boostio.ai integrate blockchain into personalized AI?",
+    question:
+      "How does blockchain technology empower personalized web experiences on Boostio.ai?",
     answer: (
       <>
         <p>
-          Boostio.ai leverages blockchain technology to create a secure and
-          personalized AI experience. By using decentralized digital IDs, users
-          have complete control over their data, enabling tailored interactions
-          and recommendations.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "Can I earn and spend tokens on Boostio.ai?",
-    answer: (
-      <>
-        <p>
-          Absolutely! Our platform rewards engagement with tokens that can be
-          spent on premium features, or saved as investments within our
-          ecosystem.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "What can I do with the tokens I earn on Boostio.ai?",
-    answer: (
-      <>
-        <p>
-          Tokens earned can be used to access exclusive content, personalize AI
-          interactions further, or participate in governance decisions on our
-          platform.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "How does tokenization enhance the Boostio.ai experience?",
-    answer: (
-      <>
-        <p>
-          Tokenization adds a layer of motivation and reward, enhancing user
-          engagement and contribution while providing a tangible value for
-          participation.
+          Blockchain technology on Boostio.ai ensures ownership and security of
+          your digital identity and data. By utilizing blockchain, users can
+          take control of their data, leading to personalized web experiences
+          tailored to their preferences.
         </p>
       </>
     ),
   },
   {
     question:
-      "What are the benefits of a decentralized digital ID on Boostio.ai?",
+      "What benefits does decentralized profile management offer on Boostio.ai?",
     answer: (
       <>
         <p>
-          Decentralized digital IDs offer enhanced privacy, security, and
-          control over personal data, leading to a more secure and customized AI
-          experience.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "How does Boostio.ai ensure the security of my digital ID?",
-    answer: (
-      <>
-        <p>
-          We employ advanced encryption and blockchain technology to secure your
-          digital ID, giving you confidence in the privacy and safety of your
-          data.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "Can I transfer my tokens to other platforms or users?",
-    answer: (
-      <>
-        <p>
-          Yes, tokens are designed for interoperability within the Web3
-          ecosystem, allowing transfers between users and platforms.
+          Decentralized profile management allows users to manage their digital
+          profile securely and privately. With blockchain, users can have
+          control over their data, receiving customized recommendations and
+          experiences while ensuring privacy.
         </p>
       </>
     ),
   },
   {
     question:
-      "Is Boostio.ai's token-based system accessible to non-technical users?",
+      "How does Boostio.ai ensure trust and authenticity in personalized web experiences?",
     answer: (
       <>
         <p>
-          Our platform is user-friendly, ensuring that everyone can participate
-          in the token-based system, regardless of their technical background.
+          Boostio.ai enables users to choose the level of access that third
+          parties have to their digital profile. By doing so, users can ensure
+          trust and authenticity in personalized web experiences while
+          maintaining control over their data.
         </p>
       </>
     ),
   },
   {
-    question: "How do community-driven developments work on Boostio.ai?",
+    question:
+      "What advantages does cross-platform personalization offer on Boostio.ai?",
     answer: (
       <>
         <p>
-          Community-driven developments are guided by user proposals and
-          token-based voting, ensuring that our platform evolves according to
-          user needs and contributions.
+          Cross-platform personalization on Boostio.ai allows users to utilize
+          their decentralized digital profile seamlessly across various
+          platforms. This enhances the online journey by providing tailored
+          recommendations and personalized experiences.
         </p>
       </>
     ),
   },
   {
-    question: "What role do users play in the governance of Boostio.ai?",
+    question:
+      "How does community-driven profile governance contribute to Boostio.ai?",
     answer: (
       <>
         <p>
-          Users play a critical role in governance by using their earned tokens
-          to vote on key decisions, directly influencing the platform's
-          direction.
+          Boostio.ai encourages community-driven governance of digital profiles.
+          Users can engage in shaping the evolution of their digital profile,
+          contributing to a collaborative ecosystem of personalized web
+          experiences.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "What benefits does shopping and marketplace personalization offer on Boostio.ai?",
+    answer: (
+      <>
+        <p>
+          Shopping and marketplace personalization on Boostio.ai provides better
+          recommendations and personalized experiences while shopping online.
+          Users can leverage their decentralized digital profile to enhance
+          their journey and discover new products tailored to their preferences.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "How do personalized learning pathways enhance the Boostio.ai experience?",
+    answer: (
+      <>
+        <p>
+          Personalized learning pathways on Boostio.ai offer users a tailored
+          learning journey aligned with their decentralized digital profile.
+          Users can access curated content and educational resources to fuel
+          continuous growth and development.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "What role does collaborative content curation play in Boostio.ai?",
+    answer: (
+      <>
+        <p>
+          Collaborative content curation allows users to join forces with the
+          community to curate and share content aligned with their decentralized
+          digital profile. This fosters innovation and quality within the
+          personalized web experience on Boostio.ai.
         </p>
       </>
     ),

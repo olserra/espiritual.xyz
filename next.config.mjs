@@ -18,6 +18,7 @@ export default withPlugins(
         "images.mktw.net",
         "document360.com",
         "cdni.iconscout.com",
+        "cdn-icons-png.flaticon.com",
       ],
     },
     // Add any other Next.js configs here

@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import DevImg from "@/assets/dev.png";
 import { useSession } from "next-auth/react";
 import { handleSignIn } from "@/helpers/handleSignIn";
 
@@ -43,7 +42,7 @@ const Hero: React.FC = () => {
       </div>
       <div className="max-w-[200px] md:max-w-[3000px] self-center items-center justify-center lg:mr-20">
         <Image
-          src="https://cdni.iconscout.com/illustration/premium/thumb/job-seeker-1818108-1539672.png"
+          src="https://cdn-icons-png.flaticon.com/512/8757/8757988.png"
           alt="matrix-img"
           width={600}
           height={600}

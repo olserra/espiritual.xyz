@@ -20,22 +20,39 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
-  Query: {
-    dummyQuery: () => true, // Implement a resolver for the dummyQuery field
-  },
   Mutation: {
     saveCustomInstructions: async (
       _: any,
       { userId, instructions }: { userId: string; instructions: string }
     ) => {
       try {
-        // Save custom instructions to the database using Prisma
-        await prisma.customInstructions.create({
-          data: {
+        // Check if a record with the given userId already exists
+        const existingInstruction = await prisma.customInstructions.findUnique({
+          where: {
             userId,
-            instructions,
           },
         });
+
+        if (existingInstruction) {
+          // If a record exists, update it with the new instructions
+          await prisma.customInstructions.update({
+            where: {
+              userId,
+            },
+            data: {
+              instructions,
+            },
+          });
+        } else {
+          // If no record exists, create a new one
+          await prisma.customInstructions.create({
+            data: {
+              userId,
+              instructions,
+            },
+          });
+        }
+
         return { success: true }; // Operation was successful
       } catch (error) {
         console.error("Failed to save custom instructions:", error);

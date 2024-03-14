@@ -1,42 +1,39 @@
-// pages/api/profiler.ts
+// pages/api/customInstructions.ts
 
 import { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
+import { prisma } from "../../../prisma/prisma";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { instagramHandle } = req.body;
+    const { userId, customInstructions } = req.body;
 
     try {
-      const instagramData = await fetchInstagramData(instagramHandle);
+      await saveCustomInstructions(userId, customInstructions);
 
-      res.status(200).json({ instagramData });
+      res.status(200).json({ success: true });
     } catch (error) {
-      res
-        .status(500)
-        .json({ error: "Failed to fetch user data from Instagram" });
+      console.error("Failed to save custom instructions:", error);
+      res.status(500).json({ error: "Failed to save custom instructions" });
     }
   } else {
     res.status(405).json({ error: "Method Not Allowed" });
   }
 }
 
-async function fetchInstagramData(instagramHandle: string) {
+const saveCustomInstructions = async (
+  userId: string,
+  customInstructions: string
+): Promise<void> => {
   try {
-    // Make a request to Instagram API using the handle
-    // For demonstration purposes, let's assume we're fetching user data from Instagram's API
-    // Replace this with your actual Instagram API request logic
-    const response = await axios.get(
-      `https://www.instagram.com/${instagramHandle}/?__a=1`
-    );
-
-    // Parse the response and extract relevant information
-    // For demonstration, let's just return the raw data for now
-    return response.data;
-  } catch (error) {
-    throw new Error("Failed to fetch user data from Instagram");
+    await prisma.customInstructions.upsert({
+      where: { userId },
+      create: { userId, instructions: customInstructions },
+      update: { instructions: customInstructions },
+    });
+  } catch (error: any) {
+    throw new Error("Failed to save custom instructions: " + error.message);
   }
-}
+};

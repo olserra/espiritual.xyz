@@ -14,7 +14,7 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = (props) => {
       email: "",
       image: "",
     },
-    customInstructions: {},
+    customInstructions: "",
   });
 
   // Return the context provider with state and setState

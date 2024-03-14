@@ -28,23 +28,11 @@ model User {
 }
 
 model CustomInstructions {
-  id          String       @id @default(cuid())
-  userId      String       @map("user_id") @unique
-  jobKind     String?
-  salaryExpectations String?
-  workingHours String?
-  benefits    String?
-  location    String?
-  relocation  String?
-  remotePreferences String?
-  workEnvironment String?
-  careerGrowth String?
-  learningExpectations String?
-  teamCulture String?
-  technologies String?
-  techsToLearn String?
+  id            String       @id @default(cuid())
+  userId        String       @map("user_id") @unique
 
-  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  instructions  String       // New field to store custom instructions
 }
 
 

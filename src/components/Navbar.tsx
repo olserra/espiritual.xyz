@@ -80,7 +80,9 @@ const Navbar = () => {
             <Arrow direction="down" className="lg:mt-6" />
           </div>
         ) : (
-          <Button onClick={handleSignIn}>Get started</Button>
+          <div className="mt-2">
+            <Button onClick={handleSignIn}>Get started</Button>
+          </div>
         )}
       </div>
     </div>

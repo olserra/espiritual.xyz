@@ -74,8 +74,8 @@ export const Profiler: React.FC = () => {
   return (
     <div className="flex flex-col justify-center container mx-auto p-4 text-gray-100">
       <h4>
-        The more you say, the best you take. If it's not applicable, leave it
-        blank.
+        Describe how would you like your responses on a chat with ChatGPT. The
+        more you say, the best you take.
       </h4>
       <div className="mt-4 flex flex-col gap-10">
         <CustomInstruction

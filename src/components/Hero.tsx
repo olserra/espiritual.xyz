@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            Personalize your experience safely
+            PERSONALIZE YOUR EXPERIENCE
           </p>
           <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">
             Own Your Data and empower your AI

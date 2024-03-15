@@ -32,42 +32,42 @@ const FeatureSection: React.FC = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Card
-        title="Own Your Data with Blockchain"
+        title="Own Your Data"
         description="Take control of your digital identity and data with blockchain technology, ensuring ownership and security while enabling personalized web experiences."
-        imageUrl="https://www.ancrypto.io/wp-content/uploads/2023/04/ownership.jpg"
+        imageUrl="https://pixelplex.io/wp-content/uploads/2022/07/blockchain-explained-components-platforms-use-cases-main-1600.jpg"
       />
       <Card
-        title="Decentralized Profile Management"
-        description="Harness the power of blockchain to manage your digital profile in a decentralized manner, ensuring privacy and control while receiving customized recommendations and experiences."
-        imageUrl="https://learn.swyftx.com/wp-content/uploads/2021/11/What-is-DeFi-800x533.png"
+        title="Improve your LLM and AI"
+        description="Enhance your interactions with large language models (LLMs) by leveraging your decentralized digital profile to personalize and improve the quality of AI-generated content."
+        imageUrl="https://miro.medium.com/v2/resize:fit:1024/1*VZJtd1_pRCiMfqJCJaQO5w.jpeg"
       />
       <Card
-        title="Trust and Authenticity in Personalization"
+        title="Trust and Authenticity"
         description="Choose the level of access that third parties have to your digital profile, ensuring trust and authenticity in personalized web experiences while maintaining control over your data."
-        imageUrl="https://miro.medium.com/v2/resize:fit:1400/1*GoOGwG5xc-iZuP4ipL7lVw.png"
+        imageUrl="https://thumbs.dreamstime.com/b/d-illustration-safety-concept-closed-padlock-digital-background-d-illustration-safety-concept-closed-padlock-digital-163797758.jpg"
       />
       <Card
         title="Cross-Platform Personalization"
         description="Utilize your decentralized digital profile seamlessly across various platforms for tailored recommendations and personalized experiences, enhancing your online journey."
-        imageUrl="https://cdn.pixabay.com/photo/2022/10/25/09/19/platform-7545309_1280.png"
+        imageUrl="https://as1.ftcdn.net/v2/jpg/04/59/52/76/1000_F_459527642_VlepBSjvj3R2wKiboUT9zXxQ4tseiwIt.jpg"
       />
       <Card
-        title="Community-Driven Profile Governance"
-        description="Engage in community-driven governance of your digital profile, shaping its evolution and contributing to a collaborative ecosystem of personalized web experiences."
-        imageUrl="https://assets-global.website-files.com/63031faba0f284f1d8ddbcc6/63eb4c94a5edc024b4e5292c_loyalty-community.png"
+        title="Gaming and Entertainment"
+        description="Immerse yourself in personalized gaming and entertainment experiences, leveraging your decentralized digital profile to enhance your journey and discover new content."
+        imageUrl="https://t3.ftcdn.net/jpg/05/66/98/14/360_F_566981407_d2ZILFcjhJTxKsGXKENEllxCF1CHTnL7.jpg"
       />
       <Card
-        title="Shopping and Marketplace Personalization"
+        title="Shopping and Marketplace"
         description="Better recommendations and personalized experiences while shopping online, leveraging your decentralized digital profile to enhance your journey and discover new products."
-        imageUrl="https://www.antiersolutions.com/wp-content/uploads/2022/10/image_2022_10_03T11_23_00_335Z.png"
+        imageUrl="https://www.influentialsoftware.com/wp-content/uploads/2021/01/why-an-azure-ecommerce-platform-is-dynamite-for-selling-online-featured-900x450.jpg"
       />
       <Card
-        title="Personalized Learning Pathways"
+        title="Learning and Education"
         description="Embark on a personalized learning journey tailored to your decentralized digital profile, accessing curated content and educational resources to fuel continuous growth."
         imageUrl="https://miro.medium.com/v2/resize:fit:1024/0*DwVcmqU5wXjxcH9I.png"
       />
       <Card
-        title="Collaborative Content Curation"
+        title="Collaborative Creation and Curation"
         description="Join forces with the community to curate and share content aligned with your decentralized digital profile, fostering innovation and quality within the personalized web experience."
         imageUrl="https://uploads-ssl.webflow.com/5e0c29eceae07ed55982d194/63c4b448a45ec713f511b12c_web3-light.png"
       />

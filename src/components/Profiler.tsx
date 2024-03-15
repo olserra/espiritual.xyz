@@ -72,7 +72,7 @@ export const Profiler: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center container mx-auto p-4 text-gray-100">
+    <div className="flex flex-col justify-center container mx-auto lg:px-16 xl:px-20 2xl:px-36 p-4 text-gray-100">
       <h4>
         Describe how would you like your responses on a chat with ChatGPT. The
         more you say, the best you take.
@@ -82,7 +82,7 @@ export const Profiler: React.FC = () => {
           onInputChange={handleInputChange}
           initialValue={customInstructions || ""}
         />
-        <div className="flex gap-4">
+        <div className="flex gap-4 self-center">
           <Button
             onClick={handleSaveInstructions}
             className="px-4 py-2 bg-green-500 text-white rounded-md"

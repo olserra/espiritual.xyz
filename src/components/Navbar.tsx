@@ -144,7 +144,7 @@ const Navbar = () => {
     () => (
       <>
         <div className="flex flex-row items-center justify-between lg:justify-between lg:px-16 xl:px-36 px-4 py-2">
-          <div className="">
+          <div className="pl-2">
             <Logo />
           </div>
           <div className="cursor-pointer md:pl-0 lg:hidden">

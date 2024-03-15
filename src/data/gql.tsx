@@ -17,3 +17,12 @@ export const SAVE_CUSTOM_INSTRUCTIONS = gql`
     }
   }
 `;
+
+export const GET_CUSTOM_INSTRUCTIONS = gql`
+  query GetCustomInstructions($userId: String!) {
+    getCustomInstructions(userId: $userId) {
+      userId
+      instructions
+    }
+  }
+`;

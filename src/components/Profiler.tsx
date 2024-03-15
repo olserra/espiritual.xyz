@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import CustomInstruction from "./Forms/CustomInstructions";
 import Button from "./Button";
-import { SAVE_CUSTOM_INSTRUCTIONS } from "@/data/gql";
+import { SAVE_CUSTOM_INSTRUCTIONS, GET_CUSTOM_INSTRUCTIONS } from "@/data/gql";
 
 export const Profiler: React.FC = () => {
   const { data: session } = useSession();
   const [customInstructions, setCustomInstructions] = useState<string>("");
   const [generatedJSON, setGeneratedJSON] = useState<string | null>(null);
+
+  // Fetch custom instructions for the current user
+  const { loading, error, data } = useQuery(GET_CUSTOM_INSTRUCTIONS, {
+    variables: { userId: session?.user?.id },
+  });
+
+  useEffect(() => {
+    if (data?.getCustomInstructions) {
+      setCustomInstructions(data.getCustomInstructions.instructions);
+    }
+  }, [data]);
 
   useEffect(() => {
     const debouncedGenerateJSON = () => {
@@ -28,7 +39,6 @@ export const Profiler: React.FC = () => {
   const handleInputChange = (text: string) => {
     setCustomInstructions(text);
   };
-
   const handleCopyToClipboard = () => {
     if (generatedJSON) {
       navigator.clipboard
@@ -68,7 +78,10 @@ export const Profiler: React.FC = () => {
         blank.
       </h4>
       <div className="mt-4 flex flex-col gap-10">
-        <CustomInstruction onInputChange={handleInputChange} />
+        <CustomInstruction
+          onInputChange={handleInputChange}
+          initialValue={customInstructions || ""}
+        />
         <div className="flex gap-4">
           <Button
             onClick={handleSaveInstructions}

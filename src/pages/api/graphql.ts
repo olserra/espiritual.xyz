@@ -1,10 +1,9 @@
-// pages/api/graphql.ts
 import { ApolloServer, gql } from "apollo-server-micro";
 import { prisma } from "../../../prisma/prisma";
 
 const typeDefs = gql`
   type Query {
-    dummyQuery: Boolean
+    getCustomInstructions(userId: String!): CustomInstructions
   }
 
   type Mutation {
@@ -14,19 +13,38 @@ const typeDefs = gql`
     ): CustomInstructionsResponse
   }
 
+  type CustomInstructions {
+    userId: String!
+    instructions: String!
+  }
+
   type CustomInstructionsResponse {
     success: Boolean!
   }
 `;
 
 const resolvers = {
+  Query: {
+    getCustomInstructions: async (_: any, { userId }: { userId: string }) => {
+      try {
+        const customInstruction = await prisma.customInstructions.findUnique({
+          where: {
+            userId,
+          },
+        });
+        return customInstruction;
+      } catch (error) {
+        console.error("Failed to fetch custom instructions:", error);
+        throw new Error("Failed to fetch custom instructions");
+      }
+    },
+  },
   Mutation: {
     saveCustomInstructions: async (
       _: any,
       { userId, instructions }: { userId: string; instructions: string }
     ) => {
       try {
-        // Check if a record with the given userId already exists
         const existingInstruction = await prisma.customInstructions.findUnique({
           where: {
             userId,
@@ -34,7 +52,6 @@ const resolvers = {
         });
 
         if (existingInstruction) {
-          // If a record exists, update it with the new instructions
           await prisma.customInstructions.update({
             where: {
               userId,
@@ -44,7 +61,6 @@ const resolvers = {
             },
           });
         } else {
-          // If no record exists, create a new one
           await prisma.customInstructions.create({
             data: {
               userId,
@@ -53,10 +69,10 @@ const resolvers = {
           });
         }
 
-        return { success: true }; // Operation was successful
+        return { success: true };
       } catch (error) {
         console.error("Failed to save custom instructions:", error);
-        return { success: false }; // Operation failed
+        return { success: false };
       }
     },
   },
@@ -64,10 +80,8 @@ const resolvers = {
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
-// Call the `start()` method before creating the handler
 await apolloServer.start();
 
-// Export the handler created by `createHandler()`
 export const config = {
   api: {
     bodyParser: false,

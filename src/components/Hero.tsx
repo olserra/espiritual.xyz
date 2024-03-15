@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
 
         {session ? (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">
-            <Button onClick={handleStart}>Create your profile</Button>
+            <Button onClick={handleStart}>Your data</Button>
           </div>
         ) : (
           <div className="pt-8 md:px-8 xl:px-2 lg:block">

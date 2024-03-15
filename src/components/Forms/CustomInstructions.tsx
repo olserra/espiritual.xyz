@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface CustomInstructionProps {
   onInputChange: (text: string) => void;
+  initialValue: string;
 }
 
 const CustomInstruction: React.FC<CustomInstructionProps> = ({
   onInputChange,
+  initialValue,
 }) => {
-  const [inputText, setInputText] = useState<string>("");
+  const [inputText, setInputText] = useState<string>(initialValue);
+
+  useEffect(() => {
+    setInputText(initialValue);
+  }, [initialValue]);
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const text = event.target.value;

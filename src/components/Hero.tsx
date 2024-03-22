@@ -18,14 +18,16 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            PERSONALIZE YOUR EXPERIENCE
+            UNLOCK THE POWER OF YOUR DATA
           </p>
           <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">
-            Own Your Data and empower your AI
+            Bridging the Human-AI With Your Own Data
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Create a digital profile, decentralized and protected by blockchain,
-            ready to be used across the web and train your own AI.
+            Seamlessly integrate metadata to forge a bridge between human
+            intelligence and your AI, enhancing its ability to learn from
+            decentralized, blockchain-protected digital profiles ready for
+            web-wide application.
           </p>
         </div>
 

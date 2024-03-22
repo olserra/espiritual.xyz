@@ -5,11 +5,13 @@ import { Faq } from "@/components/Faq";
 import { PrivacyPolicy } from "@/components/PrivacyPolicy";
 import { TermsOfService } from "@/components/TermsOfService";
 import { Profiler } from "@/components/Profiler";
+import { UploadDocs } from "@/components/UploadDocs";
 
 const PageContent = {
   faq: <Faq />,
   "privacy-policy": <PrivacyPolicy />,
   "terms-of-service": <TermsOfService />,
+  upload: <UploadDocs />,
   profiler: <Profiler />,
 };
 

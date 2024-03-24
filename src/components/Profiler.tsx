@@ -15,7 +15,7 @@ export const Profiler: React.FC = () => {
       if (session?.user?.id) {
         try {
           const response = await fetch(
-            "http://localhost:8000/download/conversation",
+            "https://boostio-ai-backend.onrender.com/download/conversation",
             {
               headers: {
                 "Content-Type": "application/json",

@@ -17,10 +17,10 @@ export const UploadDocs: React.FC = () => {
   const { data: session } = useSession();
 
   const uploadFile = async () => {
-    if (!uploadedFile) return; // Exit if no file is selected
+    if (!uploadedFile) return;
 
     const formData = new FormData();
-    formData.append("json", uploadedFile);
+    formData.append("file", uploadedFile);
 
     try {
       const response = await axios.post<UploadResponse>(
@@ -35,7 +35,7 @@ export const UploadDocs: React.FC = () => {
       );
       console.log("File uploaded successfully:", response.data);
       setUploadStatus(`Success: ${response.data.message}`);
-      router.push("/chat"); // Navigate after successful upload
+      router.push("/profiler");
     } catch (error) {
       console.error("Error uploading file:", error);
       setUploadStatus("Error: Failed to upload file. Please try again.");

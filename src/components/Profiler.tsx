@@ -1,102 +1,56 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { useMutation, useQuery } from "@apollo/client";
-import CustomInstruction from "./Forms/CustomInstructions";
-import Button from "./Button";
-import { SAVE_CUSTOM_INSTRUCTIONS, GET_CUSTOM_INSTRUCTIONS } from "@/data/gql";
+
+interface Conversation {
+  message: string;
+}
 
 export const Profiler: React.FC = () => {
   const { data: session } = useSession();
-  const [customInstructions, setCustomInstructions] = useState<string>("");
-  const [generatedJSON, setGeneratedJSON] = useState<string | null>(null);
-
-  // Fetch custom instructions for the current user
-  const { loading, error, data } = useQuery(GET_CUSTOM_INSTRUCTIONS, {
-    variables: { userId: session?.user?.id },
-  });
+  const [conversation, setConversation] = useState<Conversation | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (data?.getCustomInstructions) {
-      setCustomInstructions(data.getCustomInstructions.instructions);
-    }
-  }, [data]);
+    const fetchConversation = async () => {
+      if (session?.user?.id) {
+        try {
+          const response = await fetch(
+            "http://localhost:8000/download/conversation",
+            {
+              headers: {
+                "Content-Type": "application/json",
+                "x-user-id": session.user.id.toString(), // Ensure the ID is a string
+              },
+            }
+          );
 
-  useEffect(() => {
-    const debouncedGenerateJSON = () => {
-      const data = {
-        name: session?.user?.name as string,
-        email: session?.user?.email as string,
-        image: session?.user?.image as string,
-      };
-      setGeneratedJSON(JSON.stringify(data, null, 2));
+          if (!response.ok) {
+            throw new Error("Failed to fetch conversation data");
+          }
+
+          const data: Conversation = await response.json();
+          setConversation(data);
+        } catch (err: any) {
+          setError(err.message || "An error occurred");
+        }
+      }
     };
 
-    const debouncedHandler = setTimeout(debouncedGenerateJSON, 500);
+    fetchConversation();
+  }, [session?.user?.id]);
 
-    return () => clearTimeout(debouncedHandler);
-  }, [session]);
+  if (error) {
+    return <div className="text-red-500">{error}</div>;
+  }
 
-  const handleInputChange = (text: string) => {
-    setCustomInstructions(text);
-  };
-  const handleCopyToClipboard = () => {
-    if (generatedJSON) {
-      navigator.clipboard
-        .writeText(generatedJSON)
-        .then(() => alert("JSON copied to clipboard"))
-        .catch(() => alert("Failed to copy JSON to clipboard"));
-    } else {
-      alert("No data to copy.");
-    }
-  };
-
-  const [saveCustomInstructions] = useMutation(SAVE_CUSTOM_INSTRUCTIONS, {
-    onError: (error) => {
-      console.error("Failed to save custom instructions:", error);
-      alert("Failed to save custom instructions. Please try again later.");
-    },
-    onCompleted: () => {
-      alert("Custom instructions saved successfully!");
-    },
-  });
-
-  const handleSaveInstructions = () => {
-    if (session?.user?.id && customInstructions.trim() !== "") {
-      saveCustomInstructions({
-        variables: {
-          userId: session.user.id,
-          instructions: customInstructions,
-        },
-      });
-    }
-  };
+  if (!conversation) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="flex flex-col justify-center container mx-auto lg:px-16 xl:px-20 2xl:px-36 p-4 text-gray-100">
-      <h4>
-        Describe how would you like your responses on a chat with ChatGPT. The
-        more you say, the best you take.
-      </h4>
-      <div className="mt-4 flex flex-col gap-10">
-        <CustomInstruction
-          onInputChange={handleInputChange}
-          initialValue={customInstructions || ""}
-        />
-        <div className="flex gap-4 self-center">
-          <Button
-            onClick={handleSaveInstructions}
-            className="px-4 py-2 bg-green-500 text-white rounded-md"
-          >
-            Save Instructions
-          </Button>
-          <Button
-            onClick={handleCopyToClipboard}
-            className="px-4 py-2 bg-blue-500 text-white rounded-md"
-          >
-            Copy Data to Clipboard
-          </Button>
-        </div>
-      </div>
+    <div className="p-4 shadow-md rounded-lg">
+      {/* Render your conversation data here */}
+      <p>{conversation.message}</p>
     </div>
   );
 };

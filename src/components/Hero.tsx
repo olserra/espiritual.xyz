@@ -9,7 +9,8 @@ const Hero: React.FC = () => {
 
   const handleStart = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.location.href = "/profiler";
+    // Open email client to write an email to olserra@gmail.com
+    window.location.href = "mailto:olserra@gmail.com";
   };
 
   return (

@@ -19,7 +19,7 @@ export const Profiler: React.FC = () => {
             {
               headers: {
                 "Content-Type": "application/json",
-                "x-user-id": session.user.id.toString(), // Ensure the ID is a string
+                "x-user-id": session.user.id, // Ensure the ID is a string
               },
             }
           );

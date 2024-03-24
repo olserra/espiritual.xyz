@@ -15,20 +15,22 @@ export const Profiler: React.FC = () => {
       if (session?.user?.id) {
         try {
           const response = await fetch(
-            "https://boostio-ai-backend.onrender.com/download/conversation",
+            "https://boostio-ai-backend.onrender.com/profiler",
             {
               headers: {
                 "Content-Type": "application/json",
-                "x-user-id": session.user.id, // Ensure the ID is a string
+                "x-user-id": session.user.id,
               },
             }
           );
+          console.log("Response:", response);
 
           if (!response.ok) {
             throw new Error("Failed to fetch conversation data");
           }
 
           const data: Conversation = await response.json();
+          console.log("Conversation data:", data);
           setConversation(data);
         } catch (err: any) {
           setError(err.message || "An error occurred");

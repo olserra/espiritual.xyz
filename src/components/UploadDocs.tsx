@@ -44,6 +44,7 @@ export const UploadDocs: React.FC = () => {
             "Content-Type": "multipart/form-data",
             "x-user-id": session?.user?.id,
             "x-openai-api-key": openaiApiKey,
+            "x-zip-file-name": uploadedFile.name, // Include the file name as a header parameter
           },
         }
       );

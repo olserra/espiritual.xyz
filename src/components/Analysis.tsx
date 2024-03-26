@@ -18,11 +18,14 @@ export const Analysis: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.post<string>(`http://127.0.0.1:8000/wa`, {
-          headers: {
-            "x-user-id": session?.user?.id,
-          },
-        });
+        const response = await axios.post<string>(
+          `https://boostio-ai-backend.onrender.com/wa`,
+          {
+            headers: {
+              "x-user-id": session?.user?.id,
+            },
+          }
+        );
         setState((prevState) => ({
           ...prevState,
           insights: response.data, // Update insights in context state

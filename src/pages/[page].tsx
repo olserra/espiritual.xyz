@@ -4,7 +4,7 @@ import LandingPageLayout from "@/components/Layout";
 import { Faq } from "@/components/Faq";
 import { PrivacyPolicy } from "@/components/PrivacyPolicy";
 import { TermsOfService } from "@/components/TermsOfService";
-import { Profiler } from "@/components/Profiler";
+import { Analysis } from "@/components/Analysis";
 import { UploadDocs } from "@/components/UploadDocs";
 
 const PageContent = {
@@ -12,7 +12,7 @@ const PageContent = {
   "privacy-policy": <PrivacyPolicy />,
   "terms-of-service": <TermsOfService />,
   upload: <UploadDocs />,
-  profiler: <Profiler />,
+  analysis: <Analysis />,
 };
 
 const DynamicPage = () => {

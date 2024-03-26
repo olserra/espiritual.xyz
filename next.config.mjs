@@ -8,17 +8,11 @@ export default withPlugins(
   ],
   {
     images: {
-      domains: [
-        "avatars.githubusercontent.com",
-        "i.ytimg.com",
-        "lh3.googleusercontent.com",
-        "flowbite.s3.amazonaws.com",
-        "drive.google.com",
-        "cdn.analyticsvidhya.com",
-        "images.mktw.net",
-        "document360.com",
-        "cdni.iconscout.com",
-        "cdn-icons-png.flaticon.com",
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "**",
+        },
       ],
     },
     // Add any other Next.js configs here

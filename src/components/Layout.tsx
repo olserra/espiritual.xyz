@@ -21,7 +21,7 @@ export default function Layout({ children }: IProps) {
         title="Boostio"
         description="Personalize AI with Your Metadata"
       />
-      <div className="min-h-screen lg:mt-24" key={Math.random()}>
+      <div className="mt-8 md:my-40 lg:mt-24" key={Math.random()}>
         {children}
       </div>
       <Footer />

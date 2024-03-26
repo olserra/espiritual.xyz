@@ -7,8 +7,8 @@ const About = () => {
   return (
     <LandingPageLayout title="About">
       <Hero />
-      <FeatureSection />
-      <Faq />
+      {/* <FeatureSection /> */}
+      {/* <Faq /> */}
     </LandingPageLayout>
   );
 };

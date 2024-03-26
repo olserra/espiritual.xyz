@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import Button from "./Button";
 import Image from "next/image";
-import { Context } from "@/context/context"; // Import your context here
+import { Context } from "@/context/context";
+import ReactMarkdown from "react-markdown";
 
 export const Analysis: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -18,14 +19,11 @@ export const Analysis: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.post<string>(
-          `https://boostio-ai-backend.onrender.com/wa`,
-          {
-            headers: {
-              "x-user-id": session?.user?.id,
-            },
-          }
-        );
+        const response = await axios.post<string>(`http://127.0.0.1:8000/wa`, {
+          headers: {
+            "x-user-id": session?.user?.id,
+          },
+        });
         setState((prevState) => ({
           ...prevState,
           insights: response.data, // Update insights in context state
@@ -57,9 +55,11 @@ export const Analysis: React.FC = () => {
             height={80}
           />
         </div>
-      ) : state.insights ? (
+      ) : state?.insights ? (
         <div className="my-8 px-8 flex flex-col gap-8">
-          <p className="text-gray-200">{state.insights}</p>
+          <ReactMarkdown className="text-gray-200">
+            {state.insights}
+          </ReactMarkdown>
           <Button className="" onClick={() => router.push("/")}>
             Back to Upload
           </Button>

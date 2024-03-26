@@ -37,7 +37,7 @@ export const UploadDocs: React.FC = () => {
 
     try {
       const response = await axios.post<UploadResponse>(
-        "https://boostio-ai-backend.onrender.com/upload",
+        "http://127.0.0.1:8000/upload",
         formData,
         {
           headers: {

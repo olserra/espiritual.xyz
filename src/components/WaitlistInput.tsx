@@ -72,9 +72,7 @@ const WaitlistInput = () => {
         {isSubmitted ? (
           <p className="text-gray-200">✔ Joined</p>
         ) : (
-          <Button className="bg-black" type="submit">
-            Join waitlist
-          </Button>
+          <Button type="submit">Join waitlist</Button>
         )}
       </div>
     </form>

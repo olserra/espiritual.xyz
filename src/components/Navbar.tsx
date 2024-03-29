@@ -26,6 +26,10 @@ const Navbar = () => {
       label: `Careers`,
       href: `https://www.linkedin.com/company/boostio-ai/`,
     },
+    {
+      label: `FAQ`,
+      href: `/faq`,
+    },
   ];
 
   const handleSignOut = async (e: React.MouseEvent<HTMLButtonElement>) => {

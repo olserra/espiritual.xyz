@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import ThumbnailImage from "@/assets/screenshot.png";
 
 interface IProps {
   title: string;
@@ -19,10 +20,7 @@ export default function Layout({ children }: IProps) {
           property="og:description"
           content="Maximizing Growth and Success for B2B Companies on LinkedIn"
         />
-        <meta
-          property="og:image"
-          content="https://example.com/your-image-url.png"
-        />{" "}
+        <meta property="og:image" content={ThumbnailImage.src} />{" "}
         {/* Replace with the actual URL of your image */}
       </Head>
       <Navbar />

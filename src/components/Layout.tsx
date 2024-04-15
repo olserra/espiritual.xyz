@@ -14,7 +14,16 @@ export default function Layout({ children }: IProps) {
     <div className="bg-[#0A0826] 2xl:px-[280px]">
       <Head>
         <meta name="description" content="Boostio.ai" />
-        <meta property="og:image" content="@/assets/screenshot.png" />
+        <meta property="og:title" content="Boostio" />
+        <meta
+          property="og:description"
+          content="Maximizing Growth and Success for B2B Companies on LinkedIn"
+        />
+        <meta
+          property="og:image"
+          content="https://example.com/your-image-url.png"
+        />{" "}
+        {/* Replace with the actual URL of your image */}
       </Head>
       <Navbar />
       <NextSeo

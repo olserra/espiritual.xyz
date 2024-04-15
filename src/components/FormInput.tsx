@@ -64,7 +64,7 @@ export const FormInput: React.FC = () => {
   return (
     <div className="lg:py-8 px-4 md:px-12 mx-auto max-w-screen-2xl text-center lg:px-6">
       <div className="mx-auto max-w-screen-sm mt-12">
-        <p className="pt-12 pb-2 lg:pb-4 lg:py-0 text-sm md:text-lg text-gray-500">
+        <p className="pb-2 lg:pb-4 lg:py-0 text-sm md:text-lg text-gray-500">
           CONTACT US{" "}
         </p>
         <p className="pb-12 text-base lg:text-4xl font-bold lg:pb-14 text-gray-200">
@@ -76,7 +76,7 @@ export const FormInput: React.FC = () => {
         onSubmit={handleSubmit}
       >
         <section className="text-gray-700 body-font relative w-full">
-          <div className="container px-5 py-24 mx-auto">
+          <div className="container px-5 md:py-12 mx-auto">
             <div className="lg:w-1/2 md:w-2/3 mx-auto">
               <div className="flex flex-wrap -m-2">
                 <div className="p-2 w-full md:w-1/2">
@@ -156,7 +156,7 @@ export const FormInput: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="pl-2 w-full text-white">
+          <div className="pl-2 py-24 md:py-0 w-full text-white">
             {isSubmitted ? (
               <p className="text-gray-200">✔ We will get in touch</p>
             ) : (

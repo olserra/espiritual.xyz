@@ -140,7 +140,7 @@ export const Faq = () => (
         </p>
       </div>
     </div>
-    <div className="py-16 md:px-12 mx-auto max-w-screen-xl">
+    <div className="md:px-12 mx-auto max-w-screen-xl">
       {faqQuestions.map((faqQuestion, index) => (
         <FaqQuestion
           key={index}

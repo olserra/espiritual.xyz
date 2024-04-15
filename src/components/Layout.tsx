@@ -19,7 +19,7 @@ export default function Layout({ children }: IProps) {
       <Navbar />
       <NextSeo
         title="Boostio"
-        description="Personalize AI with Your Metadata"
+        description="Maximizing Growth and Success for B2B Companies on LinkedIn"
       />
       <div className="mt-8 md:my-40 lg:mt-24" key={Math.random()}>
         {children}

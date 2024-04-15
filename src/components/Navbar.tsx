@@ -61,7 +61,7 @@ const Navbar = () => {
           </a>
         ))}
         <div className="mt-2">
-          <Button onClick={handleGetContacted}>Get Contacted</Button>
+          <Button onClick={handleGetContacted}>Contact Us</Button>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
               onClick={handleGetContacted}
               className="text-gray-200 underline mt-4"
             >
-              Get Contacted
+              Contact Us
             </Button>
           </div>
           <div className="p-4" onClick={() => setIsMobileMenuOpen(false)}>

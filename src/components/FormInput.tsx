@@ -160,7 +160,7 @@ export const FormInput: React.FC = () => {
             {isSubmitted ? (
               <p className="text-gray-200">✔ We will get in touch</p>
             ) : (
-              <Button type="submit">Get Contacted</Button>
+              <Button type="submit">Contact Us</Button>
             )}
           </div>
         </section>

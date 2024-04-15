@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
         <div className="pt-6">
-          <Button onClick={handleGetContacted}>Get Contacted</Button>
+          <Button onClick={handleGetContacted}>Contact Us</Button>
         </div>
       </div>
       <div className="max-w-[200px] md:max-w-[3000px] self-center items-center justify-center lg:mr-20">

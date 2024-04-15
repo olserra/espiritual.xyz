@@ -7,11 +7,14 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     try {
-      const { name, email, companyUrl, employees } = req.body;
+      const { name, email, company, employees } = req.body;
 
       const formSubmission = await prisma.formSubmission.create({
         data: {
+          name,
           email,
+          company,
+          employees,
         },
       });
 

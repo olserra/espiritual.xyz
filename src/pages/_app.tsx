@@ -5,6 +5,7 @@ import PrivacyModal from "@/components/PrivacyModal";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "../../lib/apolloClient";
 import "../styles/global.css";
+import { FocusProvider } from "@/context/FocusContext";
 
 interface AppProps {
   Component: React.ComponentType;
@@ -31,8 +32,10 @@ const App: React.FC<AppProps> = ({
     <ApolloProvider client={client}>
       <SessionProvider session={session}>
         <ContextProvider>
-          <Component {...pageProps} />
-          {hasPrivacyModalShown && <PrivacyModal />}
+          <FocusProvider>
+            <Component {...pageProps} />
+            {hasPrivacyModalShown && <PrivacyModal />}
+          </FocusProvider>
         </ContextProvider>
       </SessionProvider>
     </ApolloProvider>

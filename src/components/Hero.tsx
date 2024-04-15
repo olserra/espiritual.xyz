@@ -1,16 +1,16 @@
+// Hero.tsx
+
 import React from "react";
-import Button from "./Button";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
-import { handleSignIn } from "@/helpers/handleSignIn";
-import WaitlistInput from "./WaitlistInput";
+import { useFocus } from "@/context/FocusContext"; // Import the FocusContext
+import Button from "./Button";
+import HeroImg from "@/assets/hero-bg.png";
 
 const Hero: React.FC = () => {
-  const { data: session } = useSession();
+  const { focusInput } = useFocus(); // Consume the focus method from the context
 
-  const handleStart = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "/upload";
+  const handleGetContacted = () => {
+    focusInput();
   };
 
   return (
@@ -19,33 +19,25 @@ const Hero: React.FC = () => {
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
           <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
-            UNLOCK THE POWER OF YOUR DATA
+            UNLOCK THE POWER OF LINKEDIN
           </p>
           <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">
-            Bridging the Human-AI With Your Own Data
+            Maximizing Growth and Success for B2B Companies on LinkedIn
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Seamlessly integrate metadata to forge a bridge between human
-            intelligence and your AI, enhancing its ability to learn from
-            decentralized, blockchain-protected digital profiles ready for
-            web-wide application.
+            Become recognized as the leading authority in LinkedIn marketing
+            strategies, driving growth and innovation for B2B companies
+            worldwide.
           </p>
         </div>
-
-        {session ? (
-          <div className="pt-6">
-            <WaitlistInput />
-          </div>
-        ) : (
-          <div className="pt-8 md:px-8 xl:px-2 lg:block">
-            <Button onClick={handleSignIn}>Get started</Button>
-          </div>
-        )}
+        <div className="pt-6">
+          <Button onClick={handleGetContacted}>Get Contacted</Button>
+        </div>
       </div>
       <div className="max-w-[200px] md:max-w-[3000px] self-center items-center justify-center lg:mr-20">
         <Image
-          src="https://pngimg.com/d/fingerprint_PNG38.png"
-          alt="matrix-img"
+          src={HeroImg}
+          alt="hero-img"
           width={400}
           height={400}
           className="pt-8"

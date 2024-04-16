@@ -7,106 +7,112 @@ interface FAQQuestion {
 
 const faqQuestions: FAQQuestion[] = [
   {
+    question: "How does Boostio.ai works?",
+    answer: (
+      <>
+        <p>
+          Boostio.ai leverages advanced data engineering and AI technologies to
+          create personalized web experiences. By combining decentralized data
+          ownership with collaborative AI model training, Boostio.ai empowers
+          users to control their data and train their own AI algorithms for
+          tailored recommendations and enhanced privacy.
+        </p>
+      </>
+    ),
+  },
+  {
     question:
-      "How can our LinkedIn Marketing Agency enhance your B2B strategy?",
+      "What role does decentralized data ownership play in Boostio.ai's AI-driven approach?",
     answer: (
       <>
         <p>
-          Our agency specializes in enhancing B2B strategies by crafting
-          personalized LinkedIn marketing plans. We focus on deepening your
-          market presence, increasing engagement, and driving leads by
-          optimizing your LinkedIn profile and implementing targeted content
-          campaigns.
+          Decentralized data ownership on Boostio.ai ensures that users have
+          full control over their data, empowering them to authorize AI
+          algorithms to access and analyze their information. This model
+          prioritizes user privacy while enabling AI-driven personalization.
         </p>
       </>
     ),
   },
   {
-    question: "What services does our LinkedIn Marketing Agency offer?",
+    question:
+      "How does Boostio.ai ensure trust and transparency in AI-powered web experiences?",
     answer: (
       <>
         <p>
-          We provide a comprehensive range of services including content
-          creation, lead generation, profile optimization, and strategic
-          consulting to empower your business on LinkedIn. Our aim is to
-          position your brand as a thought leader in your industry.
+          Boostio.ai implements transparent AI processes, allowing users to
+          understand how their data is utilized for personalized experiences.
+          Through decentralized governance and blockchain technology, Boostio.ai
+          fosters trust by providing visibility into AI-driven decisions.
         </p>
       </>
     ),
   },
   {
-    question: "How do we track and report your campaign performance?",
+    question:
+      "What advantages does AI-driven cross-platform personalization offer on Boostio.ai?",
     answer: (
       <>
         <p>
-          We ensure transparency and accountability in all campaigns by
-          providing detailed analytics and regular performance reports. Our
-          clients have real-time access to track ROI and see how our strategies
-          directly contribute to their business objectives.
+          AI-driven cross-platform personalization on Boostio.ai enables users
+          to seamlessly transition between different digital environments while
+          maintaining a consistent personalized experience. This unified
+          approach enhances user engagement and satisfaction.
         </p>
       </>
     ),
   },
   {
-    question: "Why choose us for your LinkedIn marketing needs?",
+    question: "How does Boostio.ai empower users to train their own AI?",
     answer: (
       <>
         <p>
-          Our agency stands out due to our tailored approach to each client,
-          deep understanding of B2B markets, and our ability to leverage
-          LinkedIn to generate substantial leads and engagement effectively.
+          Boostio.ai provides tools and resources for users to train their AI
+          models based on their preferences and behavior. This self-learning
+          capability empowers users to fine-tune their personalized experiences,
+          fostering continuous improvement.
         </p>
       </>
     ),
   },
   {
-    question: "How do we ensure your success on LinkedIn?",
+    question:
+      "What benefits does collaborative AI model training offer on Boostio.ai?",
     answer: (
       <>
         <p>
-          We commit to your success by aligning our marketing strategies with
-          your business goals, offering ongoing support, and adapting our
-          tactics based on market feedback and performance data to continuously
-          drive your business forward.
+          Collaborative AI model training allows users to contribute anonymized
+          data to enhance the overall AI algorithms used on Boostio.ai. By
+          pooling resources, users collectively improve the accuracy and
+          effectiveness of personalized recommendations.
         </p>
       </>
     ),
   },
   {
-    question: "What makes our LinkedIn marketing strategies effective?",
+    question:
+      "How does Boostio.ai ensure data security while leveraging AI capabilities?",
     answer: (
       <>
         <p>
-          Our strategies are effective because they are data-driven, tailored,
-          and continuously optimized based on the latest LinkedIn trends and
-          algorithm updates. This approach ensures we are always ahead,
-          providing maximum visibility and engagement.
+          Boostio.ai implements robust security measures, including encryption
+          and blockchain-based data storage, to safeguard user information while
+          utilizing AI. This comprehensive approach ensures data privacy and
+          integrity throughout the AI-driven processes.
         </p>
       </>
     ),
   },
   {
-    question: "How do we tailor strategies to meet your specific needs?",
+    question:
+      "What role does user feedback play in enhancing AI-powered experiences on Boostio.ai?",
     answer: (
       <>
         <p>
-          We start with a thorough analysis of your business and goals, followed
-          by the development of a customized strategy that includes content
-          planning, targeted advertising, and strategic engagements to meet your
-          unique needs and maximize your LinkedIn potential.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "What ongoing support do we offer our clients?",
-    answer: (
-      <>
-        <p>
-          Our agency provides continuous support and consulting to ensure that
-          our clients are fully equipped to leverage all LinkedIn features. From
-          onboarding to advanced campaign management, we are with you every step
-          of the way.
+          User feedback is integral to refining AI algorithms and improving
+          personalized experiences on Boostio.ai. By collecting and analyzing
+          user input, Boostio.ai iteratively enhances its AI models to better
+          meet user needs and preferences.
         </p>
       </>
     ),
@@ -140,7 +146,7 @@ export const Faq = () => (
         </p>
       </div>
     </div>
-    <div className="md:px-12 mx-auto max-w-screen-xl">
+    <div className="py-16 md:px-12 mx-auto max-w-screen-xl">
       {faqQuestions.map((faqQuestion, index) => (
         <FaqQuestion
           key={index}

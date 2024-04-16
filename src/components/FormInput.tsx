@@ -48,20 +48,6 @@ export const FormInput: React.FC = () => {
     } catch (error) {
       console.error("Error storing lead data:", error);
     }
-
-    try {
-      await axios.post("/api/sendEmail", formData); // Send email
-      console.log("Lead data stored successfully");
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        employees: "",
-      });
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
   };
 
   const handleChange = (

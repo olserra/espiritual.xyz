@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           alt="hero-img"
           width={400}
           height={400}
-          className="pt-8"
+          className="pt-8 color-overlay"
         />
       </div>
     </div>

@@ -223,3 +223,9 @@ body {
   color: #6b7280; /* Gray text color */
   cursor: not-allowed; /* Change cursor to not-allowed */
 }
+
+.color-overlay {
+  filter: hue-rotate(
+    345deg
+  ); /* Adjust the hue value to get the desired color */
+}

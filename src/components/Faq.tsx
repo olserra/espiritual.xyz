@@ -7,112 +7,109 @@ interface FAQQuestion {
 
 const faqQuestions: FAQQuestion[] = [
   {
-    question: "How does Boostio.ai works?",
+    question: "How does our platform personalize content using AI and data?",
     answer: (
       <>
         <p>
-          Boostio.ai leverages advanced data engineering and AI technologies to
-          create personalized web experiences. By combining decentralized data
-          ownership with collaborative AI model training, Boostio.ai empowers
-          users to control their data and train their own AI algorithms for
-          tailored recommendations and enhanced privacy.
+          We utilize advanced AI and data analysis to tailor content to your
+          specific needs and preferences. By bridging AI and data, we provide
+          insights that empower you to make informed, data-driven decisions for
+          your brand.
         </p>
       </>
     ),
   },
   {
     question:
-      "What role does decentralized data ownership play in Boostio.ai's AI-driven approach?",
+      "How does decentralized data management benefit personalized experiences?",
     answer: (
       <>
         <p>
-          Decentralized data ownership on Boostio.ai ensures that users have
-          full control over their data, empowering them to authorize AI
-          algorithms to access and analyze their information. This model
-          prioritizes user privacy while enabling AI-driven personalization.
+          Decentralized data management puts you in control of your information,
+          allowing you to manage and leverage your data for personalized web
+          experiences. This approach ensures trust, authenticity, and privacy in
+          content personalization.
         </p>
       </>
     ),
   },
   {
     question:
-      "How does Boostio.ai ensure trust and transparency in AI-powered web experiences?",
+      "What measures ensure trust and authenticity in personalized web experiences?",
     answer: (
       <>
         <p>
-          Boostio.ai implements transparent AI processes, allowing users to
-          understand how their data is utilized for personalized experiences.
-          Through decentralized governance and blockchain technology, Boostio.ai
-          fosters trust by providing visibility into AI-driven decisions.
+          We provide customizable access levels to your digital profile,
+          ensuring that third parties only access the data you authorize. This
+          transparency fosters trust and authenticity while maintaining your
+          data sovereignty.
         </p>
       </>
     ),
   },
   {
     question:
-      "What advantages does AI-driven cross-platform personalization offer on Boostio.ai?",
+      "How can our platform enhance marketing content for your audience?",
     answer: (
       <>
         <p>
-          AI-driven cross-platform personalization on Boostio.ai enables users
-          to seamlessly transition between different digital environments while
-          maintaining a consistent personalized experience. This unified
-          approach enhances user engagement and satisfaction.
+          Our platform enables the creation and delivery of personalized
+          marketing content tailored to your audience's preferences. By
+          leveraging your decentralized digital profile, we enhance engagement
+          and drive conversions with targeted marketing strategies.
         </p>
       </>
     ),
   },
   {
-    question: "How does Boostio.ai empower users to train their own AI?",
+    question: "How does our platform support developer relations?",
     answer: (
       <>
         <p>
-          Boostio.ai provides tools and resources for users to train their AI
-          models based on their preferences and behavior. This self-learning
-          capability empowers users to fine-tune their personalized experiences,
-          fostering continuous improvement.
-        </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "What benefits does collaborative AI model training offer on Boostio.ai?",
-    answer: (
-      <>
-        <p>
-          Collaborative AI model training allows users to contribute anonymized
-          data to enhance the overall AI algorithms used on Boostio.ai. By
-          pooling resources, users collectively improve the accuracy and
-          effectiveness of personalized recommendations.
+          We empower brands to create compelling videos that advocate for their
+          products or services. By personalizing content based on your
+          decentralized digital profile, we drive engagement and strengthen
+          connections with your audience.
         </p>
       </>
     ),
   },
   {
     question:
-      "How does Boostio.ai ensure data security while leveraging AI capabilities?",
+      "How can our platform help with documentation creation and delivery?",
     answer: (
       <>
         <p>
-          Boostio.ai implements robust security measures, including encryption
-          and blockchain-based data storage, to safeguard user information while
-          utilizing AI. This comprehensive approach ensures data privacy and
-          integrity throughout the AI-driven processes.
+          Our platform facilitates the creation and delivery of personalized
+          documentation for employees or clients. By leveraging your
+          decentralized digital profile, we enhance engagement and streamline
+          communication to drive conversions and efficiency.
         </p>
       </>
     ),
   },
   {
-    question:
-      "What role does user feedback play in enhancing AI-powered experiences on Boostio.ai?",
+    question: "What role does personalized learning play in our platform?",
     answer: (
       <>
         <p>
-          User feedback is integral to refining AI algorithms and improving
-          personalized experiences on Boostio.ai. By collecting and analyzing
-          user input, Boostio.ai iteratively enhances its AI models to better
-          meet user needs and preferences.
+          Our platform offers personalized learning journeys tailored to your
+          decentralized digital profile. Access curated content and educational
+          resources aligned with your interests and goals, fostering continuous
+          growth and development.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "How does collaborative content creation work on our platform?",
+    answer: (
+      <>
+        <p>
+          Join forces with the community to curate and share content aligned
+          with your decentralized digital profile. By collaborating with others,
+          you can foster innovation and ensure quality within the personalized
+          web experience.
         </p>
       </>
     ),

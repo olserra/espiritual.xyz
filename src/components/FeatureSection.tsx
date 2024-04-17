@@ -24,16 +24,16 @@ const FeatureSection: React.FC = () => (
   <div className="lg:py-8 px-4 md:px-12 mx-auto max-w-screen-2xl text-center lg:px-6">
     <div className="mx-auto max-w-screen-sm mt-12">
       <p className="pt-12 pb-2 lg:pb-4 lg:py-0 text-sm md:text-lg text-gray-500">
-        WEB3 MARKETPLACE SHOWCASE
+        BOOSTIO SHOWCASE
       </p>
       <p className="pb-12 text-base lg:text-4xl font-bold lg:pb-14 text-gray-200">
-        Where can you use it
+        How can we help you?
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:px-32">
       <Card
-        title="Own Your Data"
-        description="Take control of your digital identity and data with blockchain technology, ensuring ownership and security while enabling personalized web experiences."
+        title="Organize Your Data"
+        description="Collect, organize, and manage your data in a decentralized digital profile, enabling you to control and leverage your information for personalized web experiences."
         imageUrl="https://pixelplex.io/wp-content/uploads/2022/07/blockchain-explained-components-platforms-use-cases-main-1600.jpg"
       />
       <Card
@@ -47,19 +47,19 @@ const FeatureSection: React.FC = () => (
         imageUrl="https://thumbs.dreamstime.com/b/d-illustration-safety-concept-closed-padlock-digital-background-d-illustration-safety-concept-closed-padlock-digital-163797758.jpg"
       />
       <Card
-        title="Cross-Platform Personalization"
-        description="Utilize your decentralized digital profile seamlessly across various platforms for tailored recommendations and personalized experiences, enhancing your online journey."
+        title="Marketing Content"
+        description="Create and deliver personalized marketing content to your audience, leveraging your decentralized digital profile to enhance engagement and drive conversions."
         imageUrl="https://as1.ftcdn.net/v2/jpg/04/59/52/76/1000_F_459527642_VlepBSjvj3R2wKiboUT9zXxQ4tseiwIt.jpg"
       />
       <Card
-        title="Gaming and Entertainment"
-        description="Immerse yourself in personalized gaming and entertainment experiences, leveraging your decentralized digital profile to enhance your journey and discover new content."
-        imageUrl="https://t3.ftcdn.net/jpg/05/66/98/14/360_F_566981407_d2ZILFcjhJTxKsGXKENEllxCF1CHTnL7.jpg"
+        title="Develeper Relations"
+        description="Build powerful videos that advocate for your brand, leveraging your decentralized digital profile to personalize content and drive engagement with your audience."
+        imageUrl="https://res.cloudinary.com/practicaldev/image/fetch/s--re1FhokR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pezkjon0pewuipf74o5f.png"
       />
       <Card
-        title="Shopping and Marketplace"
-        description="Better recommendations and personalized experiences while shopping online, leveraging your decentralized digital profile to enhance your journey and discover new products."
-        imageUrl="https://www.influentialsoftware.com/wp-content/uploads/2021/01/why-an-azure-ecommerce-platform-is-dynamite-for-selling-online-featured-900x450.jpg"
+        title="Documentation"
+        description="Create and deliver personalized documentation to your audience, either for your employees or clients, to enhance engagement and drive conversions."
+        imageUrl="https://cdn-blog.scalablepath.com/uploads/2020/10/technical-documentation-software-project.png"
       />
       <Card
         title="Learning and Education"

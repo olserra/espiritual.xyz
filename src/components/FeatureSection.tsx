@@ -37,9 +37,9 @@ const FeatureSection: React.FC = () => (
         imageUrl="https://pixelplex.io/wp-content/uploads/2022/07/blockchain-explained-components-platforms-use-cases-main-1600.jpg"
       />
       <Card
-        title="Improve your LLM and AI"
-        description="Enhance your interactions with large language models (LLMs) by leveraging your data to personalize and improve the quality of your content and analysis."
-        imageUrl="https://miro.medium.com/v2/resize:fit:1024/1*VZJtd1_pRCiMfqJCJaQO5w.jpeg"
+        title="AI Personalization Experience"
+        description="Enhance your interactions with large language models (LLMs) by leveraging your data to personalize and improve the quality of your experience."
+        imageUrl="https://media.licdn.com/dms/image/D4D12AQGRbvAQrS59Ng/article-cover_image-shrink_720_1280/0/1699109067404?e=2147483647&v=beta&t=WKiZs1UFBDXq_4Uj_zEH-y1m4dr0ynaivigOtquNDkc"
       />
       <Card
         title="Sentiment Analysis"
@@ -49,12 +49,12 @@ const FeatureSection: React.FC = () => (
       <Card
         title="AI Agents"
         description="Create and deploy AI agents to automate tasks and provide personalized content and insights to your audience, such as moderating comments and analyzing data."
-        imageUrl="https://as1.ftcdn.net/v2/jpg/04/59/52/76/1000_F_459527642_VlepBSjvj3R2wKiboUT9zXxQ4tseiwIt.jpg"
+        imageUrl="https://www.forbes.com/advisor/wp-content/uploads/2022/06/Image_-_Chatbot.jpeg.jpg"
       />
       <Card
         title="Content Generation"
-        description="Build powerful and engaging content that resonates with your audience, such as videos, articles, and social media posts, leveraging your data to personalize and improve the quality of your content."
-        imageUrl="https://res.cloudinary.com/practicaldev/image/fetch/s--re1FhokR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pezkjon0pewuipf74o5f.png"
+        description="Build powerful and engaging content that resonates with your audience, such as videos and posts, leveraging your data to personalize and improve the quality of your content."
+        imageUrl="https://regancomm.com/wp-content/uploads/2022/10/l_feb-blogpost-03.jpg"
       />
       <Card
         title="Documentation"

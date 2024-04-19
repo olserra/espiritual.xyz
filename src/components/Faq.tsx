@@ -20,6 +20,21 @@ const faqQuestions: FAQQuestion[] = [
     ),
   },
   {
+    question: "What a sentiment analysis is capable of?",
+    answer: (
+      <>
+        <p>
+          Sentiment analysis enables you to understand the emotions and opinions
+          expressed in text data. By leveraging this technology, you can gain
+          valuable insights into customer feedback, social media sentiment, and
+          other unstructured data sources. Either conversations in WhatsApp,
+          Teams, Slack, Emails or even with ChatGPT, sentiment analysis can help
+          you understand the tone and mood of the conversation.
+        </p>
+      </>
+    ),
+  },
+  {
     question:
       "What measures ensure trust and authenticity in personalized web experiences?",
     answer: (

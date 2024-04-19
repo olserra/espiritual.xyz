@@ -14,7 +14,10 @@ const faqQuestions: FAQQuestion[] = [
           Our platform leverages advanced AI and data analysis to personalize
           content for your specific needs and preferences. By analyzing data
           from your digital profile, we tailor content to enhance engagement and
-          drive conversions.
+          drive conversions. Whether you're creating a post on LinkedIn or a
+          video to advocate for your brand, we've got you covered. We analyze
+          your content and provide insights to help you make data-driven
+          decisions.
         </p>
       </>
     ),
@@ -43,21 +46,9 @@ const faqQuestions: FAQQuestion[] = [
           We ensure trust and authenticity by providing customizable access
           levels to your digital profile. This allows you to control who
           accesses your data, fostering transparency and maintaining data
-          sovereignty.
-        </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "How can our platform enhance marketing content for your audience?",
-    answer: (
-      <>
-        <p>
-          Our platform enables the creation and delivery of personalized
-          marketing content tailored to your audience's preferences. By
-          leveraging your digital profile, we enhance engagement and drive
-          conversions with targeted marketing strategies.
+          sovereignty. By implementing security measures such as encryption and
+          multi-factor authentication, we protect your data and ensure a secure
+          personalized web experience.
         </p>
       </>
     ),
@@ -83,7 +74,13 @@ const faqQuestions: FAQQuestion[] = [
         <p>
           Our platform streamlines documentation creation and delivery for
           employees or clients. By leveraging your digital profile, we enhance
-          engagement and communication to drive efficiency and conversions.
+          engagement and communication to drive efficiency and conversions. We
+          provide insights to help you make data-driven decisions and improve
+          your content strategies. Whether you're creating documentations for
+          your employees or external clients, we've got you covered. Notion and
+          Confluence are great tools to start with. We automate the process of
+          creating and delivering personalized documentation to enhance your
+          user experience and guarantee the quality of your content.
         </p>
       </>
     ),
@@ -96,7 +93,14 @@ const faqQuestions: FAQQuestion[] = [
           Our platform offers personalized learning journeys tailored to your
           digital profile. Access curated content and educational resources
           aligned with your interests and goals, fostering continuous growth and
-          development.
+          development. By leveraging data from your digital profile, we provide
+          insights to help you make data-driven decisions and enhance your
+          skills and knowledge. Whether you're training your workforce or
+          enhancing your own skills, we've got you covered. We provide
+          personalized learning journeys tailored to your needs and objectives,
+          ensuring continuous growth and development. By leveraging data from
+          your digital profile, we provide insights to help you make data-driven
+          decisions and enhance your skills and knowledge.
         </p>
       </>
     ),
@@ -109,20 +113,11 @@ const faqQuestions: FAQQuestion[] = [
           Collaborate with the community to curate and share content aligned
           with your digital profile. By working together, you can foster
           innovation and ensure quality within the personalized web experience.
-        </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "How can on-demand services benefit content creation and analysis?",
-    answer: (
-      <>
-        <p>
-          On-demand services provide assistance with various aspects of content
-          creation and analysis, including video editing, data visualization,
-          and social media management. By accessing these services, you can
-          enhance the quality and efficiency of your content strategies.
+          We provide insights to help you make data-driven decisions and improve
+          your content strategies. Whether you're collaborating with the
+          community or your team, we've got you covered. We streamline the
+          process of collaborative content creation to enhance engagement and
+          drive growth.
         </p>
       </>
     ),

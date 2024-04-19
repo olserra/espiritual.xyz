@@ -23,12 +23,12 @@ const Hero: React.FC = () => {
             UNLOCK THE POWER OF YOUR DATA
           </p>
           <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">
-            Bridging AI and Data to personalize your content
+            Bridging AI for Data Analysis and Content Personalization
           </h1>
           <p className="text-gray-400 text-base lg:text-xl lg:pb-0">
-            Either create a post on LinkedIn or a video to advocate for your
-            brand, we got you covered. We analyze your content and provide
-            insights to help you make data-driven decisions.
+            Our value resides in the ability to provide insights to help you
+            make data-driven decisions. We understand how your data can be
+            leveraged to personalize your content and reach your objectives.
           </p>
         </div>
         <div className="pt-6">

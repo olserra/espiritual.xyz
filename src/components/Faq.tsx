@@ -11,24 +11,10 @@ const faqQuestions: FAQQuestion[] = [
     answer: (
       <>
         <p>
-          We utilize advanced AI and data analysis to tailor content to your
-          specific needs and preferences. By bridging AI and data, we provide
-          insights that empower you to make informed, data-driven decisions for
-          your brand.
-        </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "How does decentralized data management benefit personalized experiences?",
-    answer: (
-      <>
-        <p>
-          Decentralized data management puts you in control of your information,
-          allowing you to manage and leverage your data for personalized web
-          experiences. This approach ensures trust, authenticity, and privacy in
-          content personalization.
+          Our platform leverages advanced AI and data analysis to personalize
+          content for your specific needs and preferences. By analyzing data
+          from your digital profile, we tailor content to enhance engagement and
+          drive conversions.
         </p>
       </>
     ),
@@ -39,10 +25,10 @@ const faqQuestions: FAQQuestion[] = [
     answer: (
       <>
         <p>
-          We provide customizable access levels to your digital profile,
-          ensuring that third parties only access the data you authorize. This
-          transparency fosters trust and authenticity while maintaining your
-          data sovereignty.
+          We ensure trust and authenticity by providing customizable access
+          levels to your digital profile. This allows you to control who
+          accesses your data, fostering transparency and maintaining data
+          sovereignty.
         </p>
       </>
     ),
@@ -55,8 +41,8 @@ const faqQuestions: FAQQuestion[] = [
         <p>
           Our platform enables the creation and delivery of personalized
           marketing content tailored to your audience's preferences. By
-          leveraging your decentralized digital profile, we enhance engagement
-          and drive conversions with targeted marketing strategies.
+          leveraging your digital profile, we enhance engagement and drive
+          conversions with targeted marketing strategies.
         </p>
       </>
     ),
@@ -66,10 +52,10 @@ const faqQuestions: FAQQuestion[] = [
     answer: (
       <>
         <p>
-          We empower brands to create compelling videos that advocate for their
-          products or services. By personalizing content based on your
-          decentralized digital profile, we drive engagement and strengthen
-          connections with your audience.
+          Our platform empowers brands to create compelling content that
+          resonates with their audience. By personalizing content based on your
+          digital profile, we drive engagement and strengthen connections with
+          your audience.
         </p>
       </>
     ),
@@ -80,10 +66,9 @@ const faqQuestions: FAQQuestion[] = [
     answer: (
       <>
         <p>
-          Our platform facilitates the creation and delivery of personalized
-          documentation for employees or clients. By leveraging your
-          decentralized digital profile, we enhance engagement and streamline
-          communication to drive conversions and efficiency.
+          Our platform streamlines documentation creation and delivery for
+          employees or clients. By leveraging your digital profile, we enhance
+          engagement and communication to drive efficiency and conversions.
         </p>
       </>
     ),
@@ -94,9 +79,9 @@ const faqQuestions: FAQQuestion[] = [
       <>
         <p>
           Our platform offers personalized learning journeys tailored to your
-          decentralized digital profile. Access curated content and educational
-          resources aligned with your interests and goals, fostering continuous
-          growth and development.
+          digital profile. Access curated content and educational resources
+          aligned with your interests and goals, fostering continuous growth and
+          development.
         </p>
       </>
     ),
@@ -106,10 +91,23 @@ const faqQuestions: FAQQuestion[] = [
     answer: (
       <>
         <p>
-          Join forces with the community to curate and share content aligned
-          with your decentralized digital profile. By collaborating with others,
-          you can foster innovation and ensure quality within the personalized
-          web experience.
+          Collaborate with the community to curate and share content aligned
+          with your digital profile. By working together, you can foster
+          innovation and ensure quality within the personalized web experience.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "How can on-demand services benefit content creation and analysis?",
+    answer: (
+      <>
+        <p>
+          On-demand services provide assistance with various aspects of content
+          creation and analysis, including video editing, data visualization,
+          and social media management. By accessing these services, you can
+          enhance the quality and efficiency of your content strategies.
         </p>
       </>
     ),

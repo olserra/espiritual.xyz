@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ThumbnailImage from "@/assets/screenshot.png";
+import Script from "next/script";
 
 interface IProps {
   title: string;
@@ -21,10 +22,10 @@ export default function Layout({ children }: IProps) {
           content="Bridging AI and Data to personalize your content, Either create a post on LinkedIn or a video to advocate for your brand, we got you covered. We analyze your content and provide insights to help you make data-driven decisions."
         />
         <meta property="og:image" content={ThumbnailImage.src} />{" "}
-        <script
-          async
+        <Script
           src="https://app.gptmaker.ai/widget/3CE320A158A846CEF7A536DA28724B2F/float.js"
-        ></script>
+          async
+        />
       </Head>
       <Navbar />
       <NextSeo

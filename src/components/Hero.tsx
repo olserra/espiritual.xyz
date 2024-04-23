@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
       <div className="flex flex-col lg:max-w-[550px] lg:mx-12">
         {/* Content Texts */}
         <div className="md:px-8 xl:px-2">
-          <p className="text-base text-gray-400 pt-12 lg:pt-4 pb-4">
+          <p className="text-base text-gray-400 lg:pt-4 pb-4">
             UNLOCK THE POWER OF YOUR DATA
           </p>
           <h1 className="max-w-[300px] md:max-w-md pb-6 font-sans font-bold text-2xl md:text-5xl lg:text-4xl text-gray-200">

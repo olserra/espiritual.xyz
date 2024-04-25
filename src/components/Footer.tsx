@@ -21,8 +21,8 @@ const productLinks: LinkItem[] = [
 
 const aboutLinks: LinkItem[] = [
   {
-    label: `LinkedIn`,
-    href: `https://www.linkedin.com/company/boostio-ai/`,
+    label: `Facebook`,
+    href: `https://www.facebook.com/profile.php?id=61559070203543`,
   },
 ];
 
@@ -34,7 +34,7 @@ interface FooterLinkListProps {
 const FooterLinkList: React.FC<FooterLinkListProps> = ({ links, title }) => (
   <li className="w-1/2 md:w-1/3 lg:w-1/3">
     <div className="mb-6">
-      <h4 className="text-gray-200 text-base font-bold mb-1">{title}</h4>
+      <h4 className="text-gray-500 text-base font-bold mb-1">{title}</h4>
       <ul>
         {links.map((link, index) => (
           <li
@@ -82,8 +82,8 @@ const Footer: React.FC = () => {
           <FooterLinkList title="About Us" links={aboutLinks} />
         </ul>
       </div>
-      <div className="text-sm text-gray-200 mt-8">
-        © {new Date().getFullYear()} Boostio.
+      <div className="text-sm text-gray-500 mt-8">
+        © {new Date().getFullYear()} espiritual.xyz
       </div>
     </footer>
   );

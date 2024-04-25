@@ -13,7 +13,7 @@ interface IProps {
 
 export default function Layout({ children }: IProps) {
   return (
-    <div className="bg-[#0A0826] 2xl:px-[280px]">
+    <div className="bg-white mx-auto">
       <Head>
         <meta name="description" content="Boostio.ai" />
         <meta property="og:title" content="Boostio" />
@@ -22,10 +22,6 @@ export default function Layout({ children }: IProps) {
           content="Bridging AI and Data to personalize your content, Either create a post on LinkedIn or a video to advocate for your brand, we got you covered. We analyze your content and provide insights to help you make data-driven decisions."
         />
         <meta property="og:image" content={ThumbnailImage.src} />{" "}
-        <Script
-          src="https://app.gptmaker.ai/widget/3CE320A158A846CEF7A536DA28724B2F/float.js"
-          async
-        />
       </Head>
       <Navbar />
       <NextSeo

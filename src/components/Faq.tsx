@@ -7,117 +7,84 @@ interface FAQQuestion {
 
 const faqQuestions: FAQQuestion[] = [
   {
-    question: "How does our platform personalize content using AI and data?",
+    question: "What is the AI agent and how does it assist users?",
     answer: (
       <>
         <p>
-          Our platform leverages advanced AI and data analysis to personalize
-          content for your specific needs and preferences. By analyzing data
-          from your digital profile, we tailor content to enhance engagement and
-          drive conversions. Whether you're creating a post on LinkedIn or a
-          video to advocate for your brand, we've got you covered. We analyze
-          your content and provide insights to help you make data-driven
-          decisions.
+          The AI agent is an interactive digital assistant designed to
+          facilitate conversations and provide guidance on spiritual matters.
+          Using advanced natural language processing algorithms, the AI agent
+          engages users in meaningful dialogues, offering insights, advice, and
+          support tailored to their individual needs and inquiries. Whether
+          you're seeking guidance on meditation techniques, spiritual practices,
+          or personal growth, the AI agent is here to assist you.
         </p>
       </>
     ),
   },
   {
-    question: "What a sentiment analysis is capable of?",
+    question: "How does the AI agent personalize conversations with users?",
     answer: (
       <>
         <p>
-          Sentiment analysis enables you to understand the emotions and opinions
-          expressed in text data. By leveraging this technology, you can gain
-          valuable insights into customer feedback, social media sentiment, and
-          other unstructured data sources. Either conversations in WhatsApp,
-          Teams, Slack, Emails or even with ChatGPT, sentiment analysis can help
-          you understand the tone and mood of the conversation.
+          The AI agent personalizes conversations with users by analyzing their
+          input, preferences, and past interactions. Through machine learning
+          techniques, it adapts its responses and recommendations to align with
+          each user's unique spiritual journey and interests. By incorporating
+          user feedback and data, the AI agent continually improves its ability
+          to provide relevant and valuable guidance, fostering deeper
+          connections and understanding between users and the platform.
         </p>
       </>
     ),
   },
   {
-    question:
-      "What measures ensure trust and authenticity in personalized web experiences?",
+    question: "What topics can users discuss with the AI agent?",
     answer: (
       <>
         <p>
-          We ensure trust and authenticity by providing customizable access
-          levels to your digital profile. This allows you to control who
-          accesses your data, fostering transparency and maintaining data
-          sovereignty. By implementing security measures such as encryption and
-          multi-factor authentication, we protect your data and ensure a secure
-          personalized web experience.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "How does our platform support developer relations?",
-    answer: (
-      <>
-        <p>
-          Our platform empowers brands to create compelling content that
-          resonates with their audience. By personalizing content based on your
-          digital profile, we drive engagement and strengthen connections with
-          your audience.
+          Users can discuss a wide range of topics with the AI agent, including
+          meditation, mindfulness, spiritual beliefs, personal growth, and more.
+          Whether you're seeking advice on overcoming challenges, exploring new
+          spiritual practices, or deepening your understanding of spiritual
+          concepts, the AI agent is equipped to engage in meaningful
+          conversations and provide valuable insights and support.
         </p>
       </>
     ),
   },
   {
     question:
-      "How can our platform help with documentation creation and delivery?",
+      "How does the AI agent ensure a supportive and empathetic interaction?",
     answer: (
       <>
         <p>
-          Our platform streamlines documentation creation and delivery for
-          employees or clients. By leveraging your digital profile, we enhance
-          engagement and communication to drive efficiency and conversions. We
-          provide insights to help you make data-driven decisions and improve
-          your content strategies. Whether you're creating documentations for
-          your employees or external clients, we've got you covered. Notion and
-          Confluence are great tools to start with. We automate the process of
-          creating and delivering personalized documentation to enhance your
-          user experience and guarantee the quality of your content.
+          The AI agent is programmed to emulate empathy and understanding in its
+          interactions with users. Through careful design and programming, it
+          employs language and tone that convey warmth, compassion, and
+          supportiveness, creating a safe and welcoming environment for users to
+          express themselves and seek guidance. Additionally, the AI agent is
+          trained to recognize and respond sensitively to emotional cues,
+          ensuring that users feel heard, validated, and supported throughout
+          their conversations.
         </p>
       </>
     ),
   },
   {
-    question: "What role does personalized learning play in our platform?",
+    question:
+      "Can users provide feedback to improve the AI agent's performance?",
     answer: (
       <>
         <p>
-          Our platform offers personalized learning journeys tailored to your
-          digital profile. Access curated content and educational resources
-          aligned with your interests and goals, fostering continuous growth and
-          development. By leveraging data from your digital profile, we provide
-          insights to help you make data-driven decisions and enhance your
-          skills and knowledge. Whether you're training your workforce or
-          enhancing your own skills, we've got you covered. We provide
-          personalized learning journeys tailored to your needs and objectives,
-          ensuring continuous growth and development. By leveraging data from
-          your digital profile, we provide insights to help you make data-driven
-          decisions and enhance your skills and knowledge.
-        </p>
-      </>
-    ),
-  },
-  {
-    question: "How does collaborative content creation work on our platform?",
-    answer: (
-      <>
-        <p>
-          Collaborate with the community to curate and share content aligned
-          with your digital profile. By working together, you can foster
-          innovation and ensure quality within the personalized web experience.
-          We provide insights to help you make data-driven decisions and improve
-          your content strategies. Whether you're collaborating with the
-          community or your team, we've got you covered. We streamline the
-          process of collaborative content creation to enhance engagement and
-          drive growth.
+          Yes, users are encouraged to provide feedback to help improve the AI
+          agent's performance and enhance the overall user experience. Whether
+          it's suggesting new conversation topics, providing input on the
+          agent's responses, or sharing preferences for future interactions,
+          user feedback is valuable in guiding the development and refinement of
+          the AI agent. By actively engaging with users and incorporating their
+          input, we strive to continually enhance the AI agent's capabilities
+          and effectiveness in supporting users on their spiritual journeys.
         </p>
       </>
     ),
@@ -125,13 +92,13 @@ const faqQuestions: FAQQuestion[] = [
 ];
 
 const FaqQuestion: React.FC<FAQQuestion> = ({ question, answer }) => (
-  <details className="p-4 border-b border-b-gray-500 last:border-b-0 text-gray-300">
-    <summary className="cursor-pointer">{question}</summary>
+  <details className="px-12 py-8 last:border-b-0">
+    <summary className="cursor-pointer text-gray-500">{question}</summary>
     <div className="mt-3">
       {typeof answer === "string" ? (
-        <p className="text-sm leading-6 text-gray-400">{answer}</p>
+        <p className="text-sm leading-6 text-gray-500">{answer}</p>
       ) : (
-        answer
+        <p className="text-sm leading-6 text-gray-400">{answer}</p>
       )}
     </div>
   </details>
@@ -139,12 +106,12 @@ const FaqQuestion: React.FC<FAQQuestion> = ({ question, answer }) => (
 
 export const Faq = () => (
   <>
-    <div className="px-4 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
+    <div className="px-12 md:px-12 mx-auto max-w-screen-sm text-center lg:px-6">
       <div className="mx-auto mt-12">
-        <p className="mb-8 lg:mb-10 text-lg md:text-4xl font-bold text-gray-300">
+        <p className="mb-8 lg:mb-10 text-lg md:text-4xl font-bold text-gray-600">
           FAQ
         </p>
-        <p className="pb-8 text-gray-300 italic">
+        <p className="pb-8 text-gray-400 italic">
           <strong>Frequently Asked Questions (FAQ)</strong> list is here to
           answer some of the most common knowledge gaps. If you have any other
           questions, please contact us.

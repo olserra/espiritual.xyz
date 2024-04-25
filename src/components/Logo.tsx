@@ -8,8 +8,8 @@ const Logo = () => {
     <Link href="/">
       <div className="flex flex-row items-center cursor-pointer">
         <Image src={BoostioLogo} alt="Boostio logo" width={20} />
-        <p className="sm:text-xl text-xl text-gray-300 font-bold font-pacifico ml-2">
-          Boostio
+        <p className="sm:text-xl text-xl text-gray-600 font-bold font-pacifico ml-2">
+          espiritual.xyz
         </p>
       </div>
     </Link>

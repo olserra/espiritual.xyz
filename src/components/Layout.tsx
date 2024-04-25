@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ThumbnailImage from "@/assets/screenshot.png";
-import Script from "next/script";
 
 interface IProps {
   title: string;
@@ -19,14 +18,14 @@ export default function Layout({ children }: IProps) {
         <meta property="og:title" content="Boostio" />
         <meta
           property="og:description"
-          content="Bridging AI and Data to personalize your content, Either create a post on LinkedIn or a video to advocate for your brand, we got you covered. We analyze your content and provide insights to help you make data-driven decisions."
+          content="Empowering Personal Growth through Spiritual Connection"
         />
         <meta property="og:image" content={ThumbnailImage.src} />{" "}
       </Head>
       <Navbar />
       <NextSeo
-        title="Boostio"
-        description="Bridging AI and Data to personalize your content, Either create a post on LinkedIn or a video to advocate for your brand, we got you covered. We analyze your content and provide insights to help you make data-driven decisions."
+        title="espiritual.xyz"
+        description="Empowering Personal Growth through Spiritual Connection"
       />
       <div className="mt-8 md:my-40 lg:mt-24" key={Math.random()}>
         {children}

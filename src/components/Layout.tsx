@@ -14,8 +14,8 @@ export default function Layout({ children }: IProps) {
   return (
     <div className="bg-white mx-auto">
       <Head>
-        <meta name="description" content="Boostio.ai" />
-        <meta property="og:title" content="Boostio" />
+        <meta name="description" content="espiritual.xyz" />
+        <meta property="og:title" content="espiritual.xyz" />
         <meta
           property="og:description"
           content="Empowering Personal Growth through Spiritual Connection"

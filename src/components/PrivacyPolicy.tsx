@@ -10,22 +10,24 @@ export const PrivacyPolicy = () => (
         <p>
           <span className="font-bold">1. Your Privacy Matters to Us</span>
           <br />
-          Welcome to Boostio, where we are committed to maximizing growth and
-          success for B2B companies on LinkedIn. This Privacy Policy outlines
-          how Boostio ("us", "we", or "our") collects, uses, discloses, and
-          protects your personal information as you engage with our services. By
-          accessing or using our services, you acknowledge that you have read,
-          understood, and agreed to the terms of this Privacy Policy. If you do
-          not agree with our practices, please do not use our services.
+          Welcome to Espiritual.xyz, where we are committed to maximizing growth
+          and success for B2B companies on LinkedIn. This Privacy Policy
+          outlines how Espiritual.xyz ("us", "we", or "our") collects, uses,
+          discloses, and protects your personal information as you engage with
+          our services. By accessing or using our services, you acknowledge that
+          you have read, understood, and agreed to the terms of this Privacy
+          Policy. If you do not agree with our practices, please do not use our
+          services.
         </p>
 
         <p>
           <span className="font-bold">2. Data Collection and Utilization</span>
           <br />
           <span className="font-bold">a. Personal Information:</span> When you
-          interact with Boostio, you may provide personal information such as
-          your name, email address, and contact details. We use this information
-          to deliver our services effectively and personalize your experience.
+          interact with Espiritual.xyz, you may provide personal information
+          such as your name, email address, and contact details. We use this
+          information to deliver our services effectively and personalize your
+          experience.
           <br />
           <span className="font-bold">b. Usage Data:</span> We may automatically
           collect information about your interactions with our services,
@@ -108,12 +110,12 @@ export const PrivacyPolicy = () => (
           <br />
           If you have any questions, concerns, or requests regarding this
           Privacy Policy or our data practices, please contact us at:
-          privacy@boostio.com.
+          privacy@Espiritual.xyz.com.
         </p>
 
         <p>
-          Thank you for choosing Boostio to maximize growth and success for your
-          B2B company on LinkedIn!
+          Thank you for choosing Espiritual.xyz to maximize growth and success
+          for your B2B company on LinkedIn!
         </p>
       </div>
     </div>

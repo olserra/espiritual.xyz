@@ -7,21 +7,21 @@ export const TermsOfService = () => (
         Terms of Service
       </p>
       <p className="text-sm text-gray-200 max-w-4xl">
-        Sure, here's the Terms of Service for BoostioAI: Terms of Service
+        Sure, here's the Terms of Service for Espiritual.xyz: Terms of Service
         Effective Date: 22/02/2022 By accessing and using this website ("Site")
-        and the services provided by BoostioAI, you agree to comply with and be
-        bound by the following terms and conditions ("Terms of Service"). Please
-        read these Terms of Service carefully before using our Site or services.
-        1. Intellectual Property: All content on this Site, including text,
-        graphics, logos, images, and software, is the property of BoostioAI and
-        protected by intellectual property laws. You may not reproduce,
-        distribute, modify, or create derivative works of the content without
-        our prior written consent. 2. Use of Services: You agree to use our
-        services for lawful purposes and in compliance with all applicable laws
-        and regulations. You are solely responsible for your use of the services
-        and any content you submit or share. 3. Privacy: Your privacy is
-        important to us. Please refer to our Privacy Policy for information on
-        how we collect, use, and protect your personal information. 4.
+        and the services provided by Espiritual.xyz, you agree to comply with
+        and be bound by the following terms and conditions ("Terms of Service").
+        Please read these Terms of Service carefully before using our Site or
+        services. 1. Intellectual Property: All content on this Site, including
+        text, graphics, logos, images, and software, is the property of
+        Espiritual.xyz and protected by intellectual property laws. You may not
+        reproduce, distribute, modify, or create derivative works of the content
+        without our prior written consent. 2. Use of Services: You agree to use
+        our services for lawful purposes and in compliance with all applicable
+        laws and regulations. You are solely responsible for your use of the
+        services and any content you submit or share. 3. Privacy: Your privacy
+        is important to us. Please refer to our Privacy Policy for information
+        on how we collect, use, and protect your personal information. 4.
         Limitation of Liability: We strive to provide accurate and reliable
         information, but we do not guarantee the completeness, accuracy, or
         reliability of any content on our Site or services. We shall not be
@@ -36,10 +36,10 @@ export const TermsOfService = () => (
         continued use of our Site or services after any such changes constitute
         your acceptance of the modified Terms of Service. If you have any
         questions or concerns about these Terms of Service, please contact us
-        using the information provided below. Contact Information: BoostioAI,
-        Lisbon - Portugal, otavio@boostio.ai. Thank you for using BoostioAI!
+        using the information provided below. Contact Information:
+        Espiritual.xyz, Lisbon - Portugal. Thank you for using Espiritual.xyz!
         Please note that this is a general template and should be reviewed and
-        adapted to meet the specific terms and conditions of BoostioAI.
+        adapted to meet the specific terms and conditions of Espiritual.xyz.
         Consulting with legal professionals is recommended to ensure compliance
         with all applicable laws and regulations.
       </p>

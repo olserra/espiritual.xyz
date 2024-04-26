@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/logo2.png";
-
+import Logo from "./Logo";
 interface LinkItem {
   label: string;
   href: string;
@@ -67,13 +66,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="flex lg:flex-row justify-between lg:px-40 border-t border-gray-400 py-16 pl-14 max-lg:flex-col">
       <div className="mb-8">
-        <Image
-          src={Logo}
-          alt="espiritual.xyz logo"
-          width={40}
-          height={10}
-          className="mr-4"
-        />
+        <Logo />
       </div>
       <div className="w-full lg:w-2/3">
         <ul className="text-lg font-light flex flex-wrap">

@@ -2,15 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import { useFocus } from "@/context/FocusContext"; // Import the FocusContext
 import Button from "./Button";
 import HeroImg from "@/assets/hero.jpeg";
+import { useRouter } from "next/router";
 
 const Hero: React.FC = () => {
-  const { focusInput } = useFocus(); // Consume the focus method from the context
+  const router = useRouter();
 
-  const handleGetContacted = () => {
-    focusInput();
+  const handleStart = () => {
+    router.push("/chat");
   };
 
   return (
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           className="rounded-xl"
         />
         <div className="pt-6">
-          <Button onClick={handleGetContacted}>Get Started</Button>
+          <Button onClick={handleStart}>Get Started</Button>
         </div>
       </div>
     </div>

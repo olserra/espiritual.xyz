@@ -8,21 +8,21 @@ interface LinkItem {
   href: string;
 }
 
-const productLinks: LinkItem[] = [
+const socialLinks: LinkItem[] = [
   {
-    label: `Careers`,
-    href: `https://www.linkedin.com/company/boostio-ai/`,
+    label: `LinkedIn`,
+    href: `https://www.linkedin.com/company/espiritual-xyz/`,
   },
   {
-    label: `FAQ`,
-    href: `/faq`,
+    label: `Facebook`,
+    href: `https://www.facebook.com/profile.php?id=61559070203543`,
   },
 ];
 
 const aboutLinks: LinkItem[] = [
   {
-    label: `Facebook`,
-    href: `https://www.facebook.com/profile.php?id=61559070203543`,
+    label: `FAQ`,
+    href: `/faq`,
   },
 ];
 
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
       <div className="mb-8">
         <Image
           src={Logo}
-          alt="Boostio logo"
+          alt="espiritual.xyz logo"
           width={40}
           height={10}
           className="mr-4"
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="w-full lg:w-2/3">
         <ul className="text-lg font-light flex flex-wrap">
-          <FooterLinkList title="Company" links={productLinks} />
+          <FooterLinkList title="Social" links={socialLinks} />
           <FooterLinkList title="Legal" links={legalLinks} />
           <FooterLinkList title="About Us" links={aboutLinks} />
         </ul>

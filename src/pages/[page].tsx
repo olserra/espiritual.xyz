@@ -4,11 +4,13 @@ import LandingPageLayout from "@/components/Layout";
 import { Faq } from "@/components/Faq";
 import { PrivacyPolicy } from "@/components/PrivacyPolicy";
 import { TermsOfService } from "@/components/TermsOfService";
+import { Chat } from "@/components/Chat";
 
 const PageContent = {
   faq: <Faq />,
   "privacy-policy": <PrivacyPolicy />,
   "terms-of-service": <TermsOfService />,
+  chat: <Chat />,
 };
 
 const DynamicPage = () => {

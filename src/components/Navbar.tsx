@@ -21,13 +21,6 @@ const Navbar = () => {
     session?.user?.image && setAvatarImg(session.user.image);
   }, [session]);
 
-  const LandingMenuItems = [
-    {
-      label: `Contact Us`,
-      href: `https://wa.me/+351914127195`,
-    },
-  ];
-
   const router = useRouter();
 
   const handleStart = () => {
@@ -60,17 +53,6 @@ const Navbar = () => {
   const TabItems = () => (
     <div className="flex lg:flex-row pr-4 lg:pl-52">
       <div className="flex flex-row items-center text-gray-200">
-        {LandingMenuItems.map((item, index) => (
-          <a
-            target={item.href === "Careers" ? "_blank" : "_self"}
-            rel="noreferrer"
-            href={item.href}
-            key={index}
-            className="lg:mt-4 lg:pr-6"
-          >
-            {item.label}
-          </a>
-        ))}
         {session ? (
           <div
             className="flex flex-row justify-center items-center lg:ml-8 hover:cursor-pointer"
@@ -96,9 +78,9 @@ const Navbar = () => {
 
   const BurguerMenu = () => {
     return (
-      <div className="block lg:hidden">
+      <div className="block lg:hidden mr-2 mt-2">
         <button onClick={toggleMenu} aria-controls="mobile-menu">
-          <RiMenu4Line />
+          <RiMenu4Line className="w-5 h-5" />
         </button>
       </div>
     );
@@ -112,17 +94,6 @@ const Navbar = () => {
       >
         <div className="flex flex-row justify-between items-start">
           <div className="flex flex-col text-sm gap-4 p-4 text-gray-200">
-            {LandingMenuItems.map((item, index) => (
-              <a
-                target={item.href === "Careers" ? "_blank" : "_self"}
-                rel="noreferrer"
-                href={item.href}
-                key={index}
-                className="relative hover:underline"
-              >
-                {item.label}
-              </a>
-            ))}
             {session ? (
               <button
                 onClick={handleSignOut}

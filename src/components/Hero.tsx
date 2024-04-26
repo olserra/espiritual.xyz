@@ -4,15 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Button from "./Button";
 import HeroImg from "@/assets/hero.jpeg";
-import { useRouter } from "next/router";
+import { handleSignIn } from "@/helpers/handleSignIn";
 
 const Hero: React.FC = () => {
-  const router = useRouter();
-
-  const handleStart = () => {
-    router.push("/chat");
-  };
-
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:mx-24 mb-8 px-6 sm:px-2 lg:px-0 gap-4">
       <div className="flex flex-col lg:max-w-[550px] lg:mx-12 gap-2">
@@ -43,7 +37,7 @@ const Hero: React.FC = () => {
           className="rounded-xl"
         />
         <div className="pt-6">
-          <Button onClick={handleStart}>Get Started</Button>
+          <Button onClick={handleSignIn}>Get Started</Button>
         </div>
       </div>
     </div>

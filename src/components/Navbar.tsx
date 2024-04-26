@@ -8,7 +8,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { Arrow } from "./Arrow";
 import CloseIcon from "@/assets/close-icon.png";
-import { useRouter } from "next/router";
+import { handleSignIn } from "@/helpers/handleSignIn";
 
 const Navbar = () => {
   const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
@@ -20,12 +20,6 @@ const Navbar = () => {
   useEffect(() => {
     session?.user?.image && setAvatarImg(session.user.image);
   }, [session]);
-
-  const router = useRouter();
-
-  const handleStart = () => {
-    router.push("/chat");
-  };
 
   const handleSignOut = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -69,7 +63,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="mt-3">
-            <Button onClick={handleStart}>Get started</Button>
+            <Button onClick={handleSignIn}>Get started</Button>
           </div>
         )}
       </div>
@@ -103,7 +97,7 @@ const Navbar = () => {
               </button>
             ) : (
               <button
-                onClick={handleStart}
+                onClick={handleSignIn}
                 className="text-gray-200 underline mt-4"
               >
                 Get started

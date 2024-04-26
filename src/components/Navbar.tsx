@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 
 import Logo from "./Logo";
-import svgs from "../helpers/svgs";
+import { RiMenu4Line } from "react-icons/ri";
 
 import Button from "./Button";
 import { signOut, useSession } from "next-auth/react";
@@ -97,12 +97,8 @@ const Navbar = () => {
   const BurguerMenu = () => {
     return (
       <div className="block lg:hidden">
-        <button
-          className="flex items-center px-3 py-2 rounded-md text-white"
-          onClick={toggleMenu}
-          aria-controls="mobile-menu"
-        >
-          {svgs.burguerMenuIcon}
+        <button onClick={toggleMenu} aria-controls="mobile-menu">
+          <RiMenu4Line />
         </button>
       </div>
     );
@@ -159,7 +155,7 @@ const Navbar = () => {
   const renderContent = useCallback(
     () => (
       <>
-        <div className="flex flex-row items-center justify-between lg:justify-between lg:px-16 xl:px-36 px-4 py-2">
+        <div className="flex flex-row items-center justify-between lg:justify-between lg:px-16 xl:px-36 px-6 py-2">
           <div className="">
             <Logo />
           </div>

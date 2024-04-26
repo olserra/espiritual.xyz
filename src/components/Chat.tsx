@@ -8,7 +8,7 @@ export const Chat: React.FC = () => {
       <iframe
         src="https://app.gptmaker.ai/widget/3CE57CD411A176773CD95E164221D92A/iframe"
         width="100%"
-        style={{ height: "100%", minHeight: "700px" }}
+        style={{ height: "100%", minHeight: "550px" }}
       ></iframe>
     </div>
   );

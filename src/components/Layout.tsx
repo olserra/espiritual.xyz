@@ -12,7 +12,7 @@ interface IProps {
 
 export default function Layout({ children }: IProps) {
   return (
-    <div className="bg-white mx-auto">
+    <div className="bg-white mx-auto md:max-w-[1400px]">
       <Head>
         <meta name="description" content="espiritual.xyz" />
         <meta property="og:title" content="espiritual.xyz" />
@@ -27,9 +27,7 @@ export default function Layout({ children }: IProps) {
         title="espiritual.xyz"
         description="Empowering Personal Growth through Spiritual Connection"
       />
-      <div className="mt-8 md:my-40 lg:mt-24" key={Math.random()}>
-        {children}
-      </div>
+      <div key={Math.random()}>{children}</div>
       <Footer />
     </div>
   );

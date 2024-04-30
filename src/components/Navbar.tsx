@@ -2,11 +2,11 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 
 import Logo from "./Logo";
 import { RiMenu4Line } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 
 import Button from "./Button";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { Arrow } from "./Arrow";
 import CloseIcon from "@/assets/close-icon.png";
 import { handleSignIn } from "@/helpers/handleSignIn";
 
@@ -57,12 +57,12 @@ const Navbar = () => {
               alt="user icon"
               width={30}
               height={20}
-              className="max-h-[30px] max-w-[30px] mr-4 mt-4 rounded-2xl"
+              className="max-h-[30px] max-w-[30px] mr-2 rounded-2xl"
             />
-            <Arrow direction="down" className="lg:mt-6" />
+            <IoIosArrowDown className="text-gray-700" />
           </div>
         ) : (
-          <div className="mt-3">
+          <div>
             <Button onClick={handleSignIn}>Get started</Button>
           </div>
         )}
@@ -120,7 +120,7 @@ const Navbar = () => {
   const renderContent = useCallback(
     () => (
       <>
-        <div className="flex flex-row items-center justify-between lg:justify-between lg:px-16 xl:px-36 px-6 py-2">
+        <div className="flex flex-row items-center justify-between lg:justify-between lg:px-16 xl:px-36 px-6 py-4">
           <div className="">
             <Logo />
           </div>

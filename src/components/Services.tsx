@@ -10,7 +10,7 @@ const ServiceCard: React.FC<{
   color: string;
 }> = ({ icon, title, description, color }) => (
   <div
-    className={`flex flex-col items-start p-12 ${color} rounded-lg m-6 min-w-[300px] min-h-[300px] gap-4`}
+    className={`flex flex-col items-start p-12 ${color} rounded-lg m-6 max-w-[300px] max-h-[300px] gap-4`}
   >
     <div className="text-gray-800 text-5xl mb-2">{icon}</div>
     <h3 className="mb-1 font-semibold text-2xl text-gray-900">{title}</h3>
@@ -35,13 +35,13 @@ const Services: React.FC = () => {
         />
         <ServiceCard
           icon={<FaHeart />}
-          title="Community Events"
+          title="Community"
           description="Join our community gatherings, workshops, and seminars to connect with like-minded individuals."
           color={colors[1]}
         />
         <ServiceCard
           icon={<FaBrain />}
-          title="Educational Resources"
+          title="Resources"
           description="Access a wealth of knowledge through our curated articles, books, and other learning materials."
           color={colors[2]}
         />

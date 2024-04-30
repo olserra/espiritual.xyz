@@ -5,12 +5,14 @@ import { Faq } from "@/components/Faq";
 import { PrivacyPolicy } from "@/components/PrivacyPolicy";
 import { TermsOfService } from "@/components/TermsOfService";
 import { Chat } from "@/components/Chat";
+import { Faith } from "@/components/Faith";
 
 const PageContent = {
   faq: <Faq />,
   "privacy-policy": <PrivacyPolicy />,
   "terms-of-service": <TermsOfService />,
   chat: <Chat />,
+  faith: <Faith />,
 };
 
 const DynamicPage = () => {

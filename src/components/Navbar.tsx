@@ -91,7 +91,7 @@ const Navbar = () => {
             {session ? (
               <button
                 onClick={handleSignOut}
-                className="text-gray-200 underline mt-4 text-start"
+                className="text-gray-200 underline text-start"
               >
                 Sign out
               </button>
